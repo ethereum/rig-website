@@ -8,10 +8,7 @@ const Section = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(
-      "space-y-8 py-12 sm:py-20",
-      className
-    )}
+    className={cn("space-y-8 py-12 sm:py-20", className)}
     {...props}
   />
 ))
@@ -21,14 +18,7 @@ const SectionHead = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <section
-    ref={ref}
-    className={cn(
-      "space-x-2",
-      className
-    )}
-    {...props}
-  />
+  <section ref={ref} className={cn("space-x-2", className)} {...props} />
 ))
 SectionHead.displayName = "SectionHead"
 
@@ -39,7 +29,7 @@ const SectionHeading = React.forwardRef<
   <h2
     ref={ref}
     className={cn(
-      "text-4xl text-primary font-sans lowercase inline",
+      "text-primary inline font-sans text-4xl lowercase",
       className
     )}
     {...props}
@@ -51,14 +41,9 @@ const SectionCounter = React.forwardRef<
   HTMLSpanElement,
   React.HTMLAttributes<HTMLSpanElement>
 >(({ className, children, ...props }, ref) => (
-  <span
-    ref={ref}
-    className={cn(
-      "font-sans",
-      className
-    )}
-    {...props}
-  >({children})</span>
+  <span ref={ref} className={cn("font-sans", className)} {...props}>
+    ({children})
+  </span>
 ))
 SectionCounter.displayName = "SectionCounter"
 
