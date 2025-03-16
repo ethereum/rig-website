@@ -14,10 +14,12 @@ const ThemeIcon = React.forwardRef<
     icon = <Sun ref={ref} className={iconClassName} {...props} />
   }
   return (
-    <div className="text grid size-7 rotate-90 grid-cols-3 place-items-center font-sans">
-      <p className="text-primary mb-[3px]">[</p>
-      {icon}
-      <p className="text-primary mb-[3px]">]</p>
+    <div className="relative grid size-8 place-items-center">
+      <div className="absolute inset-0 grid place-items-center">{icon}</div>
+
+      <span className="text-primary absolute inset-0 grid rotate-90 place-items-center whitespace-nowrap">
+        [&nbsp;&nbsp;&nbsp;&nbsp;]
+      </span>
     </div>
   )
 })
