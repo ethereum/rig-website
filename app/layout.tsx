@@ -46,13 +46,16 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6 font-sans font-bold">
-          <div id="socials" className="flex items-center gap-x-4 text-3xl">
+        <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
+          <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
             <span className="text-accent-foreground text-[50px]">&#91;</span>
             <GitHub className="text-primary" />
             <Twitter className="text-primary" />
             <Email className="text-primary" />
             <span className="text-accent-foreground text-[50px]">&#93;</span>
+          </div>
+          <div className="text-secondary-foreground font-sans">
+            legal disclaimer
           </div>
         </footer>
       </body>
