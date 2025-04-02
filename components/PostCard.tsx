@@ -1,5 +1,5 @@
 import type { PostFrontMatter } from "@/lib/types"
-import { CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Tag } from "./ui/tag"
 import { cn } from "@/lib/utils"
 
@@ -14,7 +14,7 @@ const PostCard = ({
   href,
   className,
 }: PostCardProps) => (
-  <div className={cn("row-span-2 grid grid-rows-subgrid gap-8", className)}>
+  <Card className={cn("row-span-2 grid grid-rows-subgrid gap-8", className)}>
     <CardHeader>
       <time
         dateTime={datePublished}
@@ -52,7 +52,7 @@ const PostCard = ({
         <span className="text-primary"> &#93;</span>
       </a>
     </CardFooter>
-  </div>
+  </Card>
 )
 
 export default PostCard

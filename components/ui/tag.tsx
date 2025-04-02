@@ -8,7 +8,7 @@ const Tag = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <span
     ref={ref}
-    className={cn("block font-sans text-xs font-medium", className)}
+    className={cn("block font-sans text-xs font-medium text-nowrap", className)}
     {...props}
   >
     <span className="text-accent-foreground">&#65378; </span>
