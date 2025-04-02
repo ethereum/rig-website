@@ -17,3 +17,8 @@ export type TalkFrontMatter = BaseFrontMatter & {
   startDate: string
   endDate?: string
 }
+
+export type PostSummary = {
+  frontmatter: PostFrontMatter
+  path: string
+}
