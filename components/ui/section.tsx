@@ -8,7 +8,7 @@ const Section = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn("space-y-8 py-12 sm:py-20", className)}
+    className={cn("w-full space-y-8 py-12 sm:py-20", className)}
     {...props}
   />
 ))
