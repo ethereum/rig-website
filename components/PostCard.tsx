@@ -1,6 +1,9 @@
 import type { PostFrontMatter } from "@/lib/types"
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Tag } from "./ui/tag"
+import Link from "./ui/link"
+
 import { cn } from "@/lib/utils"
 
 type PostCardProps = {
@@ -42,15 +45,14 @@ const PostCard = ({
       </CardContent>
     </CardHeader>
     <CardFooter>
-      {/* TODO: Abstract Link component */}
-      <a
+      <Link
         href={href}
         className="hover:text-primary font-sans font-medium tracking-[0.02em]"
       >
         <span className="text-primary">&#91; </span>
         Read post
         <span className="text-primary"> &#93;</span>
-      </a>
+      </Link>
     </CardFooter>
   </Card>
 )

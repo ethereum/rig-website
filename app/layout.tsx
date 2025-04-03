@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { EB_Garamond, Montserrat } from "next/font/google"
 
+import Link from "@/components/ui/link"
+
 import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
 import Twitter from "@/components/svg/twitter.svg"
@@ -37,10 +39,12 @@ export default function RootLayout({
         className={`${garamondSerif.variable} ${montserratSans.variable} grid min-h-screen grid-rows-[auto_1fr_auto] items-center justify-items-center p-8 font-serif antialiased sm:px-18 sm:py-10`}
       >
         <header className="flex w-full justify-between">
-          <Logo
-            className="text-foreground text-[9rem]"
-            alt="Robust Incentives Group RIG logo"
-          />
+          <Link href="/">
+            <Logo
+              className="text-foreground text-[9rem]"
+              alt="Robust Incentives Group RIG logo"
+            />
+          </Link>
           <nav className="flex items-center gap-4">
             <ThemeSwitch />
           </nav>

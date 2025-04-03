@@ -1,6 +1,9 @@
 import type { PostFrontMatter } from "@/lib/types"
+
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Tag } from "./ui/tag"
+import Link from "./ui/link"
+
 import { cn } from "@/lib/utils"
 
 type PostPreviewRowProps = {
@@ -29,9 +32,9 @@ const PostPreviewRow = ({
         </time>
 
         <CardTitle>
-          <a href={href} className="hover:text-primary hover:underline">
+          <Link href={href} className="hover:text-primary hover:underline">
             {title}
-          </a>
+          </Link>
         </CardTitle>
         <p className="text-card-foreground font-sans text-sm">
           {new Intl.ListFormat("en", {
