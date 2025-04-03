@@ -36,7 +36,7 @@ export default function Home() {
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map(({ frontmatter, path }) => (
+          {posts.map(({ frontmatter, href: path }) => (
             <PostCard key={path} frontmatter={frontmatter} href={path} />
           ))}
         </div>

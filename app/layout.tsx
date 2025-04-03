@@ -52,11 +52,21 @@ export default function RootLayout({
         {children}
         <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
           <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
-            <span className="text-accent-foreground text-[50px]">&#91;</span>
-            <GitHub className="text-primary" />
-            <Twitter className="text-primary" />
-            <Email className="text-primary" />
-            <span className="text-accent-foreground text-[50px]">&#93;</span>
+            <span className="text-accent-foreground mb-[0.125em] text-[50px]">
+              &#91;
+            </span>
+            <Link href="https://github.com/" hideArrow>
+              <GitHub />
+            </Link>
+            <Link href="https://xcancel.com" hideArrow>
+              <Twitter />
+            </Link>
+            <Link href="#" hideArrow>
+              <Email />
+            </Link>
+            <span className="text-accent-foreground mb-[0.125em] text-[50px]">
+              &#93;
+            </span>
           </div>
           <div className="text-secondary-foreground font-sans">
             legal disclaimer

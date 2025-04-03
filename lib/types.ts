@@ -20,5 +20,5 @@ export type TalkFrontMatter = BaseFrontMatter & {
 
 export type PostSummary = {
   frontmatter: PostFrontMatter
-  path: string
+  href: string
 }

@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main className="row-start-2">
       <div>
-        {posts.map(({ frontmatter, path }) => (
+        {posts.map(({ frontmatter, href: path }) => (
           <PostPreviewRow
             key={path}
             frontmatter={frontmatter}
