@@ -22,3 +22,10 @@ export type PostSummary = {
   frontmatter: PostFrontMatter
   href: string
 }
+
+export type Author = {
+  id: string
+  name?: string
+  avatar?: string
+  email?: string
+}
