@@ -48,3 +48,15 @@ export const fetchPosts = (): PostSummary[] => {
 
   return posts
 }
+
+export const getPost = (slug: string) => {
+  const filePath = path.join(MD_DIR_POSTS, slug + ".md")
+  const file = fs.readFileSync(filePath, "utf-8")
+  const { data, content } = matter(file)
+  const frontmatter = data as PostFrontMatter
+
+  return { frontmatter, content } as {
+    frontmatter: PostFrontMatter
+    content: string
+  }
+}
