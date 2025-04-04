@@ -2,14 +2,12 @@
 title: Second post title will have it's own nuance but should be even longer apparently since you need a ton of text to make this wrap
 authors:
   - Paul
-  - John
   - George
-  - Ringo
 tags:
-  - music
-  - classics
-  - revolutionary
-datePublished: 2025-04-02Z12:00:00.000Z
+  - pbs
+  - protocol-development
+  - resource-pricing
+datePublished: 2023-04-02Z12:00:00.000Z
 ---
 
 Welcome AGAIN!! Some intro text to get things started.

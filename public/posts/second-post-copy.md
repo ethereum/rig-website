@@ -1,14 +1,12 @@
 ---
 title: Second post (FORKED!) title will have it's own nuance but should be even longer apparently since you need a ton of text to make this wrap
 authors:
-  - Paul
-  - John
   - George
   - Ringo
 tags:
-  - music
-  - classics
-  - revolutionary
+  - simulations
+  - crypto-ai
+  - cl
 datePublished: 2025-04-02Z13:00:00.000Z
 ---
 
