@@ -1,3 +1,4 @@
+import Link from "next/link"
 import PostCard from "@/components/PostCard"
 import {
   Section,
@@ -5,6 +6,7 @@ import {
   SectionHeading,
   SectionCounter,
 } from "@/components/ui/section"
+
 import type { PaperFrontMatter, TalkFrontMatter } from "@/lib/types"
 import { fetchPosts } from "@/lib/posts"
 
@@ -40,6 +42,8 @@ export default function Home() {
             <PostCard key={path} frontmatter={frontmatter} href={path} />
           ))}
         </div>
+
+        <Link href="/posts">View all posts</Link>
       </Section>
       <hr />
       <Section>

@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${garamondSerif.variable} ${montserratSans.variable} grid min-h-screen grid-rows-[auto_1fr_auto] items-center justify-items-center p-8 font-serif antialiased sm:px-18 sm:py-10`}
+        className={`${garamondSerif.variable} ${montserratSans.variable} grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10`}
       >
         <header className="flex w-full justify-between">
           <Link href="/">
