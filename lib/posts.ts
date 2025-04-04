@@ -3,11 +3,19 @@ import path from "path"
 
 import matter from "gray-matter"
 
-import type { PostFrontMatter, PostSummary } from "@/lib/types"
-import { MD_DIR_POSTS } from "@/lib/constants"
+import type { PostFrontMatter, PostSummary, Tag } from "@/lib/types"
+import { MD_DIR_POSTS, TAGS } from "@/lib/constants"
 
 export const getPostURL = (filePath: string) =>
   filePath.replace(/^public|\.md$/g, "")
+
+const updateFrontMatterTags = (
+  frontmatter: PostFrontMatter
+): PostFrontMatter => {
+  const { tags } = frontmatter
+  const newTags = tags.map((tag) => TAGS[tag as Tag] || "").filter(Boolean)
+  return { ...frontmatter, tags: newTags }
+}
 
 export const fetchPosts = (): PostSummary[] => {
   const postsDirContents = fs.readdirSync(MD_DIR_POSTS)
@@ -17,7 +25,7 @@ export const fetchPosts = (): PostSummary[] => {
       const filePath = path.join(MD_DIR_POSTS, filename)
       const file = fs.readFileSync(filePath, "utf-8")
       const { data } = matter(file)
-      const frontmatter = data as PostFrontMatter
+      const frontmatter = updateFrontMatterTags(data as PostFrontMatter)
       if (
         new Date(frontmatter.datePublished)
           .toString()
@@ -53,7 +61,7 @@ export const getPost = (slug: string) => {
   const filePath = path.join(MD_DIR_POSTS, slug + ".md")
   const file = fs.readFileSync(filePath, "utf-8")
   const { data, content } = matter(file)
-  const frontmatter = data as PostFrontMatter
+  const frontmatter = updateFrontMatterTags(data as PostFrontMatter)
 
   return { frontmatter, content } as {
     frontmatter: PostFrontMatter

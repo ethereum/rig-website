@@ -1,3 +1,5 @@
+import { TAGS } from "./constants"
+
 type BaseFrontMatter = {
   title: string
   authors: string[]
@@ -29,3 +31,5 @@ export type Author = {
   avatar?: string
   email?: string
 }
+
+export type Tag = keyof typeof TAGS
