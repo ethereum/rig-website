@@ -104,7 +104,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
             key={path}
             frontmatter={frontmatter}
             href={path}
-            className="border-b"
+            className="border-b px-5"
           />
         ))}
         {filteredPosts.length === 0 && (

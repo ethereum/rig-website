@@ -17,7 +17,7 @@ const PostPreviewRow = ({
   href,
   className,
 }: PostPreviewRowProps) => (
-  <Card className={cn("w-full py-12", className)}>
+  <Card className={cn("hover:bg-card w-full py-12", className)}>
     <div className="flex gap-8 max-sm:flex-col sm:items-center">
       <CardHeader className="w-full">
         <time
@@ -32,7 +32,7 @@ const PostPreviewRow = ({
         </time>
 
         <CardTitle>
-          <Link href={href} className="hover:text-primary hover:underline">
+          <Link href={href} className="hover:text-primary text-foreground">
             {title}
           </Link>
         </CardTitle>
