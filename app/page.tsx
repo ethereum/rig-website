@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { BracketLink } from "@/components/ui/link"
 import PostCard from "@/components/PostCard"
 import {
   Section,
@@ -21,7 +21,7 @@ export default function Home() {
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
       <div className="py-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
-        <p className="text-5xl">
+        <p className="text-5xl">´
           The{" "}
           <span className="text-primary-foreground">
             Robust Incentives Group
@@ -43,7 +43,9 @@ export default function Home() {
           ))}
         </div>
 
-        <Link href="/posts">View all posts</Link>
+        <BracketLink href="/posts" className="mx-auto lowercase">
+          <span className="text-lg">View all posts</span>
+        </BracketLink>
       </Section>
       <hr />
       <Section>
