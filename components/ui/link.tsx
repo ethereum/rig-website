@@ -4,6 +4,7 @@ import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 import { ExternalLink } from "lucide-react"
 
 import * as url from "@/lib/url"
+import { cn } from "@/lib/utils"
 
 type BaseProps = {
   hideArrow?: boolean
@@ -54,11 +55,32 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 })
 BaseLink.displayName = "BaseLink"
 
+export const BracketLink = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ children, className, ...props }: LinkProps, ref) => (
+    <BaseLink
+      className={cn(
+        "hover:text-primary text-foreground block w-fit font-sans tracking-[0.02em]",
+        className
+      )}
+      ref={ref}
+      {...props}
+    >
+      <span className="text-primary">&#91; </span>
+      {children}
+      <span className="text-primary"> &#93;</span>
+    </BaseLink>
+  )
+)
+BracketLink.displayName = "BracketLink"
+
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
-  (props: LinkProps, ref) => {
+  ({ className, ...props }: LinkProps, ref) => {
     return (
       <BaseLink
-        className="font-body text-primary visited:text-primary-visited hover:text-primary-light"
+        className={cn(
+          "font-body text-primary visited:text-primary-visited hover:text-primary-light",
+          className
+        )}
         ref={ref}
         {...props}
       />
