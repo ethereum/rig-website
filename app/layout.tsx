@@ -10,6 +10,7 @@ import Email from "@/components/svg/email.svg"
 import ThemeSwitch from "@/components/ThemeSwitch"
 
 import "./globals.css"
+import { cn } from "@/lib/utils"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -36,9 +37,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${garamondSerif.variable} ${montserratSans.variable} grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10`}
+        className={cn(
+          garamondSerif.variable,
+          montserratSans.variable,
+          "mx-auto grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10"
+        )}
+        style={{ maxWidth: "96rem" }}
       >
-        <header className="flex w-full justify-between">
+        <header className="mx-auto flex w-full justify-between">
           <Link href="/">
             <Logo
               className="text-foreground text-[9rem]"
