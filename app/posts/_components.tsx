@@ -3,8 +3,11 @@
 // TODO: Add pagination
 
 import { useState } from "react"
+
 import PostPreviewRow from "@/components/PostPreviewRow"
-import { PostSummary } from "@/lib/types"
+import HeroHeading from "@/components/HeroHeading"
+
+import type { PostSummary } from "@/lib/types"
 
 type FilterOptions = {
   years: number[]
@@ -48,7 +51,8 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
 
   return (
     <>
-      <div className="mt-16 flex items-center space-x-4 font-sans text-sm">
+      <HeroHeading>Posts</HeroHeading>
+      <div className="flex items-center space-x-4 p-8 font-sans text-sm">
         <span>Filter by:</span>
         <select
           id="filter-date"

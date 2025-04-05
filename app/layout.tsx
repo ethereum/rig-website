@@ -47,7 +47,7 @@ export default function RootLayout({
         <header className="mx-auto flex w-full justify-between">
           <Link href="/">
             <Logo
-              className="text-foreground text-[9rem]"
+              className="text-foreground text-7xl"
               alt="Robust Incentives Group RIG logo"
             />
           </Link>
