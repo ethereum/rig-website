@@ -64,7 +64,7 @@ export default function RootLayout({
         {children}
         <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
           <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
-            <span className="text-accent-foreground mb-[0.125em] text-[50px]">
+            <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
               &#91;
             </span>
             <Link href="https://github.com/" hideArrow>
@@ -76,7 +76,7 @@ export default function RootLayout({
             <Link href="#" hideArrow>
               <Email />
             </Link>
-            <span className="text-accent-foreground mb-[0.125em] text-[50px]">
+            <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
               &#93;
             </span>
           </div>

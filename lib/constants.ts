@@ -7,7 +7,7 @@ export const POSTS_PATH = "post"
 export const TAGS = {
   consensus: "Consensus",
   data: "Data",
-  mev: "MEV",
+  mev: "Maximal Extractable Value",
   pbs: "Proposer-Builder Separation",
   "protocol-development": "Protocol Development",
   "resource-pricing": "Resource Pricing",
@@ -15,7 +15,7 @@ export const TAGS = {
   "crypto-ai": "Crypto x AI",
   cryptography: "Cryptography",
   el: "EL",
-  "game-theory": "Game Theory / Econ",
+  "game-theory": "Game Theory / Economics",
   scaling: "Scaling / Rollups",
 } as const
 

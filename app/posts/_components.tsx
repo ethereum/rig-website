@@ -2,12 +2,15 @@
 
 // TODO: Add pagination
 
+import { join } from "path"
+
 import { useState } from "react"
 
 import PostPreviewRow from "@/components/PostPreviewRow"
 import HeroHeading from "@/components/HeroHeading"
 
 import type { PostSummary } from "@/lib/types"
+import { POSTS_PATH } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -103,11 +106,11 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         )}
       </div>
       <div>
-        {filteredPosts.map(({ frontmatter, slug: path }) => (
+        {filteredPosts.map(({ frontmatter, slug }) => (
           <PostPreviewRow
-            key={path}
+            key={slug}
             frontmatter={frontmatter}
-            href={path}
+            href={join(POSTS_PATH, slug)}
             className="border-b px-5"
           />
         ))}

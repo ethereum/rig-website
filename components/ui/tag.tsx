@@ -11,9 +11,9 @@ const Tag = React.forwardRef<
     className={cn("block font-sans text-xs font-medium text-nowrap", className)}
     {...props}
   >
-    <span className="text-accent-foreground">&#65378; </span>
+    <span className="text-accent-foreground select-none">&#65378; </span>
     <span className="text-primary uppercase">{children}</span>
-    <span className="text-accent-foreground"> &#65379;</span>
+    <span className="text-accent-foreground select-none"> &#65379;</span>
   </span>
 ))
 Tag.displayName = "Tag"

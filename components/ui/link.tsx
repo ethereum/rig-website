@@ -65,9 +65,9 @@ export const BracketLink = forwardRef<HTMLAnchorElement, LinkProps>(
       ref={ref}
       {...props}
     >
-      <span className="text-primary">&#91; </span>
+      <span className="text-primary select-none">&#91;&nbsp;</span>
       {children}
-      <span className="text-primary"> &#93;</span>
+      <span className="text-primary select-none">&nbsp;&#93;</span>
     </BaseLink>
   )
 )
