@@ -103,7 +103,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         )}
       </div>
       <div>
-        {filteredPosts.map(({ frontmatter, href: path }) => (
+        {filteredPosts.map(({ frontmatter, slug: path }) => (
           <PostPreviewRow
             key={path}
             frontmatter={frontmatter}

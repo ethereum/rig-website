@@ -42,10 +42,7 @@ export const fetchPosts = (): PostSummary[] => {
 
       const postPath = getPostURL(filename)
 
-      return {
-        frontmatter,
-        href: path.join("post", postPath),
-      } as PostSummary
+      return { frontmatter, slug: postPath } as PostSummary
     })
     .sort(
       (a, b) =>

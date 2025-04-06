@@ -1,7 +1,12 @@
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import { Tag } from "@/components/ui/tag"
 
-import { getPost } from "@/lib/posts"
+import { fetchPosts, getPost } from "@/lib/posts"
+
+export async function generateStaticParams() {
+  const allPosts = fetchPosts()
+  return allPosts.map(({ slug }) => ({ slug: slug }))
+}
 
 type Props = { params: Promise<{ slug: string }> }
 

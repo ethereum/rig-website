@@ -1,3 +1,5 @@
+import { join } from "path"
+
 import { BracketLink } from "@/components/ui/link"
 import PostCard from "@/components/PostCard"
 import {
@@ -9,6 +11,7 @@ import {
 
 import type { PaperFrontMatter, TalkFrontMatter } from "@/lib/types"
 import { fetchPosts } from "@/lib/posts"
+import { POSTS_PATH } from "@/lib/constants"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -21,7 +24,7 @@ export default function Home() {
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
       <div className="py-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
-        <p className="text-5xl">´
+        <p className="text-5xl">
           The{" "}
           <span className="text-primary-foreground">
             Robust Incentives Group
@@ -38,8 +41,12 @@ export default function Home() {
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map(({ frontmatter, href: path }) => (
-            <PostCard key={path} frontmatter={frontmatter} href={path} />
+          {posts.map(({ frontmatter, slug: path }) => (
+            <PostCard
+              key={path}
+              frontmatter={frontmatter}
+              href={join(POSTS_PATH, path)}
+            />
           ))}
         </div>
 

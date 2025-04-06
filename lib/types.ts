@@ -22,7 +22,7 @@ export type TalkFrontMatter = BaseFrontMatter & {
 
 export type PostSummary = {
   frontmatter: PostFrontMatter
-  href: string
+  slug: string
 }
 
 export type Author = {
