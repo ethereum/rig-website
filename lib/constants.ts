@@ -18,3 +18,22 @@ export const TAGS = {
   "game-theory": "Game Theory / Econ",
   scaling: "Scaling / Rollups",
 } as const
+
+export const NAV_ITEMS: { title: string; href: string }[] = [
+  {
+    title: "Posts",
+    href: "/posts",
+  },
+  {
+    title: "Papers",
+    href: "/papers",
+  },
+  {
+    title: "Talks",
+    href: "/talks",
+  },
+  {
+    title: "Open Problems",
+    href: "/team",
+  },
+]

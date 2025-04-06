@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { EB_Garamond, Montserrat } from "next/font/google"
 
-import Link from "@/components/ui/link"
+import Link, { BracketLink } from "@/components/ui/link"
 
 import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
@@ -11,6 +11,7 @@ import ThemeSwitch from "@/components/ThemeSwitch"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
+import { NAV_ITEMS } from "@/lib/constants"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -52,6 +53,11 @@ export default function RootLayout({
             />
           </Link>
           <nav className="flex items-center gap-4">
+            {NAV_ITEMS.map(({ title, href }) => (
+              <BracketLink href={href} key={href} className="text-xl lowercase">
+                {title}
+              </BracketLink>
+            ))}
             <ThemeSwitch />
           </nav>
         </header>
