@@ -12,14 +12,14 @@ export const authors: Author[] = [
     avatar: "public/avatars/anders.jpg",
   },
   {
-    id: "banabe",
-    name: "Banabé Monnot",
-    avatar: "public/avatars/banabe-monnot.jpg",
+    id: "barnabe",
+    name: "Barnabé Monnot",
+    avatar: "public/avatars/barnabe-monnot.jpg",
   },
   {
     id: "caspar",
-    name: "Caspar Chwartz-Schilling",
-    avatar: "public/avatars/caspar-chwartz-schilling.jpg",
+    name: "Caspar Schwarz-Schilling",
+    avatar: "public/avatars/caspar-schwarz-schilling.jpg",
   },
   {
     id: "michael",
