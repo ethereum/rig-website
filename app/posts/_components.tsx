@@ -3,14 +3,14 @@
 // TODO: Add pagination
 
 import { join } from "path"
-
-import { useState } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
 
 import PostPreviewRow from "@/components/PostPreviewRow"
 import HeroHeading from "@/components/HeroHeading"
 
 import type { PostSummary } from "@/lib/types"
-import { POSTS_PATH } from "@/lib/constants"
+import { POSTS_PATH, TAGS } from "@/lib/constants"
+import Link from "next/link"
 
 type FilterOptions = {
   years: number[]
@@ -24,20 +24,30 @@ type PostsPageProps = {
 }
 
 export function PostsPage({ allPosts, options }: PostsPageProps) {
-  const [yearFilter, setYearFilter] = useState<string>("")
-  const [authorFilter, setAuthorFilter] = useState<string>("")
-  const [tagFilter, setTagFilter] = useState<string>("")
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Get filter values from URL query parameters
+  const yearFilter = searchParams.get("year") || ""
+  const authorFilter = searchParams.get("author") || ""
+  const tagFilter = searchParams.get("tag") || ""
 
   const { years, authors, tags } = options
 
   // Check if any filter is active
   const filtered = yearFilter !== "" || authorFilter !== "" || tagFilter !== ""
 
-  // Reset all filters function
-  const resetAllFilters = () => {
-    setYearFilter("")
-    setAuthorFilter("")
-    setTagFilter("")
+  // Update URL with filters
+  const updateFilters = (param: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString())
+
+    if (value === "") {
+      params.delete(param)
+    } else {
+      params.set(param, value)
+    }
+
+    router.push(`?${params.toString()}`)
   }
 
   // Filter posts based on selected filters
@@ -48,7 +58,17 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         yearFilter
     const matchesAuthor =
       authorFilter === "" || frontmatter.authors.includes(authorFilter)
-    const matchesTag = tagFilter === "" || frontmatter.tags.includes(tagFilter)
+
+    const matchesTag =
+      tagFilter === "" ||
+      frontmatter.tags.some((tag) => {
+        // Find the key in TAGS object that corresponds to this tag
+        const tagKey = Object.entries(TAGS).find(
+          ([_, value]) => value === tag
+        )?.[0]
+        return tagKey === tagFilter
+      })
+
     return matchesYear && matchesAuthor && matchesTag
   })
 
@@ -61,7 +81,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           id="filter-date"
           className="rounded border px-2 py-1"
           value={yearFilter}
-          onChange={(e) => setYearFilter(e.target.value)}
+          onChange={(e) => updateFilters("year", e.target.value)}
         >
           <option value="">Year</option>
           {years.map((year) => (
@@ -74,7 +94,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           id="filter-author"
           className="rounded border px-2 py-1"
           value={authorFilter}
-          onChange={(e) => setAuthorFilter(e.target.value)}
+          onChange={(e) => updateFilters("author", e.target.value)}
         >
           <option value="">Author</option>
           {authors.map((author) => (
@@ -87,22 +107,25 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           id="filter-tag"
           className="rounded border px-2 py-1"
           value={tagFilter}
-          onChange={(e) => setTagFilter(e.target.value)}
+          onChange={(e) => updateFilters("tag", e.target.value)}
         >
           <option value="">Field</option>
-          {tags.map((tag) => (
-            <option key={tag} value={tag}>
-              {tag}
-            </option>
-          ))}
+          {tags.map((tag) => {
+            // Find the key in TAGS object that corresponds to this tag
+            const tagKey =
+              Object.entries(TAGS).find(([_, value]) => value === tag)?.[0] ||
+              ""
+            return (
+              <option key={tagKey} value={tagKey}>
+                {tag}
+              </option>
+            )
+          })}
         </select>
         {filtered && (
-          <button
-            onClick={resetAllFilters}
-            className="text-primary hover:underline"
-          >
+          <Link href="?" className="text-primary hover:underline">
             Reset
-          </button>
+          </Link>
         )}
       </div>
       <div>
