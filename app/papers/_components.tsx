@@ -3,13 +3,13 @@
 // TODO: Add pagination
 
 import { join } from "path"
+import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import PostPreviewRow from "@/components/PostPreviewRow"
 
-import type { PostSummary } from "@/lib/types"
-import { PATH_POSTS, TAGS } from "@/lib/constants"
-import Link from "next/link"
+import type { PaperSummary } from "@/lib/types"
+import { PATH_PAPERS, TAGS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -17,12 +17,12 @@ type FilterOptions = {
   tags: string[]
 }
 
-type PostsPageProps = {
-  allPosts: PostSummary[]
+type PapersPageProps = {
+  allPapers: PaperSummary[]
   options: FilterOptions
 }
 
-export function PostsPage({ allPosts, options }: PostsPageProps) {
+export function PapersPage({ allPapers, options }: PapersPageProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -49,8 +49,8 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
     router.push(`?${params.toString()}`)
   }
 
-  // Filter posts based on selected filters
-  const filteredPosts = allPosts.filter(({ frontmatter }) => {
+  // Filter papers based on selected filters
+  const filteredPapers = allPapers.filter(({ frontmatter }) => {
     const matchesYear =
       yearFilter === "" ||
       new Date(frontmatter.datePublished).getFullYear().toString() ===
@@ -126,17 +126,18 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         )}
       </div>
       <div>
-        {filteredPosts.map(({ frontmatter, slug }) => (
+        {filteredPapers.map(({ frontmatter, slug }) => (
+          // TODO: Update to use PaperPreviewRow when ready
           <PostPreviewRow
             key={slug}
             frontmatter={frontmatter}
-            href={join(PATH_POSTS, slug)}
+            href={join(PATH_PAPERS, slug)}
             className="border-b px-5"
           />
         ))}
-        {filteredPosts.length === 0 && (
+        {filteredPapers.length === 0 && (
           <div className="text-secondary-foreground mt-4 text-center">
-            No posts found for the selected filters.
+            No papers found for the selected filters.
           </div>
         )}
       </div>

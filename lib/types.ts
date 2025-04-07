@@ -25,6 +25,11 @@ export type PostSummary = {
   slug: string
 }
 
+export type PaperSummary = {
+  frontmatter: PaperFrontMatter
+  slug: string
+}
+
 export type Author = {
   id: string
   name?: string

@@ -2,7 +2,8 @@ export const MD_DIR_POSTS = "public/posts"
 export const MD_DIR_PAPERS = "public/papers"
 export const MD_DIR_TALKS = "public/talks"
 
-export const POSTS_PATH = "post"
+export const PATH_POSTS = "post"
+export const PATH_PAPERS = "paper"
 
 export const TAGS = {
   consensus: "Consensus",
