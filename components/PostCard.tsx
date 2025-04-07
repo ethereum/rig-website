@@ -1,10 +1,13 @@
+import Link from "next/link"
+
 import type { PostFrontMatter } from "@/lib/types"
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
-import { Tag } from "./ui/tag"
+import TagLink from "@/components/TagLink"
 import { BracketLink } from "./ui/link"
 
 import { cn } from "@/lib/utils"
+import { getTagKey } from "@/lib/posts-client-side"
 
 type PostCardProps = {
   frontmatter: PostFrontMatter
@@ -40,12 +43,16 @@ const PostCard = ({
 
       <CardContent>
         {tags.map((tag, i) => (
-          <Tag key={i}>{tag}</Tag>
+          <Link key={i} href={`/posts/?tag=${getTagKey(tag)}`}>
+            <TagLink className="block">{tag}</TagLink>
+          </Link>
         ))}
       </CardContent>
     </CardHeader>
     <CardFooter>
-      <BracketLink href={href} className="font-medium">Read post</BracketLink>
+      <BracketLink href={href} className="font-medium">
+        Read post
+      </BracketLink>
     </CardFooter>
   </Card>
 )

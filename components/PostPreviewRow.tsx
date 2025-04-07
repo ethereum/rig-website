@@ -1,8 +1,8 @@
 import type { PostFrontMatter } from "@/lib/types"
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
-import { Tag } from "./ui/tag"
 import Link from "./ui/link"
+import TagLink from "./TagLink"
 
 import { cn } from "@/lib/utils"
 
@@ -45,7 +45,7 @@ const PostPreviewRow = ({
       </CardHeader>
       <CardContent>
         {tags.map((tag, i) => (
-          <Tag key={i}>{tag}</Tag>
+          <TagLink key={i}>{tag}</TagLink>
         ))}
       </CardContent>
     </div>

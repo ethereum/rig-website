@@ -1,5 +1,5 @@
 import { MarkdownProvider } from "@/components/Markdown/Provider"
-import { Tag } from "@/components/ui/tag"
+import TagLink from "@/components/TagLink"
 
 import { fetchPosts, getPost } from "@/lib/posts"
 
@@ -42,9 +42,7 @@ export default async function Page({ params }: Props) {
         </p>
         <div className="space-x-4">
           {tags.map((tag, i) => (
-            <Tag key={i} className="inline">
-              {tag}
-            </Tag>
+            <TagLink key={i}>{tag}</TagLink>
           ))}
         </div>
       </div>
