@@ -3,20 +3,19 @@ import path from "path"
 
 import matter from "gray-matter"
 
-import type { PostFrontMatter, PostSummary } from "@/lib/types"
-import { MD_DIR_POSTS } from "@/lib/constants"
-
+import type { PaperFrontMatter, PaperSummary } from "@/lib/types"
+import { MD_DIR_PAPERS } from "@/lib/constants"
 import { getSlug, updateFrontMatterTags } from "./markdown"
 
-export const fetchPosts = (): PostSummary[] => {
-  const postsDirContents = fs.readdirSync(MD_DIR_POSTS)
+export const fetchPapers = (): PaperSummary[] => {
+  const papersDirContents = fs.readdirSync(MD_DIR_PAPERS)
 
-  const posts = postsDirContents
+  const papers = papersDirContents
     .map((filename) => {
-      const filePath = path.join(MD_DIR_POSTS, filename)
+      const filePath = path.join(MD_DIR_PAPERS, filename)
       const file = fs.readFileSync(filePath, "utf-8")
       const { data } = matter(file)
-      const frontmatter = updateFrontMatterTags(data as PostFrontMatter)
+      const frontmatter = updateFrontMatterTags(data as PaperFrontMatter)
       if (
         new Date(frontmatter.datePublished)
           .toString()
@@ -33,7 +32,7 @@ export const fetchPosts = (): PostSummary[] => {
 
       const postPath = getSlug(filename)
 
-      return { frontmatter, slug: postPath } as PostSummary
+      return { frontmatter, slug: postPath } as PaperSummary
     })
     .sort(
       (a, b) =>
@@ -41,17 +40,17 @@ export const fetchPosts = (): PostSummary[] => {
         new Date(a.frontmatter.datePublished).getTime()
     )
 
-  return posts
+  return papers
 }
 
 export const getPost = (slug: string) => {
-  const filePath = path.join(MD_DIR_POSTS, slug + ".md")
+  const filePath = path.join(MD_DIR_PAPERS, slug + ".md")
   const file = fs.readFileSync(filePath, "utf-8")
   const { data, content } = matter(file)
-  const frontmatter = updateFrontMatterTags(data as PostFrontMatter)
+  const frontmatter = updateFrontMatterTags(data as PaperFrontMatter)
 
   return { frontmatter, content } as {
-    frontmatter: PostFrontMatter
+    frontmatter: PaperFrontMatter
     content: string
   }
 }
