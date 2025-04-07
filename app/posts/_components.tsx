@@ -6,7 +6,6 @@ import { join } from "path"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import PostPreviewRow from "@/components/PostPreviewRow"
-import HeroHeading from "@/components/HeroHeading"
 
 import type { PostSummary } from "@/lib/types"
 import { POSTS_PATH, TAGS } from "@/lib/constants"
@@ -64,7 +63,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
       frontmatter.tags.some((tag) => {
         // Find the key in TAGS object that corresponds to this tag
         const tagKey = Object.entries(TAGS).find(
-          ([_, value]) => value === tag
+          ([, value]) => value === tag
         )?.[0]
         return tagKey === tagFilter
       })
@@ -74,7 +73,6 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
 
   return (
     <>
-      <HeroHeading>Posts</HeroHeading>
       <div className="flex items-center space-x-4 p-8 font-sans text-sm">
         <span>Filter by:</span>
         <select
@@ -113,8 +111,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           {tags.map((tag) => {
             // Find the key in TAGS object that corresponds to this tag
             const tagKey =
-              Object.entries(TAGS).find(([_, value]) => value === tag)?.[0] ||
-              ""
+              Object.entries(TAGS).find(([, value]) => value === tag)?.[0] || ""
             return (
               <option key={tagKey} value={tagKey}>
                 {tag}

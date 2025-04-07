@@ -1,4 +1,7 @@
 import { fetchPosts } from "@/lib/posts"
+import { Suspense } from "react"
+import { SkeletonLines } from "@/components/ui/skeleton"
+import HeroHeading from "@/components/HeroHeading"
 import { PostsPage } from "./_components"
 
 export default function Page() {
@@ -25,7 +28,10 @@ export default function Page() {
 
   return (
     <main className="row-start-2 w-full">
-      <PostsPage allPosts={posts} options={filterOptions} />
+      <HeroHeading>Posts</HeroHeading>
+      <Suspense fallback={<SkeletonLines noOfLines={5} />}>
+        <PostsPage allPosts={posts} options={filterOptions} />
+      </Suspense>
     </main>
   )
 }
