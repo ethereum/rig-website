@@ -43,7 +43,7 @@ const PostPreviewRow = ({
           }).format(authors.map((author) => author))}
         </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-col items-end">
         {tags.map((tag, i) => (
           <TagLink key={i}>{tag}</TagLink>
         ))}
