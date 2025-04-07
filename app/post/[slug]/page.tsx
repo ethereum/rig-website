@@ -5,7 +5,7 @@ import { fetchPosts, getPost } from "@/lib/posts"
 
 export async function generateStaticParams() {
   const allPosts = fetchPosts()
-  return allPosts.map(({ slug }) => ({ slug: slug }))
+  return allPosts.map(({ slug }) => ({ slug }))
 }
 
 type Props = { params: Promise<{ slug: string }> }

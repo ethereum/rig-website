@@ -43,7 +43,7 @@ export const fetchPapers = (): PaperSummary[] => {
   return papers
 }
 
-export const getPost = (slug: string) => {
+export const getPaper = (slug: string) => {
   const filePath = path.join(MD_DIR_PAPERS, slug + ".md")
   const file = fs.readFileSync(filePath, "utf-8")
   const { data, content } = matter(file)

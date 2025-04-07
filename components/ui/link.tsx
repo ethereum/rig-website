@@ -43,7 +43,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {children}
         <span className="sr-only">(opens in a new tab)</span>
         {!hideArrow && (
-          <ExternalLink className="ms-1 mb-1 inline text-nowrap" />
+          <ExternalLink className="ms-1 mb-1 inline size-[1em] text-nowrap" />
         )}
       </a>
     )
