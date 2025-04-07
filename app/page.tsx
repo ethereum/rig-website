@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-      <div className="py-30 max-w-4xl">
+      <div className="max-w-4xl py-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
         <p className="text-5xl">
           The{" "}
@@ -41,11 +41,11 @@ export default function Home() {
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map(({ frontmatter, slug: path }) => (
+          {posts.slice(0, 3).map(({ frontmatter, slug }) => (
             <PostCard
-              key={path}
+              key={slug}
               frontmatter={frontmatter}
-              href={join(POSTS_PATH, path)}
+              href={join(POSTS_PATH, slug)}
             />
           ))}
         </div>

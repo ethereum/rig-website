@@ -49,7 +49,6 @@ export const fetchPosts = (): PostSummary[] => {
         new Date(b.frontmatter.datePublished).getTime() -
         new Date(a.frontmatter.datePublished).getTime()
     )
-    .slice(0, 3)
 
   return posts
 }
