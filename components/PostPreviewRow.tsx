@@ -2,9 +2,9 @@ import type { PostFrontMatter } from "@/lib/types"
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
-import TagLink from "./TagLink"
 
 import { cn } from "@/lib/utils"
+import { Tag } from "./ui/tag"
 
 type PostPreviewRowProps = {
   frontmatter: PostFrontMatter
@@ -45,9 +45,9 @@ const PostPreviewRow = ({
       </CardHeader>
       <CardContent className="flex flex-col items-end">
         {tags.map((tag, i) => (
-          <TagLink key={i} type="post">
+          <Tag key={i} className="text-foreground block leading-[2]">
             {tag}
-          </TagLink>
+          </Tag>
         ))}
       </CardContent>
     </div>
