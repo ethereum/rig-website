@@ -6,7 +6,7 @@ import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
-import PostPreviewRow from "@/components/PostPreviewRow"
+import PaperPreviewRow from "@/components/PaperPreviewRow"
 
 import type { PaperSummary } from "@/lib/types"
 import { PATH_PAPERS, TAGS } from "@/lib/constants"
@@ -129,8 +129,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
       </div>
       <div>
         {filteredPapers.map(({ frontmatter, slug }) => (
-          // TODO: Update to use PaperPreviewRow when ready
-          <PostPreviewRow
+          <PaperPreviewRow
             key={slug}
             frontmatter={frontmatter}
             href={join(PATH_PAPERS, slug)}

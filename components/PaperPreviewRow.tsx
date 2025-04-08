@@ -1,0 +1,66 @@
+import type { PaperFrontMatter } from "@/lib/types"
+
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import Link from "./ui/link"
+
+import { cn } from "@/lib/utils"
+import { Tag } from "./ui/tag"
+import { join } from "path"
+
+type PaperPreviewRowProps = {
+  frontmatter: PaperFrontMatter
+  href: string
+  className?: string
+}
+
+const PaperPreviewRow = ({
+  frontmatter: { title, authors, tags, datePublished, image },
+  href,
+  className,
+}: PaperPreviewRowProps) => (
+  <Card
+    className={cn(
+      "hover:bg-card flex w-full items-center gap-8 py-12 max-lg:flex-col",
+      className
+    )}
+  >
+    <div className="flex gap-8 max-sm:flex-col sm:items-center">
+      <CardHeader className="w-full">
+        <time
+          dateTime={datePublished}
+          className="text-secondary-foreground block font-sans text-sm font-semibold"
+        >
+          {new Date(datePublished).toLocaleDateString("en", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </time>
+
+        <CardTitle>
+          <Link href={href} className="hover:text-primary text-foreground">
+            {title}
+          </Link>
+        </CardTitle>
+        <p className="text-card-foreground font-sans text-sm">
+          {new Intl.ListFormat("en", {
+            style: "long",
+            type: "conjunction",
+          }).format(authors.map((author) => author))}
+        </p>
+      </CardHeader>
+
+      <CardContent className="flex flex-col sm:items-end">
+        {tags.map((tag, i) => (
+          <Tag key={i} className="text-foreground block leading-[2]">
+            {tag}
+          </Tag>
+        ))}
+      </CardContent>
+    </div>
+
+    <img src={join("assets", image)} alt="" className="max-h-60 lg:max-w-1/4" />
+  </Card>
+)
+
+export default PaperPreviewRow
