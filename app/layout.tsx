@@ -13,6 +13,7 @@ import { NAV_ITEMS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 
 import "./globals.css"
+import { ModeToggle } from "@/components/ModeToggle"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -64,6 +65,7 @@ export default function RootLayout({
                     {title}
                   </BracketLink>
                 ))}
+                <ModeToggle />
               </nav>
             </header>
             {children}
