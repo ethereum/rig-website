@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 import type { PostFrontMatter } from "@/lib/types"
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
@@ -7,7 +5,6 @@ import TagLink from "@/components/TagLink"
 import { BracketLink } from "./ui/link"
 
 import { cn } from "@/lib/utils"
-import { getTagKey } from "@/lib/posts-client-side"
 
 type PostCardProps = {
   frontmatter: PostFrontMatter
