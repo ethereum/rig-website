@@ -1,0 +1,12 @@
+---
+title: "Endgame Staking Economics: A Case for Targeting"
+authors:
+  - Caspar Schwarz-Schilling
+  - Ansgar Dietrichs
+tags:
+  - Game Theory / Econ
+  - Protocol Development
+datePublished: 2024-02-22T12:00:00.000Z
+---
+
+<https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751>

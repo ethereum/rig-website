@@ -1,0 +1,12 @@
+---
+title: Empirical analysis of Builders' Behavioral Profiles (BBPs)
+authors:
+  - Thomas Thiery
+tags:
+  - Data
+  - MEV
+  - Proposer-Builder Separation
+datePublished: 2023-08-10T12:00:00.000Z
+---
+
+<https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327>
