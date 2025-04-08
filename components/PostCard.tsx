@@ -42,10 +42,10 @@ const PostCard = ({
       </p>
 
       <CardContent>
-        {tags.map((tag, i) => (
-          <Link key={i} href={`/posts/?tag=${getTagKey(tag)}`}>
-            <TagLink className="block">{tag}</TagLink>
-          </Link>
+        {tags.map((tag) => (
+          <TagLink key={tag} className="block">
+            {tag}
+          </TagLink>
         ))}
       </CardContent>
     </CardHeader>
