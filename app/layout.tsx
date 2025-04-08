@@ -2,17 +2,17 @@ import type { Metadata } from "next"
 import { EB_Garamond, Montserrat } from "next/font/google"
 
 import Link, { BracketLink } from "@/components/ui/link"
+import { ThemeProvider } from "@/components/theme/Provider"
 
 import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
 import Twitter from "@/components/svg/twitter.svg"
 import Email from "@/components/svg/email.svg"
-import ModeToggle from "@/components/theme/ModeToggle"
+
+import { NAV_ITEMS } from "@/lib/constants"
+import { cn } from "@/lib/utils"
 
 import "./globals.css"
-import { cn } from "@/lib/utils"
-import { NAV_ITEMS } from "@/lib/constants"
-import { ThemeProvider } from "@/components/theme/Provider"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -38,15 +38,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ThemeProvider>
-        <body
-          className={cn(
-            garamondSerif.variable,
-            montserratSans.variable,
-            "mx-auto grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10"
-          )}
-          style={{ maxWidth: "96rem" }}
-        >
+      <body
+        className={cn(
+          garamondSerif.variable,
+          montserratSans.variable,
+          "mx-auto grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10"
+        )}
+        style={{ maxWidth: "96rem" }}
+      >
+        <ThemeProvider>
           <header className="mx-auto flex w-full justify-between">
             <Link href="/">
               <Logo
@@ -64,7 +64,6 @@ export default function RootLayout({
                   {title}
                 </BracketLink>
               ))}
-              <ModeToggle />
             </nav>
           </header>
           {children}
@@ -90,8 +89,8 @@ export default function RootLayout({
               legal disclaimer
             </div>
           </footer>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
