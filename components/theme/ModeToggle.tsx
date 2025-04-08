@@ -11,12 +11,12 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import ThemeIcon from "./ui/theme-icon"
+} from "../ui/dropdown-menu"
+import ThemeIcon from "./ThemeIcon"
 
 import useThemingKeyboardShortcuts from "@/hooks/useThemingKeyboardShortcuts"
 
-const ThemeSwitch = () => {
+const ModeToggle = () => {
   const [mounted, setMounted] = useState(false)
 
   const { theme, resolvedTheme, setTheme } = useTheme()
@@ -52,11 +52,12 @@ const ThemeSwitch = () => {
   ]
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="group border-primary text-primary [&[data-state=open]]:bg-background-highlight box-content flex h-3.5 w-fit items-center gap-2 px-2 py-1.5">
+      {/* <DropdownMenuTrigger className="group border-primary text-primary [&[data-state=open]]:bg-background-highlight box-content flex h-3.5 w-fit items-center gap-2 px-2 py-1.5"> */}
+      <DropdownMenuTrigger asChild>
         <ThemeIcon />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
+      <DropdownMenuContent side="left">
         {items.map((item) => (
           <DropdownMenuItem
             key={item.id}
@@ -74,4 +75,4 @@ const ThemeSwitch = () => {
   )
 }
 
-export default ThemeSwitch
+export default ModeToggle

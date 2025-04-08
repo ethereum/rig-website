@@ -7,11 +7,12 @@ import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
 import Twitter from "@/components/svg/twitter.svg"
 import Email from "@/components/svg/email.svg"
-import ThemeSwitch from "@/components/ThemeSwitch"
+import ModeToggle from "@/components/theme/ModeToggle"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { NAV_ITEMS } from "@/lib/constants"
+import { ThemeProvider } from "@/components/theme/Provider"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -36,55 +37,61 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          garamondSerif.variable,
-          montserratSans.variable,
-          "mx-auto grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10"
-        )}
-        style={{ maxWidth: "96rem" }}
-      >
-        <header className="mx-auto flex w-full justify-between">
-          <Link href="/">
-            <Logo
-              className="text-foreground text-7xl"
-              alt="Robust Incentives Group RIG logo"
-            />
-          </Link>
-          <nav className="flex items-center gap-4">
-            {NAV_ITEMS.map(({ title, href }) => (
-              <BracketLink href={href} key={href} className="text-xl lowercase">
-                {title}
-              </BracketLink>
-            ))}
-            <ThemeSwitch />
-          </nav>
-        </header>
-        {children}
-        <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
-          <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
-            <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
-              &#91;
-            </span>
-            <Link href="https://github.com/" hideArrow>
-              <GitHub />
+    <html lang="en" suppressHydrationWarning>
+      <ThemeProvider>
+        <body
+          className={cn(
+            garamondSerif.variable,
+            montserratSans.variable,
+            "mx-auto grid min-h-screen grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10"
+          )}
+          style={{ maxWidth: "96rem" }}
+        >
+          <header className="mx-auto flex w-full justify-between">
+            <Link href="/">
+              <Logo
+                className="text-foreground text-7xl"
+                alt="Robust Incentives Group RIG logo"
+              />
             </Link>
-            <Link href="https://xcancel.com" hideArrow>
-              <Twitter />
-            </Link>
-            <Link href="#" hideArrow>
-              <Email />
-            </Link>
-            <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
-              &#93;
-            </span>
-          </div>
-          <div className="text-secondary-foreground font-sans">
-            legal disclaimer
-          </div>
-        </footer>
-      </body>
+            <nav className="flex items-center gap-4">
+              {NAV_ITEMS.map(({ title, href }) => (
+                <BracketLink
+                  href={href}
+                  key={href}
+                  className="text-xl lowercase"
+                >
+                  {title}
+                </BracketLink>
+              ))}
+              <ModeToggle />
+            </nav>
+          </header>
+          {children}
+          <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
+            <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
+              <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
+                &#91;
+              </span>
+              <Link href="https://github.com/" hideArrow>
+                <GitHub />
+              </Link>
+              <Link href="https://xcancel.com" hideArrow>
+                <Twitter />
+              </Link>
+              <Link href="#" hideArrow>
+                <Email />
+              </Link>
+              <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
+                &#93;
+              </span>
+            </div>
+            <div className="text-secondary-foreground font-sans">
+              legal disclaimer
+            </div>
+          </footer>
+        </body>
+      </ThemeProvider>
     </html>
   )
 }

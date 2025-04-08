@@ -1,7 +1,8 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
-
 import { Moon, Sun } from "lucide-react"
+
+import { Button } from "../ui/button"
 
 const ThemeIcon = React.forwardRef<
   SVGSVGElement,
@@ -14,11 +15,17 @@ const ThemeIcon = React.forwardRef<
     icon = <Sun ref={ref} className={iconClassName} {...props} />
   }
   return (
-    <div className="grid size-8 place-items-center text-xl">
-      {/* <span className="text-primary select-none">&#9140;</span> */}
-      <div className="">{icon}</div>
-      {/* <span className="text-primary select-none">&#9141;</span> */}
-    </div>
+    <Button className="relative size-8 text-3xl font-medium">
+      <span className="text-primary absolute inset-0 -top-2 grid size-8 place-items-center select-none">
+        &#9140;
+      </span>
+      <div className="absolute inset-0 grid size-8 place-items-center">
+        {icon}
+      </div>
+      <span className="text-primary absolute inset-0 grid size-8 place-items-center select-none">
+        &#9141;
+      </span>
+    </Button>
   )
 })
 ThemeIcon.displayName = "ThemeIcon"
