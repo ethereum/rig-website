@@ -11,6 +11,7 @@ tags:
   - simulations
 datePublished: 2021-02-21T09:38:04.000Z
 publicationVenue: AFT 2021
+image: Screenshot_2023-05-28_at_23.18.51.png
 ---
 
 URL: <https://arxiv.org/abs/2102.10567>

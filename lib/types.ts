@@ -12,6 +12,7 @@ export type PostFrontMatter = BaseFrontMatter & {
 
 export type PaperFrontMatter = PostFrontMatter & {
   publicationVenue: string
+  image: string
 }
 
 export type TalkFrontMatter = BaseFrontMatter & {

@@ -15,6 +15,7 @@ import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
 
 import { PATH_PAPERS, PATH_POSTS } from "@/lib/constants"
+import PaperCard from "@/components/PaperCard"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -63,10 +64,9 @@ export default function Home() {
           <SectionHeading>papers</SectionHeading>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8">
           {papers.slice(0, 3).map(({ frontmatter, slug }) => (
-            // TODO: Update to PaperCard when ready
-            <PostCard
+            <PaperCard
               key={slug}
               frontmatter={frontmatter}
               href={join(PATH_PAPERS, slug)}
