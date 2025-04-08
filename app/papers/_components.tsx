@@ -82,11 +82,13 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
           onChange={(e) => updateFilters("year", e.target.value)}
         >
           <option value="">Year</option>
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
+          {years
+            .sort((a, b) => b - a)
+            .map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
         </select>
         <select
           id="filter-author"
