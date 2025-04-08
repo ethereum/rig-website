@@ -1,31 +1,32 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
-
-import { Button } from "../ui/button"
+import { cn } from "@/lib/utils"
 
 const ThemeIcon = React.forwardRef<
   SVGSVGElement,
   React.ComponentPropsWithoutRef<"svg">
->((props, ref) => {
+>(({ className, ...props }, ref) => {
   const iconClassName = "size-4 text-foreground"
   const { resolvedTheme } = useTheme()
-  let icon = <Moon ref={ref} className={iconClassName} {...props} />
+  let icon = (
+    <Moon ref={ref} className={cn(iconClassName, className)} {...props} />
+  )
   if (resolvedTheme === "light") {
-    icon = <Sun ref={ref} className={iconClassName} {...props} />
+    icon = <Sun ref={ref} className={cn(iconClassName, className)} {...props} />
   }
   return (
-    <Button className="relative size-8 text-3xl font-medium">
-      <span className="text-primary absolute inset-0 -top-2 grid size-8 place-items-center select-none">
+    <>
+      <div className="text-primary absolute inset-0 -top-2 grid size-8 place-items-center select-none">
         &#9140;
-      </span>
+      </div>
       <div className="absolute inset-0 grid size-8 place-items-center">
         {icon}
       </div>
-      <span className="text-primary absolute inset-0 grid size-8 place-items-center select-none">
+      <div className="text-primary absolute inset-0 grid size-8 place-items-center select-none">
         &#9141;
-      </span>
-    </Button>
+      </div>
+    </>
   )
 })
 ThemeIcon.displayName = "ThemeIcon"
