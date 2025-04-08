@@ -42,7 +42,9 @@ export default async function Page({ params }: Props) {
         </p>
         <div className="space-x-4">
           {tags.map((tag, i) => (
-            <TagLink key={i}>{tag}</TagLink>
+            <TagLink key={i} type="post">
+              {tag}
+            </TagLink>
           ))}
         </div>
       </div>

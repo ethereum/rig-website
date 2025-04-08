@@ -40,7 +40,7 @@ const PostCard = ({
 
       <CardContent>
         {tags.map((tag) => (
-          <TagLink key={tag} className="block">
+          <TagLink key={tag} type="post" className="block">
             {tag}
           </TagLink>
         ))}

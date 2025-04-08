@@ -45,7 +45,9 @@ const PostPreviewRow = ({
       </CardHeader>
       <CardContent className="flex flex-col items-end">
         {tags.map((tag, i) => (
-          <TagLink key={i}>{tag}</TagLink>
+          <TagLink key={i} type="post">
+            {tag}
+          </TagLink>
         ))}
       </CardContent>
     </div>
