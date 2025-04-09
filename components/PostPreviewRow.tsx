@@ -1,10 +1,11 @@
 import type { PostFrontMatter } from "@/lib/types"
 
+import { Authors } from "./Authors"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
+import { Tag } from "./ui/tag"
 
 import { cn } from "@/lib/utils"
-import { Tag } from "./ui/tag"
 
 type PostPreviewRowProps = {
   frontmatter: PostFrontMatter
@@ -36,12 +37,8 @@ const PostPreviewRow = ({
             {title}
           </Link>
         </CardTitle>
-        <p className="text-card-foreground font-sans text-sm">
-          {new Intl.ListFormat("en", {
-            style: "long",
-            type: "conjunction",
-          }).format(authors.map((author) => author))}
-        </p>
+
+        <Authors authors={authors} />
       </CardHeader>
       <CardContent className="flex flex-col items-end">
         {tags.map((tag, i) => (

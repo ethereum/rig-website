@@ -2,6 +2,7 @@ import { join } from "path"
 
 import type { PaperFrontMatter } from "@/lib/types"
 
+import { Authors } from "./Authors"
 import TagLink from "@/components/TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/link"
@@ -37,12 +38,7 @@ const PaperCard = ({
             })}
           </time>
 
-          <p className="text-card-foreground font-sans text-sm">
-            {new Intl.ListFormat("en", {
-              style: "long",
-              type: "conjunction",
-            }).format(authors.map((author) => author))}
-          </p>
+          <Authors authors={authors} />
         </CardHeader>
 
         <CardContent>

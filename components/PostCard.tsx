@@ -1,7 +1,8 @@
 import type { PostFrontMatter } from "@/lib/types"
 
+import { Authors } from "./Authors"
+import TagLink from "./TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
-import TagLink from "@/components/TagLink"
 import { BracketLink } from "./ui/link"
 
 import { cn } from "@/lib/utils"
@@ -31,12 +32,8 @@ const PostCard = ({
       </time>
 
       <CardTitle>{title}</CardTitle>
-      <p className="text-card-foreground font-sans text-sm">
-        {new Intl.ListFormat("en", {
-          style: "long",
-          type: "conjunction",
-        }).format(authors.map((author) => author))}
-      </p>
+
+      <Authors authors={authors} />
 
       <CardContent>
         {tags.map((tag) => (

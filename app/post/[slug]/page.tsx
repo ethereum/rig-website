@@ -1,3 +1,4 @@
+import { Authors } from "@/components/Authors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
@@ -29,17 +30,12 @@ export default async function Page({ params }: Props) {
             day: "numeric",
           })}
         </time>
-
         <h1 className="text-4xl font-bold tracking-[0.01em] md:text-5xl">
           {title}
         </h1>
 
-        <p className="text-card-foreground font-sans text-sm">
-          {new Intl.ListFormat("en", {
-            style: "long",
-            type: "conjunction",
-          }).format(authors.map((author) => author))}
-        </p>
+        <Authors authors={authors} />
+
         <div className="space-x-4">
           {tags.map((tag, i) => (
             <TagLink key={i} type="post">
