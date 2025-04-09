@@ -14,4 +14,4 @@ publicationVenue: AFT 2021
 image: Screenshot_2023-05-28_at_23.18.51.png
 ---
 
-URL: <https://arxiv.org/abs/2102.10567>
+<https://arxiv.org/abs/2102.10567>
