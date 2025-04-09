@@ -15,7 +15,7 @@ export type PaperFrontMatter = PostFrontMatter & {
   image: string
 }
 
-export type TalkFrontMatter = BaseFrontMatter & {
+export type TalkFrontMatter = Omit<BaseFrontMatter, "tags"> & {
   location: string
   startDate: string
   endDate?: string
