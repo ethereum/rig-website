@@ -1,11 +1,13 @@
+import { join } from "path"
+
 import type { PaperFrontMatter } from "@/lib/types"
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
+import { Tag } from "./ui/tag"
 
 import { cn } from "@/lib/utils"
-import { Tag } from "./ui/tag"
-import { join } from "path"
+import { PATH_ASSETS } from "@/lib/constants"
 
 type PaperPreviewRowProps = {
   frontmatter: PaperFrontMatter
@@ -59,7 +61,11 @@ const PaperPreviewRow = ({
       </CardContent>
     </div>
 
-    <img src={join("assets", image)} alt="" className="max-h-60 lg:max-w-1/4" />
+    <img
+      src={join(PATH_ASSETS, image)}
+      alt=""
+      className="max-h-60 lg:max-w-1/4"
+    />
   </Card>
 )
 

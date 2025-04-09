@@ -2,11 +2,12 @@ import { join } from "path"
 
 import type { PaperFrontMatter } from "@/lib/types"
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import TagLink from "@/components/TagLink"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/link"
 
 import { cn } from "@/lib/utils"
+import { PATH_ASSETS } from "@/lib/constants"
 
 type PaperCardProps = {
   frontmatter: PaperFrontMatter
@@ -59,7 +60,7 @@ const PaperCard = ({
         </CardFooter>
       </div>
       <CardContent className="md:max-w-2/5">
-        <img src={join("assets", image)} alt="" />
+        <img src={join(PATH_ASSETS, image)} alt="" />
       </CardContent>
     </div>
   </Card>
