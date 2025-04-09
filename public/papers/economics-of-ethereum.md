@@ -11,7 +11,7 @@ tags:
   - mev
   - scaling / rollups
 datePublished: 2024-01-01T00:00:00.000Z
-publicationVenue: 
+publicationVenue:
 image: Screenshot_2024-05-20_at_16.52.17.png
 ---
 

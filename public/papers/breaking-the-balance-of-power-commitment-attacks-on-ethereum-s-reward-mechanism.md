@@ -10,7 +10,7 @@ tags:
   - consensus
   - game theory
 datePublished: 2024-01-01T00:00:00.000Z
-publicationVenue: 
+publicationVenue:
 image: Screenshot_2024-08-05_at_11.38.05.png
 ---
 

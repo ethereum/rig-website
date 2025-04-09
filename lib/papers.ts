@@ -30,9 +30,9 @@ export const fetchPapers = (): PaperSummary[] => {
           }`
         )
 
-      const postPath = getSlug(filename)
+      const slug = getSlug(filename)
 
-      return { frontmatter, slug: postPath } as PaperSummary
+      return { frontmatter, slug } as PaperSummary
     })
     .sort(
       (a, b) =>

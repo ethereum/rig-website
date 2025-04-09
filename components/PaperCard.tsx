@@ -23,7 +23,7 @@ const PaperCard = ({
 }: PaperCardProps) => (
   <Card className={cn("row-span-2 grid grid-rows-subgrid gap-8", className)}>
     <div className="flex gap-x-8 gap-y-4 max-md:flex-col-reverse">
-      <div className="flex flex-col gap-8 w-full">
+      <div className="flex w-full flex-col gap-8">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
 
