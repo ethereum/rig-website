@@ -1,7 +1,5 @@
 import { join } from "path"
 
-import type { TalkFrontMatter } from "@/lib/types"
-
 import { BracketLink } from "@/components/ui/link"
 import PostCard from "@/components/PostCard"
 import {
@@ -13,16 +11,16 @@ import {
 
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
+import { fetchTalks } from "@/lib/talks"
 
-import { PATH_PAPERS, PATH_POSTS } from "@/lib/constants"
+import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
 import PaperCard from "@/components/PaperCard"
+import TalkCard from "@/components/TalkCard"
 
 export default function Home() {
   const posts = fetchPosts()
-
   const papers = fetchPapers()
-
-  const talks = [] as TalkFrontMatter[]
+  const talks = fetchTalks()
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
@@ -84,6 +82,19 @@ export default function Home() {
           <SectionHeading>talks</SectionHeading>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {talks.slice(0, 3).map(({ frontmatter, slug }) => (
+            <TalkCard
+              key={slug}
+              frontmatter={frontmatter}
+              href={join(PATH_TALKS, slug)}
+            />
+          ))}
+        </div>
+
+        <BracketLink href="/talks" className="mx-auto lowercase">
+          <span className="text-lg">View all talks</span>
+        </BracketLink>
       </Section>
     </main>
   )

@@ -31,6 +31,11 @@ export type PaperSummary = {
   slug: string
 }
 
+export type TalkSummary = {
+  frontmatter: TalkFrontMatter
+  slug: string
+}
+
 export type Author = {
   id: string
   name?: string
