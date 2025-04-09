@@ -1,7 +1,10 @@
+import { join } from "path"
+
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
 import { fetchPapers, getPaper } from "@/lib/papers"
+import { PATH_ASSETS } from "@/lib/constants"
 
 export async function generateStaticParams() {
   const allPapers = fetchPapers()
@@ -14,7 +17,8 @@ export default async function Page({ params }: Props) {
   const { slug } = await params
 
   const { frontmatter, content } = getPaper(slug)
-  const { title, authors, tags, datePublished, publicationVenue } = frontmatter
+  const { title, authors, tags, datePublished, publicationVenue, image } =
+    frontmatter
 
   return (
     <main className="row-start-2 mt-8 w-full max-w-7xl">
@@ -40,6 +44,7 @@ export default async function Page({ params }: Props) {
             type: "conjunction",
           }).format(authors.map((author) => author))}
         </p>
+
         <div className="space-x-4">
           {tags.map((tag, i) => (
             <TagLink key={i} type="paper">
@@ -47,7 +52,10 @@ export default async function Page({ params }: Props) {
             </TagLink>
           ))}
         </div>
+
         <div>{publicationVenue}</div>
+
+        <img src={join(PATH_ASSETS, image)} alt="" />
       </div>
       <article className="font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>
