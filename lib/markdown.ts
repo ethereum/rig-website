@@ -12,4 +12,4 @@ export const updateFrontMatterTags = <
 }
 
 export const getSlug = (filePath: string) =>
-  filePath.replace(/^public|\.md$/g, "")
+  filePath.replace(/^\/public|\.md$/g, "")
