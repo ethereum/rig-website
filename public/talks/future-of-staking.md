@@ -1,9 +1,12 @@
 ---
 title: Future of Staking
-authors: Caspar Schwarz-Schilling, Ansgar Dietrichs, Francesco D'Amato, Barnabé Monnot
+authors:
+  - Caspar Schwarz-Schilling
+  - Ansgar Dietrichs
+  - Francesco D'Amato
+  - Barnabé Monnot
 location: Columbia University, New York, US
 startDate: December 6, 2024
-
 ---
 
 Video: <https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI>

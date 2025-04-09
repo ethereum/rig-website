@@ -1,9 +1,10 @@
 ---
 title: ETH is Money if we choose it to be
-authors: Ansgar Dietrichs, Caspar Schwarz-Schilling
+authors:
+  - Ansgar Dietrichs
+  - Caspar Schwarz-Schilling
 location: Bankless Summit
 startDate: November 16, 2024
-
 ---
 
 Video: <https://x.com/BanklessHQ/status/1861121104884154600>

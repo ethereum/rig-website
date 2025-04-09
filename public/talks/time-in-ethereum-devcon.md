@@ -1,9 +1,9 @@
 ---
 title: Time in Ethereum (Devcon)
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: Devcon 6
 startDate: October 12, 2022
-
 ---
 
 Video: <https://youtu.be/gsFU-inKRQ8>

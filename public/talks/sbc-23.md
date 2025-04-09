@@ -1,6 +1,10 @@
 ---
 title: SBC’23
-authors: Barnabé Monnot, Caspar Schwarz-Schilling, Davide Crapis, Julian
+authors:
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
+  - Davide Crapis
+  - Julian
 location: Stanford, Palo Alto, US
 startDate: August 28, 2023
 endDate: August 31, 2023

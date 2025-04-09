@@ -1,9 +1,9 @@
 ---
-title: Lightning Talk: Blockspace Derivatives
-authors: Julian
+title: "Lightning Talk: Blockspace Derivatives"
+authors:
+  - Julian
 location: Columbia University, New York, US
 startDate: December 1, 2022
-
 ---
 
 Video: <https://youtu.be/itgfYrsZWtE>

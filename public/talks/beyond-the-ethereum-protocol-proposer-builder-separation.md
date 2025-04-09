@@ -1,9 +1,9 @@
 ---
-title: Beyond the Ethereum protocol: Proposer-Builder Separation
-authors: Barnabé Monnot
-location: 
+title: "Beyond the Ethereum protocol: Proposer-Builder Separation"
+authors:
+  - Barnabé Monnot
+location:
 startDate: May 23, 2024
-
 ---
 
 Video: <https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b>

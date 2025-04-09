@@ -1,9 +1,9 @@
 ---
 title: Start contributing to economic protocol development
-authors: Julian
+authors:
+  - Julian
 location: Devcon
 startDate: November 13, 2024
-
 ---
 
 Video: <https://youtu.be/CaauVb5jcH8?si=SlYLrxZ4w7SHY-D6>

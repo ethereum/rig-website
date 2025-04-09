@@ -1,9 +1,9 @@
 ---
 title: A Dynamic Auction Model for PBS
-authors: Julian
+authors:
+  - Julian
 location: MEV SBC, Stanford, Palo Alto, US
 startDate: August 31, 2023
-
 ---
 
 Video: <https://youtu.be/-PXGPFFneMI?si=w-p3kvN0uV1z8pb8>

@@ -1,9 +1,10 @@
 ---
-title: PEEPanEIP-7805: Fork-choice enforced Inclusion Lists (FOCIL) with Thomas Thiery & Julian Ma
-authors: Thomas Thiery, Julian
+title: "PEEPanEIP-7805: Fork-choice enforced Inclusion Lists (FOCIL) with Thomas Thiery & Julian Ma"
+authors:
+  - Thomas Thiery
+  - Julian
 location: Online
 startDate: February 4, 2025
-
 ---
 
 Video: <https://youtu.be/cUGyLx-mf6I?si=h98mKRZYiHP78sGR>

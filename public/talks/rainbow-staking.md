@@ -1,9 +1,9 @@
 ---
 title: Rainbow staking
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: ZuBerlin
 startDate: June 12, 2024
-
 ---
 
 Video: <https://streameth.org/zuberlin/watch?session=66696f1207f92b086c287292>

@@ -1,6 +1,10 @@
 ---
 title: Devcon 7 — SEA
-authors: Anders, Barnabé Monnot, Caspar Schwarz-Schilling, Julian
+authors:
+  - Anders
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
+  - Julian
 location: Bangkok, Thailand
 startDate: November 10, 2024
 endDate: November 15, 2024

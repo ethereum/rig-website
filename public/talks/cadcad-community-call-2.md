@@ -1,9 +1,9 @@
 ---
 title: cadCAD community call #2
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Online
 startDate: August 28, 2020
-
 ---
 
 Video: <https://www.youtube.com/watch?v=SVNNvTiIKlg>

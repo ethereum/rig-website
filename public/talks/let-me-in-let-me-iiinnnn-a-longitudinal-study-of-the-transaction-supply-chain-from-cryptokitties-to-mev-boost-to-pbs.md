@@ -1,9 +1,9 @@
 ---
 title: Let me in! Let me IIINNNN! A longitudinal study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: mev.day
 startDate: April 22, 2022
-
 ---
 
 Video: <https://youtu.be/jQjBNbEv9Mg>

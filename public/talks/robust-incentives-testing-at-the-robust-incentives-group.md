@@ -1,9 +1,9 @@
 ---
 title: Robust incentives testing at the Robust Incentives Group
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: https://sites.google.com/semiotic.ai/wimv2022 @ Devconnect
 startDate: April 18, 2022
-
 ---
 
 Video: <https://youtu.be/bX2NAvQjaag>

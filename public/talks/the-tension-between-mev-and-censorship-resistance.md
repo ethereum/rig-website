@@ -1,9 +1,9 @@
 ---
 title: The Tension Between MEV and Censorship Resistance
-authors: Julian
+authors:
+  - Julian
 location: Devcon
 startDate: November 15, 2024
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1q6BQXCGubElt47T2cCMmisWZixsWRezzeO8I3FiONPU/edit#slide=id.p>

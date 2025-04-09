@@ -1,6 +1,12 @@
 ---
 title: Columbia CryptoEconomics Workshop 2024 (CCE)
-authors: Thomas Thiery, Caspar Schwarz-Schilling, Ansgar Dietrichs, Francesco D'Amato, Barnabé Monnot, Julian
+authors:
+  - Thomas Thiery
+  - Caspar Schwarz-Schilling
+  - Ansgar Dietrichs
+  - Francesco D'Amato
+  - Barnabé Monnot
+  - Julian
 location: Columbia University, New York, US
 startDate: December 4, 2024
 endDate: December 6, 2024

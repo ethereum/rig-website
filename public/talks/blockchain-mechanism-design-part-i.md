@@ -1,9 +1,9 @@
 ---
 title: Blockchain Mechanism Design Part I
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Institute for Mathematical Sciences, NUS Singapore
 startDate: April 14, 2023
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1fGc9hhURMeuimuhLSAgjagU6318fa4Gd2Ur4SdG1fkM/edit?usp=sharing>

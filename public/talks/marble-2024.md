@@ -1,9 +1,10 @@
 ---
 title: MARBLE 2024
-authors: Thomas Thiery, Julian
+authors:
+  - Thomas Thiery
+  - Julian
 location: Málaga, Spain
 startDate: July 9, 2024
-
 ---
 
 Talk: Designing against centralizing forces <https://www.notion.so/Designing-against-centralizing-forces-1cfd9895554181a2a30acb7ff735e80c?pvs=21>

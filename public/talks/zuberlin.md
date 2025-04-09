@@ -1,6 +1,8 @@
 ---
 title: ZuBerlin
-authors: Barnabé Monnot, Caspar Schwarz-Schilling
+authors:
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
 location: ZuBerlin, Berlin
 startDate: June 11, 2024
 endDate: June 13, 2024

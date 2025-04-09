@@ -1,9 +1,9 @@
 ---
 title: Seeing like a protocol
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: EthCC[6]
 startDate: July 17, 2023
-
 ---
 
 Video: <https://www.youtube.com/live/msTFXLJYj9M?si=uzcLZX-xAOjPXYiM>

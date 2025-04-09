@@ -1,9 +1,9 @@
 ---
 title: Attester-Proposer Separation Research Program
-authors: Julian
+authors:
+  - Julian
 location: Columbia University, New York, US
 startDate: December 6, 2024
-
 ---
 
 Video: <https://youtu.be/5wwwxJJZoWQ?si=vWvyfsOiNZCSJmrY>

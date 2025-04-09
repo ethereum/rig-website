@@ -1,9 +1,9 @@
 ---
 title: Time in Ethereum
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: Berlin Ethereum Meetup
 startDate: February 23, 2023
-
 ---
 
 Video: <https://youtu.be/Zfqvke8BNhM>

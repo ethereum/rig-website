@@ -1,9 +1,9 @@
 ---
 title: On the impossibility of incentive compatible PoS protocols
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: EthCC[6]
 startDate: July 17, 2023
-
 ---
 
 Video: <https://www.youtube.com/live/sJBZGqAT7gE?si=vSp2s4WPl2zBusJa>

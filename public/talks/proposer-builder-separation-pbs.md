@@ -1,9 +1,9 @@
 ---
 title: Proposer-Builder Separation (PBS)
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Protocol R&D Workshop @ Devconnect
 startDate: April 19, 2022
-
 ---
 
 Video: <https://youtu.be/Yy3zsX-CB0Q>

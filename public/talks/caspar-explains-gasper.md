@@ -1,9 +1,9 @@
 ---
 title: Caspar explains Gasper
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: CBER Forum
 startDate: May 23, 2024
-
 ---
 
 Video: <https://youtu.be/XS72blk5FoE?si=YnPISn6jPdkgRK3b>

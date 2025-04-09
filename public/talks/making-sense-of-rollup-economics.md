@@ -1,9 +1,9 @@
 ---
 title: Making sense of rollup economics
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: EthCC[5]
 startDate: July 20, 2022
-
 ---
 
 Video: <https://youtu.be/BmQnb7TN3Ho>

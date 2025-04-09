@@ -1,9 +1,9 @@
 ---
 title: An Economic View of the Ethereum Roadmap
-authors: Julian
+authors:
+  - Julian
 location: Blockchain Student Association of EPFL
 startDate: May 8, 2024
-
 ---
 
 Video: <https://youtu.be/_JsQCCRwFHs?si=J8DG9f9Hov4MYpJe>

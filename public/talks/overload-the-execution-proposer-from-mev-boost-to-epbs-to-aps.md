@@ -1,9 +1,9 @@
 ---
 title: Overload the execution proposer! From MEV-Boost to ePBS to APS
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: ZuBerlin
 startDate: June 13, 2024
-
 ---
 
 Video: <https://streameth.org/zuberlin/watch?session=666af9a007f92b086c2c5117>

@@ -1,9 +1,9 @@
 ---
 title: Issued issues (Issuance with Caspar)
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: ZuBerlin
 startDate: June 12, 2024
-
 ---
 
 Video: <https://streameth.org/zuberlin/watch?session=666968aa07f92b086c285d3c>

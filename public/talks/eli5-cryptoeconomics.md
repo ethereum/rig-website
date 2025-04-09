@@ -1,9 +1,9 @@
 ---
 title: ELI5 Cryptoeconomics
-authors: Julian
+authors:
+  - Julian
 location: Devcon 6
 startDate: October 11, 2022
-
 ---
 
 Video: <https://youtu.be/gMiykGwPDSI>

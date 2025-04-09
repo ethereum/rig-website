@@ -1,6 +1,8 @@
 ---
 title: EthCC 2024
-authors: Caspar Schwarz-Schilling, Julian
+authors:
+  - Caspar Schwarz-Schilling
+  - Julian
 location: Brussels, Belgium
 startDate: July 7, 2024
 endDate: July 11, 2024

@@ -1,9 +1,9 @@
 ---
 title: Proposer-Builder Separation — PeepAnEIP
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: PeepAnEIP
 startDate: December 19, 2022
-
 ---
 
 Video: <https://youtu.be/Y7HknaU1Zjc>

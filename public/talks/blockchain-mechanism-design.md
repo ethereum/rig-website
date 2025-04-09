@@ -1,9 +1,10 @@
 ---
 title: Blockchain Mechanism Design
-authors: Barnabé Monnot, Davide Crapis
+authors:
+  - Barnabé Monnot
+  - Davide Crapis
 location: Institute for Mathematical Sciences, NUS Singapore
 startDate: April 14, 2023
-
 ---
 
 Talk: Blockchain Mechanism Design Part I <https://www.notion.so/Blockchain-Mechanism-Design-Part-I-1cfd9895554181d58fefd9a7d67e5837?pvs=21>

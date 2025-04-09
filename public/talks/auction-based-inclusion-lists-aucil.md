@@ -1,9 +1,9 @@
 ---
 title: Auction-based Inclusion Lists (AUCIL)
-authors: Julian
+authors:
+  - Julian
 location: UniNight
 startDate: November 11, 2024
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1AhRq5IhzuZ6EW9xS7PQgErPWTSZwWQM_fXP1G-KpU9s/edit?usp=sharing>

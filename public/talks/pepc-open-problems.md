@@ -1,9 +1,9 @@
 ---
 title: PEPC Open Problems
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: MEV SBC, Stanford, Palo Alto, US
 startDate: August 31, 2023
-
 ---
 
 Video: <https://youtu.be/yt4Nhqd9Wvs?si=b-GP4pK8sEnIj1Ta>

@@ -1,9 +1,10 @@
 ---
-title: Ethereum: Designing the Infinite Economic Machine
-authors: Barnabé Monnot
+title: "Ethereum: Designing the Infinite Economic Machine"
+authors:
+  - Barnabé Monnot
+  - Barnabé Monnot
 location: NYU Stern
 startDate: April 21, 2023
-
 ---
 
 Video: <https://youtu.be/oB4BBS8MsiM?t=1002>

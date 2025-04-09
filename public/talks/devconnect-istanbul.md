@@ -1,6 +1,8 @@
 ---
 title: Devconnect Istanbul
-authors: Davide Crapis, Barnabé Monnot
+authors:
+  - Davide Crapis
+  - Barnabé Monnot
 location: Istanbul
 startDate: November 13, 2023
 endDate: November 18, 2023

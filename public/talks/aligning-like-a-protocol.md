@@ -1,9 +1,9 @@
 ---
 title: Aligning like a protocol
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: http://crediblecommitments.wtf
 startDate: May 31, 2023
-
 ---
 
 Video: <https://youtu.be/GR4g9vu2PwE>

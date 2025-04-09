@@ -1,6 +1,8 @@
 ---
 title: Columbia Cryptoeconomics workshop (CCE) 2022
-authors: Barnabé Monnot, Julian
+authors:
+  - Barnabé Monnot
+  - Julian
 location: Columbia University, New York, US
 startDate: December 1, 2022
 endDate: December 3, 2022

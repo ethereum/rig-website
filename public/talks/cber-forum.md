@@ -1,9 +1,10 @@
 ---
 title: CBER Forum
-authors: Barnabé Monnot, Caspar Schwarz-Schilling
+authors:
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
 location: NYU Stern
 startDate: May 23, 2024
-
 ---
 
 Talk: Caspar explains Gasper <https://www.notion.so/Caspar-explains-Gasper-1cfd9895554181b08b12cdd5fc2e30bf?pvs=21>

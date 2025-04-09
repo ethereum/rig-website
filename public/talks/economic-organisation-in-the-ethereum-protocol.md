@@ -1,9 +1,9 @@
 ---
 title: Economic Organisation in the Ethereum Protocol
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Columbia University
 startDate: December 5, 2022
-
 ---
 
 Video: <https://youtu.be/T5BWw_IvPZo>

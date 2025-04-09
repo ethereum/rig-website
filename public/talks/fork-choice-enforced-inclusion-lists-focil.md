@@ -1,9 +1,9 @@
 ---
 title: Fork-choice enforced inclusion lists (FOCIL)
-authors: Julian
+authors:
+  - Julian
 location: Devcon
 startDate: November 14, 2024
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1x-Blq5wqU_JaSmBkeEUz0PdY_cLyE0JPmi-CAChXqbU/edit?usp=sharing>

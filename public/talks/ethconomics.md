@@ -1,9 +1,11 @@
 ---
 title: ETHconomics
-authors: Anders, Barnabé Monnot, Caspar Schwarz-Schilling
+authors:
+  - Anders
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
 location: ETHconomics
 startDate: April 21, 2022
-
 ---
 
 Video: <https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm>

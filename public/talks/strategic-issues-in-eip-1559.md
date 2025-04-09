@@ -1,9 +1,9 @@
 ---
 title: Strategic issues in EIP 1559
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: ETHTaipei
 startDate: October 15, 2020
-
 ---
 
 Video: <https://www.youtube.com/watch?v=3pErNDU5BiE>

@@ -1,9 +1,9 @@
 ---
 title: (Re-)Drawing Ethereum economics
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Ethereum Engineering Group
 startDate: March 22, 2023
-
 ---
 
 Video: <https://youtu.be/mKyyNvQeopM>

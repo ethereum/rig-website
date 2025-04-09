@@ -1,9 +1,10 @@
 ---
-title: [Gauntlet restaking day] restaking-burn
-authors: Caspar Schwarz-Schilling, Ansgar Dietrichs
+title: "[Gauntlet restaking day] restaking-burn"
+authors:
+  - Caspar Schwarz-Schilling
+  - Ansgar Dietrichs
 location: Brussels, Belgium
 startDate: July 9, 2024
-
 ---
 
 Video: <https://www.youtube.com/watch?v=xXqXoZbP_Ew>

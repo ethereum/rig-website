@@ -1,9 +1,10 @@
 ---
-title: Fireside Chat: ETHconomics meets MEVconomics
-authors: Davide Crapis, Barnabé Monnot
+title: "Fireside Chat: ETHconomics meets MEVconomics"
+authors:
+  - Davide Crapis
+  - Barnabé Monnot
 location: mevconomics.wtf
 startDate: March 24, 2023
-
 ---
 
 Video: <https://youtu.be/6oFNYDBH76Q>

@@ -1,9 +1,9 @@
 ---
-title: Semantics of Staking: Fun and Games (and Balance Sheets) with Staking Tokens
-authors: Barnabé Monnot
+title: "Semantics of Staking: Fun and Games (and Balance Sheets) with Staking Tokens"
+authors:
+  - Barnabé Monnot
 location: ETHconomics 2 (https://www.notion.so/ETHconomics-2-f3ff71566e8140bfa832c2462288a14c?pvs=21)
 startDate: November 15, 2023
-
 ---
 
 Video: <https://app.streameth.org/devconnect/ethconomics/session/semantics_of_staking_fun_and_games_and_balance_sheets_with_staking_tokens>

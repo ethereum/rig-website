@@ -1,9 +1,9 @@
 ---
 title: Protocol cryptoeconomics with the RIG
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: EthCC[4]
 startDate: July 20, 2021
-
 ---
 
 Video: <https://www.youtube.com/watch?v=6FIIZW7ScuE>

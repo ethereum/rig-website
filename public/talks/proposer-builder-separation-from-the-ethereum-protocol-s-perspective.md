@@ -1,9 +1,9 @@
 ---
 title: Proposer-Builder Separation from the Ethereum protocol’s perspective
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Columbia University, New York, US
 startDate: December 1, 2022
-
 ---
 
 Video: <https://youtu.be/175fuv2RJUo?t=572>

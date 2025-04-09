@@ -1,9 +1,9 @@
 ---
 title: Fair rewards for more decentralised attesters
-authors: Barnabé Monnot
+authors:
+  - Barnabé Monnot
 location: Devcon
 startDate: November 15, 2024
-
 ---
 
 Video: <https://app.devcon.org/schedule/Q7AYQS>

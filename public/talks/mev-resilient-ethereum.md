@@ -1,9 +1,9 @@
 ---
 title: MEV Resilient Ethereum
-authors: Davide Crapis
+authors:
+  - Davide Crapis
 location: ETHDenver
 startDate: March 4, 2023
-
 ---
 
 Video: <https://youtu.be/gLRJWrO7o0I>

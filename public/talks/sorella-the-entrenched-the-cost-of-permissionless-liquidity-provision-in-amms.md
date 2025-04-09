@@ -1,6 +1,7 @@
 ---
-title: [Sorella The Entrenched] The Cost of Permissionless Liquidity Provision in AMMs
-authors: Julian
+title: "[Sorella The Entrenched] The Cost of Permissionless Liquidity Provision in AMMs"
+authors:
+  - Julian
 location: Brussels, Belgium
 startDate: July 10, 2024
 

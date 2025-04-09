@@ -1,9 +1,9 @@
 ---
 title: The Cost of Permissionless Liquidity Provision in Automated Market Makers
-authors: Julian
+authors:
+  - Julian
 location: Málaga, Spain
 startDate: July 9, 2024
-
 ---
 
 Video: <https://youtu.be/JZRlMmyysRM>

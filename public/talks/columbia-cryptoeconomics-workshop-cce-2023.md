@@ -1,6 +1,9 @@
 ---
 title: Columbia Cryptoeconomics workshop (CCE) 2023
-authors: Caspar Schwarz-Schilling, Davide Crapis, Thomas Thiery
+authors:
+  - Caspar Schwarz-Schilling
+  - Davide Crapis
+  - Thomas Thiery
 location: Columbia University, New York, US
 startDate: December 6, 2023
 endDate: December 8, 2023

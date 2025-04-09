@@ -1,9 +1,9 @@
 ---
-title: Scaling Ethereum: Rollup Economics
-authors: Barnabé Monnot
+title: "Scaling Ethereum: Rollup Economics"
+authors:
+  - Barnabé Monnot
 location: CBER Forum Webinar
 startDate: November 2, 2023
-
 ---
 
 Video: <https://youtu.be/VFa9CuuTWEM?si=4kEQuXN01lSr9vt7>

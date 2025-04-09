@@ -1,9 +1,9 @@
 ---
-title: Time is Money: Strategic Timing Games in Proof-of-Stake Protocols (CryptoEconDay)
-authors: Barnabé Monnot
+title: "Time is Money: Strategic Timing Games in Proof-of-Stake Protocols (CryptoEconDay)"
+authors:
+  - Barnabé Monnot
 location: CryptoEconDay Paris
 startDate: July 19, 2023
-
 ---
 
 Video: <https://www.youtube.com/watch?v=f8YLZqqpFpU>

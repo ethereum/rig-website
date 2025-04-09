@@ -1,9 +1,11 @@
 ---
-title: [CLS] Ethereum Magicians Infinite Endgames: Ethconomics
-authors: Anders, Ansgar Dietrichs, Caspar Schwarz-Schilling
+title: "[CLS] Ethereum Magicians Infinite Endgames: Ethconomics"
+authors:
+  - Anders
+  - Ansgar Dietrichs
+  - Caspar Schwarz-Schilling
 location: Devcon
 startDate: November 15, 2024
-
 ---
 
 Video: <https://www.youtube.com/watch?v=bOTdFBjo0OE>

@@ -1,9 +1,9 @@
 ---
-title: Time is Money: Strategic Timing Games in Proof-of-Stake Protocols (SBC)
-authors: Caspar Schwarz-Schilling
+title: "Time is Money: Strategic Timing Games in Proof-of-Stake Protocols (SBC)"
+authors:
+  - Caspar Schwarz-Schilling
 location: SBC, Stanford, Palo Alto, US
 startDate: August 28, 2023
-
 ---
 
 Video: <https://youtu.be/jTZq58SB1l8?si=Nzfu2zNWAFw-AdSh&t=48>

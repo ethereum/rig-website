@@ -1,6 +1,7 @@
 ---
-title: [Kiln Rendez-Vous] Caspar explaining Gasper
-authors: Caspar Schwarz-Schilling
+title: "[Kiln Rendez-Vous] Caspar explaining Gasper"
+authors:
+  - Caspar Schwarz-Schilling
 location: Brussels, Belgium
 startDate: July 9, 2024
 

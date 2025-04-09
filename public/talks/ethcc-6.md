@@ -1,9 +1,11 @@
 ---
 title: EthCC[6]
-authors: Barnabé Monnot, Caspar Schwarz-Schilling, Thomas Thiery
+authors:
+  - Barnabé Monnot
+  - Caspar Schwarz-Schilling
+  - Thomas Thiery
 location: Paris, France
 startDate: July 17, 2023
-
 ---
 
 Talk: Seeing like a protocol <https://www.notion.so/Seeing-like-a-protocol-1cfd9895554181e59c2ac6387ce03e4b?pvs=21>

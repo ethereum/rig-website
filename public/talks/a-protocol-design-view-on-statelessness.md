@@ -1,9 +1,9 @@
 ---
 title: A Protocol Design View on Statelessness
-authors: Julian
+authors:
+  - Julian
 location: Stateless Implementers Call #33
 startDate: April 7, 2025
-
 ---
 
 Video: <https://youtu.be/EwsUDLSj_1w?si=NvSxVB7_HGZOUakj&t=681>

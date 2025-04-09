@@ -1,9 +1,9 @@
 ---
 title: ASSA Annual Meeting 2024
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: San Antonio, Texas, USA
 startDate: January 5, 2024
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1Rb9JKmiMs-RPrc3OJzaJBf1HUecIdLiLeqeVKWoYsbM/edit?usp=sharing>

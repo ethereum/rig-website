@@ -1,9 +1,9 @@
 ---
 title: Ethereum gas market & How gas really works
-authors: Julian
+authors:
+  - Julian
 location: ETHVietnam (Online)
 startDate: October 24, 2022
-
 ---
 
 Video: <https://www.youtube.com/watch?v=XI6G8BjWA1M>

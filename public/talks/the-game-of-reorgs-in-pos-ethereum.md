@@ -1,9 +1,9 @@
 ---
 title: The Game of Reorgs in PoS Ethereum
-authors: Caspar Schwarz-Schilling
+authors:
+  - Caspar Schwarz-Schilling
 location: LisCon 2021
 startDate: October 20, 2021
-
 ---
 
 Video: <https://vimeo.com/637529564>
