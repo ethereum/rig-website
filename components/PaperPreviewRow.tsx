@@ -24,7 +24,7 @@ const PaperPreviewRow = ({
       className
     )}
   >
-    <div className="flex gap-8 max-sm:flex-col sm:items-center">
+    <div className="flex w-full gap-8 max-sm:flex-col sm:items-center">
       <CardHeader className="w-full">
         <time
           dateTime={datePublished}
