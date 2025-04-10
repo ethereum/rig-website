@@ -100,7 +100,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         <span className="text-nowrap">Filter by:</span>
         <select
           id="filter-date"
-          className="border-b px-2 py-1"
+          className="max-w-24! border-b px-2 py-1 max"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -151,14 +151,16 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
       <div>
         {filteredPosts.length > 0 ? (
           <>
-            {paginatedPosts.map(({ frontmatter, slug }) => (
-              <PostPreviewRow
-                key={slug}
-                frontmatter={frontmatter}
-                href={join(PATH_POSTS, slug)}
-                className="border-b px-5"
-              />
-            ))}
+            <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
+              {paginatedPosts.map(({ frontmatter, slug }) => (
+                <PostPreviewRow
+                  key={slug}
+                  frontmatter={frontmatter}
+                  href={join(PATH_POSTS, slug)}
+                  className="border-b px-5"
+                />
+              ))}
+            </div>
 
             {totalPages > 1 && (
               <PaginationNav

@@ -18,8 +18,13 @@ const PostPreviewRow = ({
   href,
   className,
 }: PostPreviewRowProps) => (
-  <Card className={cn("hover:bg-card w-full py-12", className)}>
-    <div className="flex gap-8 max-sm:flex-col sm:items-center">
+  <Card
+    className={cn(
+      "hover:bg-card grid grid-cols-subgrid items-center gap-8 py-12 md:col-span-2",
+      className
+    )}
+  >
+    <div className="grid grid-cols-subgrid gap-8 sm:items-center md:col-span-2">
       <CardHeader className="w-full">
         <time
           dateTime={datePublished}
@@ -40,7 +45,7 @@ const PostPreviewRow = ({
 
         <Authors authors={authors} />
       </CardHeader>
-      <CardContent className="flex flex-col items-end">
+      <CardContent className="flex flex-wrap gap-x-4 md:flex-col md:text-end">
         {tags.map((tag, i) => (
           <Tag key={i} className="text-foreground block leading-[2]">
             {tag}
