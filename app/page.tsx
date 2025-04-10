@@ -10,11 +10,12 @@ import {
   SectionHeading,
   SectionCounter,
 } from "@/components/ui/section"
+import TwitterIcon from "@/components/svg/twitter.svg"
+import EmailIcon from "@/components/svg/email.svg"
 
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
 import { fetchTalks } from "@/lib/talks"
-import TwitterIcon from "@/components/svg/twitter.svg"
 
 import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
 import { authors } from "@/data/authors"
@@ -135,6 +136,15 @@ export default function Home() {
                     className="flex items-center"
                   >
                     <TwitterIcon />
+                  </BracketLink>
+                )}
+                {email && (
+                  <BracketLink
+                    hideArrow
+                    href={`mailto:${email}`}
+                    className="flex items-center"
+                  >
+                    <EmailIcon />
                   </BracketLink>
                 )}
               </div>
