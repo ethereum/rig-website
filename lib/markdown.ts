@@ -7,7 +7,9 @@ export const updateFrontMatterTags = <
   frontmatter: T
 ): T => {
   const { tags } = frontmatter
-  const newTags = tags.map((tag) => TAGS[tag as Tag] || "").filter(Boolean)
+  const newTags = tags
+    .map((tag) => TAGS[tag.toLowerCase() as Tag] || "")
+    .filter(Boolean)
   return { ...frontmatter, tags: newTags } as T
 }
 
