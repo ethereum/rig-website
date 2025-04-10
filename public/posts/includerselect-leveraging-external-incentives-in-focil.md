@@ -3,8 +3,8 @@ title: "IncluderSelect: Leveraging External Incentives in FOCIL"
 authors:
   - Julian
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2025-03-01T12:00:00.000Z
 ---
 

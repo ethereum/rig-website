@@ -3,9 +3,9 @@ title: Latency in Blockchains and Ethereum L2 Migration
 authors:
   - Davide Crapis
 tags:
-  - Game Theory / Econ
-  - Resource Pricing
-  - Scaling / Rollups
+  - game-theory
+  - resource-pricing
+  - scaling
 datePublished: 2023-07-21T12:00:00.000Z
 ---
 

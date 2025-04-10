@@ -3,8 +3,8 @@ title: Three-Tier staking (3TS) - Unbundling Attesters, Includers and Execution 
 authors:
   - Thomas Thiery
 tags:
-  - Consensus
-  - Protocol Development
+  - consensus
+  - protocol-development
 datePublished: 2025-01-31T12:00:00.000Z
 ---
 

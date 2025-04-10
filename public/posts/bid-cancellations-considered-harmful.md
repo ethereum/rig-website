@@ -3,9 +3,9 @@ title: Bid cancellations considered harmful
 authors:
   - Thomas Thiery
 tags:
-  - Data
-  - MEV
-  - Proposer-Builder Separation
+  - data
+  - mev
+  - pbs
 datePublished: 2023-05-05T12:00:00.000Z
 ---
 

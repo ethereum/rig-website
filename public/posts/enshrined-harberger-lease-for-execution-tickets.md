@@ -3,9 +3,9 @@ title: Enshrined Harberger Lease for Execution Tickets
 authors:
   - Julian
 tags:
-  - Game Theory / Econ
-  - MEV
-  - Proposer-Builder Separation
+  - game-theory
+  - mev
+  - pbs
 datePublished: 2024-07-15T12:00:00.000Z
 ---
 

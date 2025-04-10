@@ -7,8 +7,8 @@ authors:
   - Mark Simkin
   - Antonio Sanso
 tags:
-  - Consensus
-  - Cryptography
+  - consensus
+  - cryptography
 datePublished: 2024-05-23T12:00:00.000Z
 ---
 

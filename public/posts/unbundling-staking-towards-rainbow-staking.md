@@ -3,8 +3,8 @@ title: "Unbundling staking: Towards rainbow staking"
 authors:
   - Barnabé Monnot
 tags:
-  - Consensus
-  - Protocol Development
+  - consensus
+  - protocol-development
 datePublished: 2024-02-15T12:00:00.000Z
 ---
 

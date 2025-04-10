@@ -3,7 +3,7 @@ title: The Internet of Agents
 authors:
   - Davide Crapis
 tags:
-  - Crypto x AI
+  - crypto-ai
 datePublished: 2024-03-11T12:00:00.000Z
 ---
 

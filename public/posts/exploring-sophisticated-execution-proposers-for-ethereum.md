@@ -3,8 +3,8 @@ title: Exploring Sophisticated Execution Proposers for Ethereum
 authors:
   - Julian
 tags:
-  - Proposer-Builder Separation
-  - Protocol Development
+  - pbs
+  - protocol-development
 datePublished: 2025-01-06T12:00:00.000Z
 ---
 

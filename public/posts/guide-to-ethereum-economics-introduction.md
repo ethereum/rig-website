@@ -3,8 +3,8 @@ title: "Guide to Ethereum Economics: Introduction"
 authors:
   - Davide Crapis
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2023-01-12T12:00:00.000Z
 ---
 

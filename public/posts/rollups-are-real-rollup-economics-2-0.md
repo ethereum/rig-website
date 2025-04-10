@@ -3,8 +3,8 @@ title: Rollups are Real — Rollup Economics 2.0
 authors:
   - Davide Crapis
 tags:
-  - Game Theory / Econ
-  - Scaling / Rollups
+  - game-theory
+  - scaling
 datePublished: 2023-08-13T12:00:00.000Z
 ---
 

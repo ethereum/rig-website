@@ -3,8 +3,8 @@ title: More pictures about proposers and builders
 authors:
   - Barnabé Monnot
 tags:
-  - Proposer-Builder Separation
-  - Protocol Development
+  - pbs
+  - protocol-development
 datePublished: 2024-04-23T12:00:00.000Z
 ---
 

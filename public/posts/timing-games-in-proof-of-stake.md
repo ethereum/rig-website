@@ -3,8 +3,8 @@ title: Timing games in Proof-of-Stake
 authors:
   - Barnabé Monnot
 tags:
-  - Consensus
-  - Game Theory / Econ
+  - consensus
+  - game-theory
 datePublished: 2022-10-20T12:00:00.000Z
 ---
 

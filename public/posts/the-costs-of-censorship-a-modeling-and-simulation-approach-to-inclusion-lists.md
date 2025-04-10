@@ -3,9 +3,9 @@ title: "The Costs of Censorship: A Modeling and Simulation Approach to Inclusion
 authors:
   - Thomas Thiery
 tags:
-  - Game Theory / Econ
-  - Protocol Development
-  - Simulations
+  - game-theory
+  - protocol-development
+  - simulations
 datePublished: 2023-11-10T12:00:00.000Z
 ---
 

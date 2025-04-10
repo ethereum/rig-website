@@ -3,8 +3,8 @@ title: "Semantics of Staking 3: Advanced constructions"
 authors:
   - Barnabé Monnot
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2024-02-22T12:00:00.000Z
 ---
 

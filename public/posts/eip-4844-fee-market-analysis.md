@@ -3,7 +3,7 @@ title: EIP-4844 Fee Market Analysis
 authors:
   - Davide Crapis
 tags:
-  - Resource Pricing
+  - resource-pricing
 datePublished: 2023-03-16T12:00:00.000Z
 ---
 

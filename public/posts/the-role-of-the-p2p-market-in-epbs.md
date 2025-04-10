@@ -3,9 +3,9 @@ title: The Role of the P2P Market in ePBS
 authors:
   - Julian
 tags:
-  - MEV
-  - Proposer-Builder Separation
-  - Protocol Development
+  - mev
+  - pbs
+  - protocol-development
 datePublished: 2024-08-23T12:00:00.000Z
 ---
 

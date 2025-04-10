@@ -3,9 +3,9 @@ title: Introduction to MEV Mitigation
 authors:
   - Julian
 tags:
-  - MEV
-  - Proposer-Builder Separation
-  - Protocol Development
+  - mev
+  - pbs
+  - protocol-development
 datePublished: 2024-12-11T12:00:00.000Z
 ---
 

@@ -3,7 +3,7 @@ title: Reconsidering the market structure of PBS
 authors:
   - Barnabé Monnot
 tags:
-  - Proposer-Builder Separation
+  - pbs
 datePublished: 2024-03-01T12:00:00.000Z
 ---
 

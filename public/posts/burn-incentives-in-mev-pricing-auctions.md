@@ -3,10 +3,10 @@ title: Burn incentives in MEV pricing auctions
 authors:
   - Anders
 tags:
-  - Consensus
-  - Game Theory / Econ
-  - MEV
-  - Proposer-Builder Separation
+  - consensus
+  - game-theory
+  - mev
+  - pbs
 datePublished: 2024-06-18T12:00:00.000Z
 ---
 

@@ -3,8 +3,8 @@ title: "Next-Block Base Fee Options: Towards a Practical Implementation"
 authors:
   - Julian
 tags:
-  - Game Theory / Econ
-  - Resource Pricing
+  - game-theory
+  - resource-pricing
 datePublished: 2022-10-21T12:00:00.000Z
 ---
 

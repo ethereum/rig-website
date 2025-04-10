@@ -5,8 +5,8 @@ authors:
   - Benedikt Wagner
   - Thomas Thiery
 tags:
-  - Cryptography
-  - Protocol Development
+  - cryptography
+  - protocol-development
 datePublished: 2025-02-06T12:00:00.000Z
 ---
 

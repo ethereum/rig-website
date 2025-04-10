@@ -3,7 +3,7 @@ title: Block vs. Slot Auction PBS
 authors:
   - Julian
 tags:
-  - Proposer-Builder Separation
+  - pbs
 datePublished: 2022-12-14T12:00:00.000Z
 ---
 

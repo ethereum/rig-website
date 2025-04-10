@@ -3,8 +3,8 @@ title: "FAQ: Ethereum issuance reduction"
 authors:
   - Anders
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2024-05-29T12:00:00.000Z
 ---
 

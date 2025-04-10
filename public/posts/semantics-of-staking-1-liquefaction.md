@@ -3,8 +3,8 @@ title: "Semantics of Staking 1: Liquefaction"
 authors:
   - Barnabé Monnot
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2023-11-28T12:00:00.000Z
 ---
 

@@ -3,8 +3,8 @@ title: Why Slot Auction ePBS is not held back by LocalBlockValueBoost
 authors:
   - Julian
 tags:
-  - Proposer-Builder Separation
-  - Protocol Development
+  - pbs
+  - protocol-development
 datePublished: 2024-09-06T12:00:00.000Z
 ---
 

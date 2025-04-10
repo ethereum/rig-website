@@ -4,8 +4,8 @@ authors:
   - Caspar Schwarz-Schilling
   - Michael Neuder
 tags:
-  - Consensus
-  - MEV
+  - consensus
+  - mev
 datePublished: 2023-12-05T12:00:00.000Z
 ---
 

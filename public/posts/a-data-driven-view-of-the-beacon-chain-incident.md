@@ -3,8 +3,8 @@ title: A data-driven view of the beacon chain incident
 authors:
   - Barnabé Monnot
 tags:
-  - Consensus
-  - Data
+  - consensus
+  - data
 datePublished: 2021-04-30T12:00:00.000Z
 ---
 

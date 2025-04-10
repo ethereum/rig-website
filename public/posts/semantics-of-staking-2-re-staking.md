@@ -3,8 +3,8 @@ title: "Semantics of Staking 2: Re-staking"
 authors:
   - Barnabé Monnot
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2024-01-04T12:00:00.000Z
 ---
 

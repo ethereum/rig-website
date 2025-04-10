@@ -3,7 +3,7 @@ title: Consolidation Incentives in Orbit/Vorbit SSF
 authors:
   - Anders
 tags:
-  - Protocol Development
+  - protocol-development
 datePublished: 2025-01-26T12:00:00.000Z
 ---
 

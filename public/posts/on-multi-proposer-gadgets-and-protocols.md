@@ -3,9 +3,9 @@ title: On multi-proposer gadgets and protocols
 authors:
   - Thomas Thiery
 tags:
-  - Consensus
-  - MEV
-  - Protocol Development
+  - consensus
+  - mev
+  - protocol-development
 datePublished: 2024-08-28T12:00:00.000Z
 ---
 

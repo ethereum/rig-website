@@ -3,9 +3,9 @@ title: Sealed execution auction
 authors:
   - Anders
 tags:
-  - MEV
-  - Proposer-Builder Separation
-  - Protocol Development
+  - mev
+  - pbs
+  - protocol-development
 datePublished: 2024-07-13T12:00:00.000Z
 ---
 

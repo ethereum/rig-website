@@ -3,9 +3,9 @@ title: Reward curve with capped issuance
 authors:
   - Anders
 tags:
-  - Consensus
-  - Game Theory / Econ
-  - Protocol Development
+  - consensus
+  - game-theory
+  - protocol-development
 datePublished: 2024-04-18T12:00:00.000Z
 ---
 

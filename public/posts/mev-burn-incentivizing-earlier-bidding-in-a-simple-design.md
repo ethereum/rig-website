@@ -3,8 +3,8 @@ title: "MEV burn: Incentivizing earlier bidding in “a simple design”"
 authors:
   - Anders
 tags:
-  - MEV
-  - Proposer-Builder Separation
+  - mev
+  - pbs
 datePublished: 2023-11-11T12:00:00.000Z
 ---
 

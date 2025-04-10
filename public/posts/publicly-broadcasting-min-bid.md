@@ -3,8 +3,8 @@ title: Publicly Broadcasting Min-Bid
 authors:
   - Julian
 tags:
-  - MEV
-  - Proposer-Builder Separation
+  - mev
+  - pbs
 datePublished: 2024-07-15T12:00:00.000Z
 ---
 

@@ -3,9 +3,9 @@ title: Economic Analysis of Execution Tickets
 authors:
   - Davide Crapis
 tags:
-  - Game Theory / Econ
-  - Proposer-Builder Separation
-  - Protocol Development
+  - game-theory
+  - pbs
+  - protocol-development
 datePublished: 2024-03-07T12:00:00.000Z
 ---
 

@@ -3,7 +3,7 @@ title: "Vorbit SSF with circular and spiral finality: validator selection and di
 authors:
   - Anders
 tags:
-  - Protocol Development
+  - protocol-development
 datePublished: 2024-09-20T12:00:00.000Z
 ---
 

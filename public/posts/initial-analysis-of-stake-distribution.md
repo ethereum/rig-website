@@ -3,8 +3,8 @@ title: Initial Analysis of Stake Distribution
 authors:
   - Julian
 tags:
-  - Consensus
-  - Game Theory / Econ
+  - consensus
+  - game-theory
 datePublished: 2024-03-15T12:00:00.000Z
 ---
 

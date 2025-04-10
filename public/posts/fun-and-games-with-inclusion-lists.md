@@ -3,8 +3,8 @@ title: Fun and games with inclusion lists
 authors:
   - Barnabé Monnot
 tags:
-  - Game Theory / Econ
-  - Proposer-Builder Separation
+  - game-theory
+  - pbs
 datePublished: 2023-09-06T12:00:00.000Z
 ---
 

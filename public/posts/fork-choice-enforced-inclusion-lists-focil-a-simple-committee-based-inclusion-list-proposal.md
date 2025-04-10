@@ -6,9 +6,9 @@ authors:
   - Francesco D'Amato
   - Julian
 tags:
-  - Consensus
-  - MEV
-  - Proposer-Builder Separation
+  - consensus
+  - mev
+  - pbs
 datePublished: 2024-06-19T12:00:00.000Z
 ---
 

@@ -3,9 +3,9 @@ title: PEPC FAQ
 authors:
   - Barnabé Monnot
 tags:
-  - MEV
-  - Proposer-Builder Separation
-  - Protocol Development
+  - mev
+  - pbs
+  - protocol-development
 datePublished: 2023-08-03T12:00:00.000Z
 ---
 

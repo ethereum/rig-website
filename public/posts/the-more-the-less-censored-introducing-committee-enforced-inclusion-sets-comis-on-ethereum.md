@@ -5,8 +5,8 @@ authors:
   - Barnabé Monnot
   - Francesco D'Amato
 tags:
-  - Consensus
-  - Protocol Development
+  - consensus
+  - protocol-development
 datePublished: 2024-02-29T12:00:00.000Z
 ---
 

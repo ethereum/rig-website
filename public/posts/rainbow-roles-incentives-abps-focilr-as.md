@@ -3,10 +3,10 @@ title: Rainbow Roles & Incentives ABPS + FOCILR + AS
 authors:
   - Anders
 tags:
-  - Consensus
-  - MEV
+  - consensus
+  - mev
   - Proposer Builder Separation
-  - Protocol Development
+  - protocol-development
 datePublished: 2025-02-24T12:00:00.000Z
 ---
 

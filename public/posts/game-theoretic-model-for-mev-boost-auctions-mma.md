@@ -3,9 +3,9 @@ title: Game-theoretic Model for MEV-Boost Auctions (MMA) 🥊
 authors:
   - Thomas Thiery
 tags:
-  - Game Theory / Econ
-  - MEV
-  - Simulations
+  - game-theory
+  - mev
+  - simulations
 datePublished: 2023-07-27T12:00:00.000Z
 ---
 

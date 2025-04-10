@@ -3,9 +3,9 @@ title: A Note on Equivocation in Slot Auction ePBS
 authors:
   - Julian
 tags:
-  - Consensus
-  - Proposer-Builder Separation
-  - Protocol Development
+  - consensus
+  - pbs
+  - protocol-development
 datePublished: 2024-08-23T12:00:00.000Z
 ---
 

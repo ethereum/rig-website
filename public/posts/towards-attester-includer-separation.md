@@ -3,8 +3,8 @@ title: Towards Attester-Includer Separation
 authors:
   - Thomas Thiery
 tags:
-  - Consensus
-  - MEV
+  - consensus
+  - mev
 datePublished: 2024-12-20T12:00:00.000Z
 ---
 

@@ -3,8 +3,8 @@ title: "The price is right: Realigning builder-proposer incentives with predicti
 authors:
   - Thomas Thiery
 tags:
-  - MEV
-  - Proposer-Builder Separation
+  - mev
+  - pbs
 datePublished: 2024-02-12T12:00:00.000Z
 ---
 

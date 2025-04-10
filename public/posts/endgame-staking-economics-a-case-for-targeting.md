@@ -4,8 +4,8 @@ authors:
   - Caspar Schwarz-Schilling
   - Ansgar Dietrichs
 tags:
-  - Game Theory / Econ
-  - Protocol Development
+  - game-theory
+  - protocol-development
 datePublished: 2024-02-22T12:00:00.000Z
 ---
 

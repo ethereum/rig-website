@@ -3,8 +3,8 @@ title: Uncrowdability of FOCIL
 authors:
   - Julian
 tags:
-  - MEV
-  - Protocol Development
+  - mev
+  - protocol-development
 datePublished: 2024-10-06T12:00:00.000Z
 ---
 

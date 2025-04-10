@@ -3,8 +3,8 @@ title: "Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC)"
 authors:
   - Barnabé Monnot
 tags:
-  - MEV
-  - Proposer-Builder Separation
+  - mev
+  - pbs
 datePublished: 2022-10-08T12:00:00.000Z
 ---
 

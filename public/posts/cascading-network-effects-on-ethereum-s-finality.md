@@ -3,8 +3,8 @@ title: Cascading Network Effects on Ethereum’s Finality
 authors:
   - Thomas Thiery
 tags:
-  - Consensus
-  - Data
+  - consensus
+  - data
 datePublished: 2023-06-13T12:00:00.000Z
 ---
 
