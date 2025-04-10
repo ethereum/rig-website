@@ -92,7 +92,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         <span className="text-nowrap">Filter by:</span>
         <select
           id="filter-date"
-          className="border-b px-2 py-1"
+          className="max-w-24! border-b px-2 py-1"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -140,14 +140,16 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
       <div>
         {filteredTalks.length > 0 ? (
           <>
-            {paginatedTalks.map(({ frontmatter, slug }) => (
-              <TalkPreviewRow
-                key={slug}
-                frontmatter={frontmatter}
-                href={join(PATH_TALKS, slug)}
-                className="border-b px-5"
-              />
-            ))}
+            <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
+              {paginatedTalks.map(({ frontmatter, slug }) => (
+                <TalkPreviewRow
+                  key={slug}
+                  frontmatter={frontmatter}
+                  href={join(PATH_TALKS, slug)}
+                  className="border-b px-5"
+                />
+              ))}
+            </div>
 
             {totalPages > 1 && (
               <PaginationNav

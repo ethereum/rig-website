@@ -19,11 +19,11 @@ const TalkPreviewRow = ({
 }: TalkPreviewRowProps) => (
   <Card
     className={cn(
-      "hover:bg-card flex w-full items-center gap-8 py-12 max-lg:flex-col",
+      "hover:bg-card grid grid-cols-subgrid items-center gap-8 py-12 md:col-span-2",
       className
     )}
   >
-    <div className="flex w-full gap-8 max-sm:flex-col sm:items-center">
+    <div className="grid grid-cols-subgrid gap-8 sm:items-center md:col-span-2">
       <CardHeader className="w-full">
         <time
           dateTime={startDate}
@@ -50,7 +50,7 @@ const TalkPreviewRow = ({
         <Authors authors={authors} />
       </CardHeader>
 
-      <CardContent className="flex flex-col sm:items-end">
+      <CardContent className="flex flex-col md:text-end">
         {location}
       </CardContent>
     </div>
