@@ -2,6 +2,8 @@ import { join } from "path"
 
 import { BracketLink } from "@/components/ui/link"
 import PostCard from "@/components/PostCard"
+import PaperCard from "@/components/PaperCard"
+import TalkCard from "@/components/TalkCard"
 import {
   Section,
   SectionHead,
@@ -12,10 +14,11 @@ import {
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
 import { fetchTalks } from "@/lib/talks"
+import TwitterIcon from "@/components/svg/twitter.svg"
 
 import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
-import PaperCard from "@/components/PaperCard"
-import TalkCard from "@/components/TalkCard"
+import { authors } from "@/data/authors"
+import { Card } from "@/components/ui/card"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -95,6 +98,49 @@ export default function Home() {
         <BracketLink href="/talks" className="mx-auto lowercase">
           <span className="text-lg">View all talks</span>
         </BracketLink>
+      </Section>
+      <hr />
+      <Section className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2">
+        <h2 className="sr-only">The team</h2>
+        <div className="flex flex-col gap-11">
+          <p className="text-4xl leading-snug">
+            Some text about the team that can help engage and create some
+            connection with the team
+          </p>
+          <Card className="bg-card flex flex-col gap-4 border p-8">
+            <p className="m-0 font-sans">
+              looking for some super exciting research job? look no further
+            </p>
+            {/* TODO: Get link */}
+            <BracketLink href="#">we are hiring</BracketLink>
+          </Card>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-8">
+          {authors.map(({ name, avatar, twitter, email }) => (
+            <div
+              key={name}
+              className="flex flex-col items-center gap-2 font-sans"
+            >
+              <img
+                src={avatar?.replace(/^public/, "")}
+                alt={name}
+                className="size-22 rounded-full border"
+              />
+              <h3 className="text-center text-sm">{name}</h3>
+              <div className="flex justify-center">
+                {twitter && (
+                  <BracketLink
+                    hideArrow
+                    href={new URL(twitter, "https://x.com").toString()}
+                    className="flex items-center"
+                  >
+                    <TwitterIcon />
+                  </BracketLink>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </Section>
     </main>
   )

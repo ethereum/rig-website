@@ -41,6 +41,7 @@ export type Author = {
   name?: string
   avatar?: string
   email?: string
+  twitter?: string
 }
 
 export type Tag = keyof typeof TAGS
