@@ -65,7 +65,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
   return (
     <>
-      <div className="flex items-center space-x-4 p-8 font-sans text-sm">
+      <div className="flex items-center gap-10 p-8 font-sans text-sm">
         <span>Filter by:</span>
         <select
           id="filter-date"

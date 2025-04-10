@@ -73,7 +73,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
 
   return (
     <>
-      <div className="flex items-center space-x-4 p-8 font-sans text-sm">
+      <div className="flex items-center gap-10 p-8 font-sans text-sm">
         <span>Filter by:</span>
         <select
           id="filter-date"
