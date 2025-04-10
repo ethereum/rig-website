@@ -5,8 +5,8 @@ import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
+import { PaginationNav } from "@/components/PaginationNav"
 import TalkPreviewRow from "@/components/TalkPreviewRow"
-import { Paginate } from "@/components/Paginate"
 
 import type { TalkSummary } from "@/lib/types"
 import { MAX_PER_PAGE, PATH_TALKS } from "@/lib/constants"
@@ -151,7 +151,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
             ))}
 
             {totalPages > 1 && (
-              <Paginate
+              <PaginationNav
                 currentPage={validCurrentPage}
                 totalPages={totalPages}
                 onPageChange={handlePageChange}

@@ -5,8 +5,8 @@ import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
+import { PaginationNav } from "@/components/PaginationNav"
 import PaperPreviewRow from "@/components/PaperPreviewRow"
-import { Paginate } from "@/components/Paginate"
 
 import type { PaperSummary } from "@/lib/types"
 import { MAX_PER_PAGE, PATH_PAPERS, TAGS } from "@/lib/constants"
@@ -163,7 +163,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
             ))}
 
             {totalPages > 1 && (
-              <Paginate
+              <PaginationNav
                 currentPage={validCurrentPage}
                 totalPages={totalPages}
                 onPageChange={handlePageChange}

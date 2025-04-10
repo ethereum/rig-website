@@ -4,8 +4,8 @@ import { useState } from "react"
 import { join } from "path"
 import { useRouter, useSearchParams } from "next/navigation"
 
+import { PaginationNav } from "@/components/PaginationNav"
 import PostPreviewRow from "@/components/PostPreviewRow"
-import { Paginate } from "@/components/Paginate"
 
 import type { PostSummary } from "@/lib/types"
 import { MAX_PER_PAGE, PATH_POSTS, TAGS } from "@/lib/constants"
@@ -161,7 +161,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
             ))}
 
             {totalPages > 1 && (
-              <Paginate
+              <PaginationNav
                 currentPage={validCurrentPage}
                 totalPages={totalPages}
                 onPageChange={handlePageChange}
