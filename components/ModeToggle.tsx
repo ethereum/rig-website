@@ -11,9 +11,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import useThemingKeyboardShortcuts from "@/hooks/useThemingKeyboardShortcuts"
 
 export function ModeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
+
+  useThemingKeyboardShortcuts(() => {
+    setTheme(resolvedTheme === "light" ? "dark" : "light")
+  })
 
   return (
     <DropdownMenu>
