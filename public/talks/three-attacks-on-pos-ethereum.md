@@ -2,7 +2,7 @@
 title: Three Attacks on PoS Ethereum
 authors:
   - Caspar Schwarz-Schilling
-location: https://www.notion.so/Let-me-in-Let-me-IIINNNN-A-longitudinal-study-of-the-transaction-supply-chain-from-CryptoKitties-t-1cfd9895554181868b85ef0297df343b?pvs=21
+location: Financial Cryptography and Data Security 2022
 startDate: April 19, 2022
 ---
 
