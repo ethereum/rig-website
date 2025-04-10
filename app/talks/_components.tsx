@@ -1,15 +1,15 @@
 "use client"
 
-// TODO: Add pagination
-
+import { useState } from "react"
 import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import TalkPreviewRow from "@/components/TalkPreviewRow"
+import { Paginate } from "@/components/Paginate"
 
 import type { TalkSummary } from "@/lib/types"
-import { PATH_TALKS } from "@/lib/constants"
+import { MAX_PER_PAGE, PATH_TALKS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -31,6 +31,9 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
   const authorFilter = searchParams.get("author") || ""
   const locationFilter = searchParams.get("location") || ""
 
+  // Client-side pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+
   const { years, authors, locations } = options
 
   // Check if any filter is active
@@ -48,6 +51,9 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
     }
 
     router.push(`?${params.toString()}`)
+
+    // Reset to page 1 when filters change
+    setCurrentPage(1)
   }
 
   // Filter talks based on selected filters
@@ -62,6 +68,23 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
     return matchesYear && matchesAuthor && matchesLocation
   })
+
+  // Calculate pagination values
+  const totalTalks = filteredTalks.length
+  const totalPages = Math.max(1, Math.ceil(totalTalks / MAX_PER_PAGE))
+
+  // Ensure current page is within valid range
+  const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages)
+
+  // Get the talks for the current page
+  const startIndex = (validCurrentPage - 1) * MAX_PER_PAGE
+  const endIndex = startIndex + MAX_PER_PAGE
+  const paginatedTalks = filteredTalks.slice(startIndex, endIndex)
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+  }
 
   return (
     <>
@@ -116,15 +139,26 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         )}
       </div>
       <div>
-        {filteredTalks.map(({ frontmatter, slug }) => (
-          <TalkPreviewRow
-            key={slug}
-            frontmatter={frontmatter}
-            href={join(PATH_TALKS, slug)}
-            className="border-b px-5"
-          />
-        ))}
-        {filteredTalks.length === 0 && (
+        {filteredTalks.length > 0 ? (
+          <>
+            {paginatedTalks.map(({ frontmatter, slug }) => (
+              <TalkPreviewRow
+                key={slug}
+                frontmatter={frontmatter}
+                href={join(PATH_TALKS, slug)}
+                className="border-b px-5"
+              />
+            ))}
+
+            {totalPages > 1 && (
+              <Paginate
+                currentPage={validCurrentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            )}
+          </>
+        ) : (
           <div className="text-secondary-foreground mt-4 text-center">
             No talks found for the selected filters.
           </div>

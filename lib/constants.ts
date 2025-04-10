@@ -40,3 +40,5 @@ export const NAV_ITEMS: { title: string; href: string }[] = [
     href: "/issues",
   },
 ]
+
+export const MAX_PER_PAGE = 10

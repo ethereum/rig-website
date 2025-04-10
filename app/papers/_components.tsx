@@ -1,15 +1,15 @@
 "use client"
 
-// TODO: Add pagination
-
+import { useState } from "react"
 import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import PaperPreviewRow from "@/components/PaperPreviewRow"
+import { Paginate } from "@/components/Paginate"
 
 import type { PaperSummary } from "@/lib/types"
-import { PATH_PAPERS, TAGS } from "@/lib/constants"
+import { MAX_PER_PAGE, PATH_PAPERS, TAGS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -31,6 +31,9 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
   const authorFilter = searchParams.get("author") || ""
   const tagFilter = searchParams.get("tag") || ""
 
+  // Client-side pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+
   const { years, authors, tags } = options
 
   // Check if any filter is active
@@ -47,6 +50,9 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
     }
 
     router.push(`?${params.toString()}`)
+
+    // Reset to page 1 when filters change
+    setCurrentPage(1)
   }
 
   // Filter papers based on selected filters
@@ -70,6 +76,23 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
 
     return matchesYear && matchesAuthor && matchesTag
   })
+
+  // Calculate pagination values
+  const totalPapers = filteredPapers.length
+  const totalPages = Math.max(1, Math.ceil(totalPapers / MAX_PER_PAGE))
+
+  // Ensure current page is within valid range
+  const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages)
+
+  // Get the papers for the current page
+  const startIndex = (validCurrentPage - 1) * MAX_PER_PAGE
+  const endIndex = startIndex + MAX_PER_PAGE
+  const paginatedPapers = filteredPapers.slice(startIndex, endIndex)
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+  }
 
   return (
     <>
@@ -128,15 +151,26 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
         )}
       </div>
       <div>
-        {filteredPapers.map(({ frontmatter, slug }) => (
-          <PaperPreviewRow
-            key={slug}
-            frontmatter={frontmatter}
-            href={join(PATH_PAPERS, slug)}
-            className="border-b px-5"
-          />
-        ))}
-        {filteredPapers.length === 0 && (
+        {filteredPapers.length > 0 ? (
+          <>
+            {paginatedPapers.map(({ frontmatter, slug }) => (
+              <PaperPreviewRow
+                key={slug}
+                frontmatter={frontmatter}
+                href={join(PATH_PAPERS, slug)}
+                className="border-b px-5"
+              />
+            ))}
+
+            {totalPages > 1 && (
+              <Paginate
+                currentPage={validCurrentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            )}
+          </>
+        ) : (
           <div className="text-secondary-foreground mt-4 text-center">
             No papers found for the selected filters.
           </div>
