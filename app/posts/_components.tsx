@@ -100,7 +100,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         <span className="text-nowrap">Filter by:</span>
         <select
           id="filter-date"
-          className="max-w-24! border-b px-2 py-1 max"
+          className="max max-w-24! border-b px-2 py-1"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >

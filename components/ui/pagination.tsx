@@ -13,10 +13,7 @@ function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
       role="navigation"
       aria-label="pagination"
       data-slot="pagination"
-      className={cn(
-        "my-8 flex items-center justify-end gap-8",
-        className
-      )}
+      className={cn("my-8 flex items-center justify-end gap-8", className)}
       {...props}
     />
   )
