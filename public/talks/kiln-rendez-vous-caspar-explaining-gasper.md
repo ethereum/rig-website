@@ -4,7 +4,6 @@ authors:
   - Caspar Schwarz-Schilling
 location: Brussels, Belgium
 startDate: July 9, 2024
-
 ---
 
 Slides: <https://docs.google.com/presentation/d/1eHD5XjBo33N21ZYtdzyhJ-WCaEjEoLEkoHW7HTR51hQ/edit>

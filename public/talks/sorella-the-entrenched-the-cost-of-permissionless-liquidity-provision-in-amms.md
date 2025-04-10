@@ -4,7 +4,6 @@ authors:
   - Julian
 location: Brussels, Belgium
 startDate: July 10, 2024
-
 ---
 
 Video: <https://youtu.be/JZRlMmyysRM>

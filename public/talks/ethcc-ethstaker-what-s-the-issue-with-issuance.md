@@ -5,7 +5,6 @@ authors:
   - Ansgar Dietrichs
 location: Brussels, Belgium
 startDate: July 8, 2024
-
 ---
 
 Video: <https://ethcc.io/archive/Whats-the-issue-with-issuance>
