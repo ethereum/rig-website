@@ -69,7 +69,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         <span>Filter by:</span>
         <select
           id="filter-date"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -84,7 +84,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         </select>
         <select
           id="filter-author"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
@@ -97,7 +97,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         </select>
         <select
           id="filter-location"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={locationFilter}
           onChange={(e) => updateFilters("location", e.target.value)}
         >

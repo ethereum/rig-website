@@ -77,7 +77,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         <span>Filter by:</span>
         <select
           id="filter-date"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -90,7 +90,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </select>
         <select
           id="filter-author"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
@@ -103,7 +103,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </select>
         <select
           id="filter-tag"
-          className="rounded border px-2 py-1"
+          className="border-b px-2 py-1"
           value={tagFilter}
           onChange={(e) => updateFilters("tag", e.target.value)}
         >
