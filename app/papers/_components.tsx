@@ -96,8 +96,8 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
 
   return (
     <>
-      <div className="flex items-center gap-10 p-8 font-sans text-sm">
-        <span>Filter by:</span>
+      <div className="flex flex-wrap gap-x-10 gap-y-4 p-4 font-sans text-sm max-md:flex-col md:items-center md:p-8 [&>select]:w-full [&>select]:max-w-xs">
+        <span className="text-nowrap">Filter by:</span>
         <select
           id="filter-date"
           className="border-b px-2 py-1"

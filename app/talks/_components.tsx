@@ -88,8 +88,8 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
   return (
     <>
-      <div className="flex items-center gap-10 p-8 font-sans text-sm">
-        <span>Filter by:</span>
+      <div className="flex flex-wrap gap-x-10 gap-y-4 p-4 font-sans text-sm max-md:flex-col md:items-center md:p-8 [&>select]:w-full [&>select]:max-w-xs">
+        <span className="text-nowrap">Filter by:</span>
         <select
           id="filter-date"
           className="border-b px-2 py-1"
@@ -121,7 +121,6 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         <select
           id="filter-location"
           className="border-b px-2 py-1"
-          style={{ maxWidth: "32rem" }} // TODO: Clean up locations, remove if possible
           value={locationFilter}
           onChange={(e) => updateFilters("location", e.target.value)}
         >

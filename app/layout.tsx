@@ -48,14 +48,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="mx-auto grid min-h-screen max-w-[96rem] grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10">
-            <header className="mx-auto flex w-full justify-between">
+            <header className="mx-auto flex w-full flex-wrap justify-between gap-y-4">
               <Link href="/">
                 <Logo
                   className="text-foreground text-7xl"
                   alt="Robust Incentives Group RIG logo"
                 />
               </Link>
-              <nav className="flex items-center gap-4">
+
+              <nav className="flex flex-wrap items-center gap-x-4 gap-y-2">
                 {NAV_ITEMS.map(({ title, href }) => (
                   <BracketLink
                     href={href}
@@ -65,6 +66,7 @@ export default function RootLayout({
                     {title}
                   </BracketLink>
                 ))}
+
                 <ModeToggle />
               </nav>
             </header>
