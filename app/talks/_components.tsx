@@ -98,6 +98,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         <select
           id="filter-location"
           className="border-b px-2 py-1"
+          style={{ maxWidth: "32rem" }} // TODO: Clean up locations, remove if possible
           value={locationFilter}
           onChange={(e) => updateFilters("location", e.target.value)}
         >
