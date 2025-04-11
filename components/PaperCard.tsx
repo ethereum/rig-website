@@ -2,7 +2,7 @@ import { join } from "path"
 
 import type { PaperFrontMatter } from "@/lib/types"
 
-import { Authors } from "./Authors"
+import { Contributors } from "./Contributors"
 import TagLink from "@/components/TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/link"
@@ -38,7 +38,7 @@ const PaperCard = ({
             })}
           </time>
 
-          <Authors authors={authors} />
+          <Contributors names={authors} />
         </CardHeader>
 
         <CardContent>

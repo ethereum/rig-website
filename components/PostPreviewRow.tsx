@@ -1,6 +1,6 @@
 import type { PostFrontMatter } from "@/lib/types"
 
-import { Authors } from "./Authors"
+import { Contributors } from "./Contributors"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
 import { Tag } from "./ui/tag"
@@ -43,7 +43,7 @@ const PostPreviewRow = ({
           </Link>
         </CardTitle>
 
-        <Authors authors={authors} />
+        <Contributors names={authors} />
       </CardHeader>
       <CardContent className="flex flex-wrap gap-x-4 md:flex-col md:text-end">
         {tags.map((tag, i) => (

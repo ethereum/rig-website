@@ -1,4 +1,4 @@
-import { Authors } from "@/components/Authors"
+import { Contributors } from "@/components/Contributors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 
 import { fetchTalks, getTalk } from "@/lib/talks"
@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
           {title}
         </h1>
 
-        <Authors authors={authors} />
+        <Contributors names={authors} />
       </div>
       <article className="font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>

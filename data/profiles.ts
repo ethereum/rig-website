@@ -1,6 +1,6 @@
-import type { Author } from "@/lib/types"
+import type { Contributor } from "@/lib/types"
 
-export const authors: Author[] = [
+export const profiles: Contributor[] = [
   {
     id: "ansgar",
     name: "Ansgar Dietrichs",

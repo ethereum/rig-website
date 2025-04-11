@@ -1,6 +1,6 @@
 import type { PostFrontMatter } from "@/lib/types"
 
-import { Authors } from "./Authors"
+import { Contributors } from "./Contributors"
 import TagLink from "./TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/link"
@@ -33,7 +33,7 @@ const PostCard = ({
 
       <CardTitle>{title}</CardTitle>
 
-      <Authors authors={authors} />
+      <Contributors names={authors} />
 
       <CardContent>
         {tags.map((tag) => (

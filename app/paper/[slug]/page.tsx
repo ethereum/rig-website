@@ -1,6 +1,6 @@
 import { join } from "path"
 
-import { Authors } from "@/components/Authors"
+import { Contributors } from "@/components/Contributors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
           {title}
         </h1>
 
-        <Authors authors={authors} />
+        <Contributors names={authors} />
 
         <div className="space-x-4">
           {tags.map((tag, i) => (

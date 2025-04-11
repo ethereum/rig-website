@@ -36,9 +36,9 @@ export type TalkSummary = {
   slug: string
 }
 
-export type Author = {
+export type Contributor = {
   id: string
-  name?: string
+  name: string
   avatar?: string
   email?: string
   twitter?: string

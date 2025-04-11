@@ -1,6 +1,6 @@
 import type { TalkFrontMatter } from "@/lib/types"
 
-import { Authors } from "./Authors"
+import { Contributors } from "./Contributors"
 import { Card, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/link"
 
@@ -40,7 +40,7 @@ const TalkCard = ({
                 })}
           </time>
 
-          <Authors authors={authors} />
+          <Contributors names={authors} />
         </CardHeader>
 
         <CardFooter>

@@ -22,7 +22,7 @@ import {
   PATH_TALKS,
   // TAGS, // TODO: Reenable and complete, or remove
 } from "@/lib/constants"
-import { authors } from "@/data/authors"
+import { profiles } from "@/data/profiles"
 import { Card } from "@/components/ui/card"
 
 export default function Home() {
@@ -151,7 +151,7 @@ export default function Home() {
           </Card>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-8">
-          {authors.map(({ name, avatar, twitter, email }) => (
+          {profiles.map(({ name, avatar, twitter, email }) => (
             <div
               key={name}
               className="flex flex-col items-center gap-2 font-sans"

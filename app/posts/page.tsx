@@ -24,8 +24,6 @@ export default function Page() {
     ].sort(),
   }
 
-  // TODO: Add pagination
-
   return (
     <main className="row-start-2 w-full">
       <HeroHeading>Posts</HeroHeading>

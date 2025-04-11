@@ -2,7 +2,7 @@ import { join } from "path"
 
 import type { PaperFrontMatter } from "@/lib/types"
 
-import { Authors } from "./Authors"
+import { Contributors } from "./Contributors"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
 import { Tag } from "./ui/tag"
@@ -46,7 +46,7 @@ const PaperPreviewRow = ({
           </Link>
         </CardTitle>
 
-        <Authors authors={authors} />
+        <Contributors names={authors} />
       </CardHeader>
 
       <CardContent className="flex flex-col sm:items-end">
