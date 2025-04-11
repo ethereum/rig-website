@@ -16,7 +16,12 @@ import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
 import { fetchTalks } from "@/lib/talks"
 
-import { TAGS, PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
+import {
+  PATH_PAPERS,
+  PATH_POSTS,
+  PATH_TALKS,
+  // TAGS, // TODO: Reenable and complete, or remove
+} from "@/lib/constants"
 import { authors } from "@/data/authors"
 import { Card } from "@/components/ui/card"
 
@@ -24,7 +29,7 @@ export default function Home() {
   const posts = fetchPosts()
   const papers = fetchPapers()
   const talks = fetchTalks()
-  const research = Object.entries(TAGS)
+  // const research = Object.entries(TAGS) // TODO: Reenable and complete, or remove
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
@@ -101,7 +106,8 @@ export default function Home() {
         </BracketLink>
       </Section>
       <hr />
-      <Section id="research">
+      {/* TODO: Reenable and complete, or remove */}
+      {/* <Section id="research">
         <SectionHead>
           <SectionHeading>research fields</SectionHeading>
           <SectionCounter>{research.length}</SectionCounter>
@@ -117,7 +123,7 @@ export default function Home() {
                   >
                     {value}
                   </button>
-                  {/* TODO: client-side active indicator */}
+                  <div id="TODO:client-side-active-indicator" />
                 </div>
               )
             })}
@@ -125,8 +131,11 @@ export default function Home() {
           <div className="border-s-2"></div>
         </div>
       </Section>
-      <hr />
-      <Section id="team" className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2">
+      <hr /> */}
+      <Section
+        id="team"
+        className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2"
+      >
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
           <p className="text-4xl leading-snug">

@@ -35,10 +35,11 @@ export const NAV_ITEMS: { title: string; href: string }[] = [
     title: "Talks",
     href: "/talks",
   },
-  {
-    title: "Open Problems",
-    href: "/#research",
-  },
+  // TODO: Implement or remove
+  // {
+  //   title: "Open Problems",
+  //   href: "/#research",
+  // },
 ]
 
 export const MAX_PER_PAGE = 10
