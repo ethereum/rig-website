@@ -37,7 +37,7 @@ export const NAV_ITEMS: { title: string; href: string }[] = [
   },
   {
     title: "Open Problems",
-    href: "/issues",
+    href: "/#research",
   },
 ]
 

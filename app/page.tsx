@@ -41,7 +41,7 @@ export default function Home() {
         </p>
       </div>
       <hr />
-      <Section>
+      <Section id="posts">
         <SectionHead>
           <SectionHeading>posts</SectionHeading>
           <SectionCounter>{posts.length}</SectionCounter>
@@ -61,7 +61,7 @@ export default function Home() {
         </BracketLink>
       </Section>
       <hr />
-      <Section>
+      <Section id="papers">
         <SectionHead>
           <SectionHeading>papers</SectionHeading>
           <SectionCounter>{papers.length}</SectionCounter>
@@ -81,7 +81,7 @@ export default function Home() {
         </BracketLink>
       </Section>
       <hr />
-      <Section>
+      <Section id="talks">
         <SectionHead>
           <SectionHeading>talks</SectionHeading>
           <SectionCounter>{talks.length}</SectionCounter>
@@ -101,7 +101,7 @@ export default function Home() {
         </BracketLink>
       </Section>
       <hr />
-      <Section>
+      <Section id="research">
         <SectionHead>
           <SectionHeading>research fields</SectionHeading>
           <SectionCounter>{research.length}</SectionCounter>
@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </Section>
       <hr />
-      <Section className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2">
+      <Section id="team" className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2">
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
           <p className="text-4xl leading-snug">
