@@ -1,31 +1,56 @@
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+
 import {
+  formatTeamNames,
   getContributorsFromIDs,
   getFallbackInitials,
   listNames,
 } from "@/lib/contributors"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+
+import { members } from "@/data/profiles"
 
 export const Contributors = ({ names }: { names: string[] }) => {
   const contributors = getContributorsFromIDs(names)
-  const contributorNames = contributors.map(({ name }) => name)
+  const teamMembers = contributors.filter((contributor) =>
+    members.some((member) => member.id === contributor.id)
+  )
+
+  // Get names of team members only
+  const teamMemberNames = teamMembers.map(({ name }) => name)
+  // Check if we have non-team contributors
+  const hasOtherContributors = contributors.length > teamMembers.length
+  // Get all non-team contributors
+  const nonTeamContributors = contributors.filter(
+    (contributor) => !members.some((member) => member.id === contributor.id)
+  )
+  const nonTeamNames = nonTeamContributors.map(({ name }) => name)
 
   return (
     <div className="flex items-center space-x-2">
-      <div className="flex flex-nowrap -space-x-1">
-        {contributors.map(({ id, name, avatar }) => (
-          <Avatar key={id} className="border-background size-4 border-1">
-            <AvatarImage
-              src={avatar?.replace(/^public/, "")}
-              alt={`${name} avatar`}
-            />
-            <AvatarFallback className="font-sans text-xs">
-              {getFallbackInitials(name)}
-            </AvatarFallback>
-          </Avatar>
-        ))}
-      </div>
+      {/* Only display avatars if there are team members */}
+      {teamMembers.length > 0 && (
+        <div className="flex flex-nowrap -space-x-1">
+          {teamMembers.map(({ id, name, avatar }) => (
+            <Avatar key={id} className="border-background size-4 border-1">
+              <AvatarImage
+                src={avatar?.replace(/^public/, "")}
+                alt={`${name} avatar`}
+              />
+              <AvatarFallback className="font-sans text-xs">
+                {getFallbackInitials(name)}
+              </AvatarFallback>
+            </Avatar>
+          ))}
+        </div>
+      )}
       <p className="text-card-foreground font-sans text-sm">
-        {listNames(contributorNames)}
+        {
+          teamMembers.length > 0
+            ? `${formatTeamNames(teamMemberNames, hasOtherContributors)}${hasOtherContributors ? ", et al." : ""}`
+            : listNames(
+                nonTeamNames
+              ) /* Show all contributor names when only non-team members */
+        }
       </p>
     </div>
   )

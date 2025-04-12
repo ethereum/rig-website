@@ -45,3 +45,15 @@ export const sortContributors = (a: Contributor, b: Contributor) => {
     ? aFirst.localeCompare(bFirst)
     : aLast.localeCompare(bLast)
 }
+
+// Format team member names differently based on whether "et al." will be used
+export const formatTeamNames = (names: string[], useEtAl: boolean) => {
+  if (names.length === 0) return ""
+  if (names.length === 1) return names[0]
+
+  // When using "et al.", use comma-separated list without "and"
+  if (useEtAl) return names.join(", ")
+
+  // Otherwise use the standard listNames function (which includes "and")
+  return listNames(names)
+}
