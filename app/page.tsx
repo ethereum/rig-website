@@ -35,7 +35,7 @@ export default function Home() {
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
       <div className="max-w-4xl py-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
-        <p className="text-5xl">
+        <p className="text-4xl sm:text-5xl">
           The{" "}
           <span className="text-primary-foreground">
             Robust Incentives Group
@@ -138,7 +138,7 @@ export default function Home() {
       >
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
-          <p className="text-4xl leading-snug">
+          <p className="text-3xl sm:text-4xl leading-snug">
             Some text about the team that can help engage and create some
             connection with the team
           </p>
