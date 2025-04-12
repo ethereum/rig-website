@@ -110,7 +110,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </span>
         <select
           id="filter-date"
-          className="max max-w-24! border-b px-2 py-1"
+          className="border-b px-2 py-1"
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
