@@ -1,11 +1,11 @@
 import type { Contributor } from "@/lib/types"
-import { profiles } from "@/data/profiles"
+import { members } from "@/data/profiles"
 
 export const getContributorsFromIDs = (ids: string[]): Contributor[] => {
   const contributors = ids.map((id) => {
-    const contributor = profiles.find((contributor) => contributor.id === id)
+    const contributor = members.find((contributor) => contributor.id === id)
     if (contributor) return contributor
-    const nameMatch = profiles.find((contributor) => contributor.name === id)
+    const nameMatch = members.find((contributor) => contributor.name === id)
     if (nameMatch) return nameMatch
     return { id, name: id } as Contributor
   })
