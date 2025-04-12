@@ -1,17 +1,21 @@
 import { join } from "path"
 
-import { BracketLink } from "@/components/ui/link"
 import PostCard from "@/components/PostCard"
 import PaperCard from "@/components/PaperCard"
 import TalkCard from "@/components/TalkCard"
+
+import { BracketLink } from "@/components/ui/link"
+import { Card } from "@/components/ui/card"
 import {
   Section,
   SectionHead,
   SectionHeading,
   SectionCounter,
 } from "@/components/ui/section"
+
 import TwitterIcon from "@/components/svg/twitter.svg"
 import EmailIcon from "@/components/svg/email.svg"
+
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
 import { fetchTalks } from "@/lib/talks"
@@ -22,8 +26,8 @@ import {
   PATH_TALKS,
   // TAGS, // TODO: Reenable and complete, or remove
 } from "@/lib/constants"
-import { profiles } from "@/data/profiles"
-import { Card } from "@/components/ui/card"
+
+import { members } from "@/data/profiles"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -138,7 +142,7 @@ export default function Home() {
       >
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
-          <p className="text-3xl sm:text-4xl leading-snug">
+          <p className="text-3xl leading-snug sm:text-4xl">
             Some text about the team that can help engage and create some
             connection with the team
           </p>
@@ -151,7 +155,7 @@ export default function Home() {
           </Card>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-8">
-          {profiles.map(({ name, avatar, twitter, email }) => (
+          {members.map(({ name, avatar, twitter, email }) => (
             <div
               key={name}
               className="flex flex-col items-center gap-2 font-sans"
