@@ -14,6 +14,8 @@ import { cn } from "@/lib/utils"
 
 import "./globals.css"
 import { ModeToggle } from "@/components/ModeToggle"
+import { MobileMenu } from "@/components/MobileMenu"
+import { ClientSideLinkDecorator } from "@/components/ClientSideLinkDecorator"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -48,7 +50,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="mx-auto grid min-h-screen max-w-[96rem] grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10">
-            <header className="mx-auto flex w-full flex-wrap justify-between gap-y-4">
+            <header className="mx-auto flex w-full flex-wrap items-center justify-between gap-y-4">
               <Link href="/">
                 <Logo
                   className="text-foreground text-7xl"
@@ -58,14 +60,15 @@ export default function RootLayout({
 
               <nav className="flex flex-wrap items-center gap-x-4 gap-y-2">
                 {NAV_ITEMS.map(({ title, href }) => (
-                  <BracketLink
-                    href={href}
-                    key={href}
-                    className="text-xl lowercase"
-                  >
-                    {title}
-                  </BracketLink>
+                  <div key={href} className="relative max-sm:hidden">
+                    <BracketLink href={href} className="text-xl lowercase">
+                      {title}
+                    </BracketLink>
+                    <ClientSideLinkDecorator href={href} />
+                  </div>
                 ))}
+
+                <MobileMenu className="sm:hidden" />
 
                 <ModeToggle />
               </nav>
