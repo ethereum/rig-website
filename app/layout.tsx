@@ -86,13 +86,25 @@ export default function RootLayout({
                 <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
                   &#91;
                 </span>
-                <Link href={URL_GITHUB_REPO} hideArrow>
+                <Link
+                  href={URL_GITHUB_REPO}
+                  hideArrow
+                  className="scale-100 transition-transform hover:scale-110 focus:scale-110"
+                >
                   <GitHub />
                 </Link>
-                <Link href={URL_TWITTER} hideArrow>
+                <Link
+                  href={URL_TWITTER}
+                  hideArrow
+                  className="scale-100 transition-transform hover:scale-110 focus:scale-110"
+                >
                   <Twitter />
                 </Link>
-                <Link href={URL_EMAIL} hideArrow>
+                <Link
+                  href={URL_EMAIL}
+                  hideArrow
+                  className="scale-100 transition-transform hover:scale-110 focus:scale-110"
+                >
                   <Email />
                 </Link>
                 <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
