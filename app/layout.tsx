@@ -1,21 +1,28 @@
 import type { Metadata } from "next"
 import { EB_Garamond, Montserrat } from "next/font/google"
 
-import Link, { BracketLink } from "@/components/ui/link"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ModeToggle } from "@/components/ModeToggle"
+import { MobileMenu } from "@/components/MobileMenu"
+import { ClientSideLinkDecorator } from "@/components/ClientSideLinkDecorator"
+
+import Link, { BracketLink } from "@/components/ui/link"
 
 import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
 import Twitter from "@/components/svg/twitter.svg"
 import Email from "@/components/svg/email.svg"
 
-import { NAV_ITEMS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 
+import {
+  NAV_ITEMS,
+  URL_EMAIL,
+  URL_GITHUB_REPO,
+  URL_TWITTER,
+} from "@/lib/constants"
+
 import "./globals.css"
-import { ModeToggle } from "@/components/ModeToggle"
-import { MobileMenu } from "@/components/MobileMenu"
-import { ClientSideLinkDecorator } from "@/components/ClientSideLinkDecorator"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -79,13 +86,13 @@ export default function RootLayout({
                 <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
                   &#91;
                 </span>
-                <Link href="https://github.com/" hideArrow>
+                <Link href={URL_GITHUB_REPO} hideArrow>
                   <GitHub />
                 </Link>
-                <Link href="https://xcancel.com" hideArrow>
+                <Link href={URL_TWITTER} hideArrow>
                   <Twitter />
                 </Link>
-                <Link href="#" hideArrow>
+                <Link href={URL_EMAIL} hideArrow>
                   <Email />
                 </Link>
                 <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">

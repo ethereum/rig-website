@@ -43,3 +43,7 @@ export const NAV_ITEMS: { title: string; href: string }[] = [
 ]
 
 export const MAX_PER_PAGE = 10
+
+export const URL_GITHUB_REPO = "https://github.com/ethereum/rig"
+export const URL_TWITTER = "https://xcancel.com" // TODO: Update
+export const URL_EMAIL = "mailto:#" // TODO: Update
