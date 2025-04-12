@@ -14,7 +14,10 @@ export default function TagLink({
   type: typeof PATH_POSTS | typeof PATH_PAPERS
 }) {
   return (
-    <Link href={`/${type}s/?tag=${getTagKey(children)}`} className={cn("w-fit", className)}>
+    <Link
+      href={`/${type}s/?tag=${getTagKey(children)}`}
+      className={cn("w-fit", className)}
+    >
       <Tag className="inline">{children}</Tag>
     </Link>
   )

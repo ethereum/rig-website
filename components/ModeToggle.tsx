@@ -23,9 +23,13 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="empty" size="icon" className="relative">
+        <Button
+          variant="empty"
+          size="icon"
+          className="data-[state=open]:text-primary relative data-[state=open]:[&>div]:rotate-90"
+        >
           <div
-            className="border-primary absolute inset-1.5 border-2"
+            className="border-primary absolute inset-1.5 border-2 transition-transform"
             style={{
               clipPath:
                 "polygon(0 0, 100% 0, 100% 5px, 0 5px, 0 calc(100% - 5px), 100% calc(100% - 5px), 100% 100%, 0 100%)",
