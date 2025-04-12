@@ -9,6 +9,9 @@ import { PaginationNav } from "@/components/PaginationNav"
 import PaperPreviewRow from "@/components/PaperPreviewRow"
 
 import type { PaperSummary } from "@/lib/types"
+
+import { cn } from "@/lib/utils"
+
 import { MAX_PER_PAGE, PATH_PAPERS, TAGS } from "@/lib/constants"
 
 type FilterOptions = {
@@ -96,8 +99,15 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
 
   return (
     <>
-      <div className="flex flex-wrap gap-x-10 gap-y-4 p-4 font-sans text-sm max-md:flex-col md:items-center md:p-8 [&>select]:w-full [&>select]:max-w-xs">
-        <span className="text-nowrap">Filter by:</span>
+      <div
+        className={cn(
+          "grid gap-4 p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
+        )}
+      >
+        <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
+          Filter by:
+        </span>
         <select
           id="filter-date"
           className="border-b px-2 py-1"
@@ -144,11 +154,18 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
             )
           })}
         </select>
-        {filtered && (
-          <Link href="?" className="text-primary hover:underline">
+
+        <div className="col-start-3 row-start-1 max-lg:text-end lg:col-start-5">
+          <Link
+            href="?"
+            className={cn(
+              "text-primary invisible hover:underline",
+              filtered && "visible"
+            )}
+          >
             Reset
           </Link>
-        )}
+        </div>
       </div>
       <div>
         {filteredPapers.length > 0 ? (

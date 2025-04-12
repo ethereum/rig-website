@@ -5,10 +5,13 @@ import { join } from "path"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
+import type { TalkSummary } from "@/lib/types"
+
 import { PaginationNav } from "@/components/PaginationNav"
 import TalkPreviewRow from "@/components/TalkPreviewRow"
 
-import type { TalkSummary } from "@/lib/types"
+import { cn } from "@/lib/utils"
+
 import { MAX_PER_PAGE, PATH_TALKS } from "@/lib/constants"
 
 type FilterOptions = {
@@ -88,8 +91,15 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
   return (
     <>
-      <div className="flex flex-wrap gap-x-10 gap-y-4 p-4 font-sans text-sm max-md:flex-col md:items-center md:p-8 [&>select]:w-full [&>select]:max-w-xs">
-        <span className="text-nowrap">Filter by:</span>
+      <div
+        className={cn(
+          "grid gap-4 p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
+        )}
+      >
+        <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
+          Filter by:
+        </span>
         <select
           id="filter-date"
           className="max-w-24! border-b px-2 py-1"
@@ -131,11 +141,18 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
             </option>
           ))}
         </select>
-        {filtered && (
-          <Link href="?" className="text-primary hover:underline">
+
+        <div className="col-start-3 row-start-1 max-lg:text-end lg:col-start-5">
+          <Link
+            href="?"
+            className={cn(
+              "text-primary invisible hover:underline",
+              filtered && "visible"
+            )}
+          >
             Reset
           </Link>
-        )}
+        </div>
       </div>
       <div>
         {filteredTalks.length > 0 ? (
