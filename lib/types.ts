@@ -45,3 +45,5 @@ export type Contributor = {
 }
 
 export type Tag = keyof typeof TAGS
+
+export type NavItem = { title: string; href: string }

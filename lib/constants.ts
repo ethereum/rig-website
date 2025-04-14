@@ -1,3 +1,5 @@
+import type { NavItem } from "./types"
+
 export const MD_DIR_POSTS = "public/posts"
 export const MD_DIR_PAPERS = "public/papers"
 export const MD_DIR_TALKS = "public/talks"
@@ -22,7 +24,7 @@ export const TAGS = {
   scaling: "Scaling / Rollups",
 } as const
 
-export const NAV_ITEMS: { title: string; href: string }[] = [
+export const NAV_ITEMS: NavItem[] = [
   {
     title: "Posts",
     href: "/posts",
