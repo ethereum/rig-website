@@ -55,24 +55,6 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 })
 BaseLink.displayName = "BaseLink"
 
-export const BracketLink = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, className, ...props }: LinkProps, ref) => (
-    <BaseLink
-      className={cn(
-        "hover:text-primary text-foreground block w-fit font-sans tracking-[0.02em]",
-        className
-      )}
-      ref={ref}
-      {...props}
-    >
-      <span className="text-primary font-medium select-none">&#91;&nbsp;</span>
-      {children}
-      <span className="text-primary font-medium select-none">&nbsp;&#93;</span>
-    </BaseLink>
-  )
-)
-BracketLink.displayName = "BracketLink"
-
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ className, ...props }: LinkProps, ref) => {
     return (

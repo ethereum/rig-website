@@ -5,7 +5,7 @@ import type { PaperFrontMatter } from "@/lib/types"
 import { Contributors } from "./Contributors"
 import TagLink from "@/components/TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
-import { BracketLink } from "./ui/link"
+import { BracketLink } from "./ui/bracket-link"
 
 import { cn } from "@/lib/utils"
 import { PATH_ASSETS } from "@/lib/constants"

@@ -4,7 +4,7 @@ import PostCard from "@/components/PostCard"
 import PaperCard from "@/components/PaperCard"
 import TalkCard from "@/components/TalkCard"
 
-import { BracketLink } from "@/components/ui/link"
+import { BracketLink } from "@/components/ui/bracket-link"
 import { Card } from "@/components/ui/card"
 import {
   Section,

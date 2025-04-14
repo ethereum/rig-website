@@ -1,9 +1,9 @@
 import type { DropdownMenuProps } from "@radix-ui/react-dropdown-menu"
 
 import { Button } from "./ui/button"
+import { BracketLink } from "./ui/bracket-link"
 
 import { Menu } from "lucide-react"
-import { BracketLink } from "./ui/link"
 import {
   DropdownMenu,
   DropdownMenuContent,

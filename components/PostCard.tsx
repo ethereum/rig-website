@@ -3,7 +3,7 @@ import type { PostFrontMatter } from "@/lib/types"
 import { Contributors } from "./Contributors"
 import TagLink from "./TagLink"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
-import { BracketLink } from "./ui/link"
+import { BracketLink } from "./ui/bracket-link"
 
 import { cn } from "@/lib/utils"
 

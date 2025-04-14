@@ -4,9 +4,8 @@ import { EB_Garamond, Montserrat } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ModeToggle } from "@/components/ModeToggle"
 import { MobileMenu } from "@/components/MobileMenu"
-import { ClientSideLinkDecorator } from "@/components/ClientSideLinkDecorator"
 
-import Link, { BracketLink } from "@/components/ui/link"
+import Link from "@/components/ui/link"
 
 import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
@@ -23,6 +22,7 @@ import {
 } from "@/lib/constants"
 
 import "./globals.css"
+import { BracketLink } from "@/components/ui/bracket-link"
 
 const garamondSerif = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -66,12 +66,11 @@ export default function RootLayout({
               </Link>
 
               <nav className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                {NAV_ITEMS.map(({ title, href }) => (
+                {NAV_ITEMS.map(({ href, title }) => (
                   <div key={href} className="relative max-sm:hidden">
                     <BracketLink href={href} className="text-xl lowercase">
                       {title}
                     </BracketLink>
-                    <ClientSideLinkDecorator href={href} />
                   </div>
                 ))}
 
