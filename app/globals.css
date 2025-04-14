@@ -7,6 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-light: var(--foreground-light);
   --font-serif: var(--font-eb-garamond);
   --font-sans: var(--font-montserrat);
   /* --font-mono: var(--font-mono); */
@@ -55,6 +56,7 @@
 :root {
   --background: #fdfaf2;
   --foreground: #2b2b2b;
+  --foreground-light: #464646;
   --card: #ffffff;
   --card-foreground: #2b2b2b; /* oklch(0.267 0.001 0); */
   --popover: oklch(0.984 0.01 95.3);
@@ -91,6 +93,7 @@
 .dark {
   --background: #171717;
   --foreground: #c4c4c4;
+  --foreground-light: #9F9F9F;
   --card: #000000;
   --card-foreground: #c4c4c4;
   --popover: oklch(0.196 0.001 0);

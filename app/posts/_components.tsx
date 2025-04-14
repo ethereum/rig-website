@@ -2,13 +2,13 @@
 
 import { useState } from "react"
 import { join } from "path"
-import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import type { PostSummary } from "@/lib/types"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import PostPreviewRow from "@/components/PostPreviewRow"
+import { Button } from "@/components/ui/button"
 
 import { cn } from "@/lib/utils"
 
@@ -58,6 +58,12 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
     setCurrentPage(1)
   }
 
+  const resetFilters = () => {
+    updateFilters("year", "")
+    updateFilters("author", "")
+    updateFilters("tag", "")
+  }
+
   // Filter posts based on selected filters
   const filteredPosts = allPosts.filter(({ frontmatter }) => {
     const matchesYear =
@@ -101,7 +107,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
     <>
       <div
         className={cn(
-          "grid gap-4 p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
           "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
         )}
       >
@@ -114,7 +120,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
-          <option value="">Year</option>
+          <option value="">date</option>
           {years.map((year) => (
             <option key={year} value={year}>
               {year}
@@ -127,7 +133,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
-          <option value="">Author</option>
+          <option value="">author</option>
           {authors.map((author) => (
             <option key={author} value={author}>
               {author}
@@ -140,7 +146,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           value={tagFilter}
           onChange={(e) => updateFilters("tag", e.target.value)}
         >
-          <option value="">Field</option>
+          <option value="">field</option>
           {tags.map((tag) => {
             // Find the key in TAGS object that corresponds to this tag
             const tagKey =
@@ -153,16 +159,19 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           })}
         </select>
 
-        <div className="col-start-3 row-start-1 max-lg:text-end lg:col-start-5">
-          <Link
-            href="?"
+        <div className="col-start-3 row-start-1 self-end max-lg:text-end lg:col-start-5">
+          <Button
+            variant="ghost"
             className={cn(
-              "text-primary invisible hover:underline",
+              "group text-primary hover:text-primary invisible relative h-fit rounded-none p-0 lowercase hover:bg-transparent hover:underline hover:underline-offset-2",
               filtered && "visible"
             )}
+            onClick={resetFilters}
           >
+            <span className="-me-1 group-hover:invisible">&#91;</span>
             Reset
-          </Link>
+            <span className="-ms-1 group-hover:invisible">&#93;</span>
+          </Button>
         </div>
       </div>
       <div>

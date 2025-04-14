@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import PaperPreviewRow from "@/components/PaperPreviewRow"
+import { Button } from "@/components/ui/button"
 
 import type { PaperSummary } from "@/lib/types"
 
@@ -58,6 +59,12 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
     setCurrentPage(1)
   }
 
+  const resetFilters = () => {
+    updateFilters("year", "")
+    updateFilters("author", "")
+    updateFilters("tag", "")
+  }
+
   // Filter papers based on selected filters
   const filteredPapers = allPapers.filter(({ frontmatter }) => {
     const matchesYear =
@@ -101,11 +108,11 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
     <>
       <div
         className={cn(
-          "grid gap-4 p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
           "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
         )}
       >
-        <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
+        <span className="text-foreground-light col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
           Filter by:
         </span>
         <select
@@ -114,7 +121,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
-          <option value="">Year</option>
+          <option value="">date</option>
           {years
             .sort((a, b) => b - a)
             .map((year) => (
@@ -129,7 +136,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
-          <option value="">Author</option>
+          <option value="">author</option>
           {authors.map((author) => (
             <option key={author} value={author}>
               {author}
@@ -142,7 +149,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
           value={tagFilter}
           onChange={(e) => updateFilters("tag", e.target.value)}
         >
-          <option value="">Field</option>
+          <option value="">field</option>
           {tags.map((tag) => {
             // Find the key in TAGS object that corresponds to this tag
             const tagKey =
@@ -155,16 +162,19 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
           })}
         </select>
 
-        <div className="col-start-3 row-start-1 max-lg:text-end lg:col-start-5">
-          <Link
-            href="?"
+        <div className="col-start-3 row-start-1 self-end max-lg:text-end lg:col-start-5">
+          <Button
+            variant="ghost"
             className={cn(
-              "text-primary invisible hover:underline",
+              "group text-primary hover:text-primary invisible relative h-fit rounded-none p-0 lowercase hover:bg-transparent hover:underline hover:underline-offset-2",
               filtered && "visible"
             )}
+            onClick={resetFilters}
           >
+            <span className="-me-1 group-hover:invisible">&#91;</span>
             Reset
-          </Link>
+            <span className="-ms-1 group-hover:invisible">&#93;</span>
+          </Button>
         </div>
       </div>
       <div>

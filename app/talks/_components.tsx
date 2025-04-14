@@ -2,13 +2,13 @@
 
 import { useState } from "react"
 import { join } from "path"
-import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 
 import type { TalkSummary } from "@/lib/types"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import TalkPreviewRow from "@/components/TalkPreviewRow"
+import { Button } from "@/components/ui/button"
 
 import { cn } from "@/lib/utils"
 
@@ -31,7 +31,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
-  const authorFilter = searchParams.get("author") || ""
+  const speakerFilter = searchParams.get("speaker") || ""
   const locationFilter = searchParams.get("location") || ""
 
   // Client-side pagination state
@@ -41,7 +41,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
   // Check if any filter is active
   const filtered =
-    yearFilter !== "" || authorFilter !== "" || locationFilter !== ""
+    yearFilter !== "" || speakerFilter !== "" || locationFilter !== ""
 
   // Update URL with filters
   const updateFilters = (param: string, value: string) => {
@@ -59,13 +59,19 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
     setCurrentPage(1)
   }
 
+  const resetFilters = () => {
+    updateFilters("year", "")
+    updateFilters("speaker", "")
+    updateFilters("tag", "")
+  }
+
   // Filter talks based on selected filters
   const filteredTalks = allTalks.filter(({ frontmatter }) => {
     const matchesYear =
       yearFilter === "" ||
       new Date(frontmatter.startDate).getFullYear().toString() === yearFilter
     const matchesAuthor =
-      authorFilter === "" || frontmatter.authors.includes(authorFilter)
+      speakerFilter === "" || frontmatter.authors.includes(speakerFilter)
     const matchesLocation =
       locationFilter === "" || frontmatter.location === locationFilter
 
@@ -93,7 +99,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
     <>
       <div
         className={cn(
-          "grid gap-4 p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
           "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
         )}
       >
@@ -106,7 +112,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
-          <option value="">Year</option>
+          <option value="">date</option>
           {years
             .sort((a, b) => b - a)
             .map((year) => (
@@ -118,10 +124,10 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         <select
           id="filter-author"
           className="border-b px-2 py-1"
-          value={authorFilter}
-          onChange={(e) => updateFilters("author", e.target.value)}
+          value={speakerFilter}
+          onChange={(e) => updateFilters("speaker", e.target.value)}
         >
-          <option value="">Author</option>
+          <option value="">author</option>
           {authors.map((author) => (
             <option key={author} value={author}>
               {author}
@@ -134,7 +140,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
           value={locationFilter}
           onChange={(e) => updateFilters("location", e.target.value)}
         >
-          <option value="">Location</option>
+          <option value="">location</option>
           {locations.map((location) => (
             <option key={location} value={location}>
               {location}
@@ -142,16 +148,19 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
           ))}
         </select>
 
-        <div className="col-start-3 row-start-1 max-lg:text-end lg:col-start-5">
-          <Link
-            href="?"
+        <div className="col-start-3 row-start-1 self-end max-lg:text-end lg:col-start-5">
+          <Button
+            variant="ghost"
             className={cn(
-              "text-primary invisible hover:underline",
+              "group text-primary hover:text-primary invisible relative h-fit rounded-none p-0 lowercase hover:bg-transparent hover:underline hover:underline-offset-2",
               filtered && "visible"
             )}
+            onClick={resetFilters}
           >
+            <span className="-me-1 group-hover:invisible">&#91;</span>
             Reset
-          </Link>
+            <span className="-ms-1 group-hover:invisible">&#93;</span>
+          </Button>
         </div>
       </div>
       <div>
