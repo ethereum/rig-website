@@ -10,13 +10,17 @@ import {
 import { members } from "@/data/profiles"
 import { cn } from "@/lib/utils"
 
+type ContributorsProps = {
+  names: string[]
+  avatarClass?: string
+  etAl?: boolean
+}
+
 export const Contributors = ({
   names,
   avatarClass,
-}: {
-  names: string[]
-  avatarClass?: string
-}) => {
+  etAl,
+}: ContributorsProps) => {
   const contributors = getContributorsFromIDs(names)
   const teamMembers = contributors.filter((contributor) =>
     members.some((member) => member.id === contributor.id)
@@ -31,6 +35,16 @@ export const Contributors = ({
     (contributor) => !members.some((member) => member.id === contributor.id)
   )
   const nonTeamNames = nonTeamContributors.map(({ name }) => name)
+
+  const getContributorList = () => {
+    if (!teamMembers.length) return listNames(nonTeamNames)
+
+    if (!etAl) return listNames([...teamMemberNames, ...nonTeamNames])
+
+    return `${formatTeamNames(teamMemberNames, hasOtherContributors)}${
+      hasOtherContributors ? ", et al." : ""
+    }`
+  }
 
   return (
     <div className="flex items-center space-x-2">
@@ -54,13 +68,7 @@ export const Contributors = ({
         </div>
       )}
       <p className="text-card-foreground font-sans text-sm">
-        {
-          teamMembers.length > 0
-            ? `${formatTeamNames(teamMemberNames, hasOtherContributors)}${hasOtherContributors ? ", et al." : ""}`
-            : listNames(
-                nonTeamNames
-              ) /* Show all contributor names when only non-team members */
-        }
+        {getContributorList()}
       </p>
     </div>
   )

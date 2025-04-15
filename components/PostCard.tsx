@@ -36,7 +36,7 @@ const PostCard = ({
         <CardTitle>{title}</CardTitle>
       </Link>
 
-      <Contributors names={authors} />
+      <Contributors names={authors} etAl />
 
       <CardContent>
         {tags.map((tag) => (

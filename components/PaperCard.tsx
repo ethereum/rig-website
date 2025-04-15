@@ -44,7 +44,7 @@ const PaperCard = ({
             })}
           </time>
 
-          <Contributors names={authors} />
+          <Contributors names={authors} etAl />
         </CardHeader>
 
         <CardContent>
