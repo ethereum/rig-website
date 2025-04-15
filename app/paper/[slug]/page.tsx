@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
           {title}
         </h1>
 
-        <Contributors names={authors} />
+        <Contributors names={authors} avatarClass="size-8" />
 
         <div className="space-x-4">
           {tags.map((tag, i) => (
