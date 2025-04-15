@@ -29,6 +29,7 @@ import {
 
 import { members } from "@/data/profiles"
 import { sortContributors } from "@/lib/contributors"
+import Link from "@/components/ui/link"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -50,10 +51,16 @@ export default function Home() {
           crypto-economics, formal methods and data science.
         </p>
       </div>
+
       <hr />
+
       <Section id="posts">
         <SectionHead>
-          <SectionHeading>posts</SectionHeading>
+          <Link href="/posts" className="group">
+            <SectionHeading className="group-hover:text-foreground">
+              posts
+            </SectionHeading>
+          </Link>
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -70,10 +77,16 @@ export default function Home() {
           <span className="text-lg">View all posts</span>
         </BracketLink>
       </Section>
+
       <hr />
+
       <Section id="papers">
         <SectionHead>
-          <SectionHeading>papers</SectionHeading>
+          <Link href="/papers" className="group">
+            <SectionHeading className="group-hover:text-foreground">
+              papers
+            </SectionHeading>
+          </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8">
@@ -90,10 +103,16 @@ export default function Home() {
           <span className="text-lg">View all papers</span>
         </BracketLink>
       </Section>
+
       <hr />
+
       <Section id="talks">
         <SectionHead>
-          <SectionHeading>talks</SectionHeading>
+          <Link href="/talks" className="group">
+            <SectionHeading className="group-hover:text-foreground">
+              talks
+            </SectionHeading>
+          </Link>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,7 +129,9 @@ export default function Home() {
           <span className="text-lg">View all talks</span>
         </BracketLink>
       </Section>
+
       <hr />
+
       {/* TODO: Reenable and complete, or remove */}
       {/* <Section id="research">
         <SectionHead>
@@ -137,6 +158,7 @@ export default function Home() {
         </div>
       </Section>
       <hr /> */}
+
       <Section
         id="team"
         className="grid grid-cols-1 gap-24 space-y-0 lg:grid-cols-2"
