@@ -33,7 +33,7 @@ export const MobileMenu = ({
         <span className="sr-only">Mobile navigation menu</span>
       </Button>
     </DrawerTrigger>
-    <DrawerContent className="flex flex-col items-center gap-12 p-32">
+    <DrawerContent className="flex flex-col items-center gap-16 p-32 text-2xl">
       {NAV_ITEMS.map(({ href, title }) => (
         <DrawerClose key={href} asChild>
           <BracketLink href={href}>{title}</BracketLink>
