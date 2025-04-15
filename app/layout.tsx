@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils"
 
 import {
   NAV_ITEMS,
+  SITE_NAME,
   URL_EMAIL,
   URL_GITHUB_REPO,
   URL_TWITTER,
@@ -110,8 +111,10 @@ export default function RootLayout({
                   &#93;
                 </span>
               </div>
-              <div className="text-secondary-foreground font-sans">
-                legal disclaimer
+              <div className="text-secondary-foreground text-center font-sans">
+                © {new Date().getFullYear()} {SITE_NAME}
+                <br />
+                All rights reserved
               </div>
             </footer>
           </div>

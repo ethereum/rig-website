@@ -1,5 +1,7 @@
 import type { NavItem } from "./types"
 
+export const SITE_NAME = "Robust Incentives Group"
+
 export const MD_DIR_POSTS = "public/posts"
 export const MD_DIR_PAPERS = "public/papers"
 export const MD_DIR_TALKS = "public/talks"
