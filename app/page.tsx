@@ -56,10 +56,17 @@ export default function Home() {
 
       <Section id="posts">
         <SectionHead>
-          <Link href="/posts" className="group">
+          <Link href="/posts" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
               posts
             </SectionHeading>
+            <div
+              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
+              style={{
+                clipPath:
+                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
+              }}
+            />
           </Link>
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
@@ -82,10 +89,17 @@ export default function Home() {
 
       <Section id="papers">
         <SectionHead>
-          <Link href="/papers" className="group">
+          <Link href="/papers" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
               papers
             </SectionHeading>
+            <div
+              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
+              style={{
+                clipPath:
+                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
+              }}
+            />
           </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
@@ -108,10 +122,17 @@ export default function Home() {
 
       <Section id="talks">
         <SectionHead>
-          <Link href="/talks" className="group">
+          <Link href="/talks" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
               talks
             </SectionHeading>
+            <div
+              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
+              style={{
+                clipPath:
+                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
+              }}
+            />
           </Link>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
