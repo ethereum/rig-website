@@ -2,14 +2,14 @@
 
 import { useState } from "react"
 import { join } from "path"
-import Link from "next/link"
-import { useRouter, useSearchParams } from "next/navigation"
+
+import type { PaperSummary } from "@/lib/types"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import PaperPreviewRow from "@/components/PaperPreviewRow"
 import { Button } from "@/components/ui/button"
 
-import type { PaperSummary } from "@/lib/types"
+import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
@@ -27,43 +27,21 @@ type PapersPageProps = {
 }
 
 export function PapersPage({ allPapers, options }: PapersPageProps) {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  // Client-side pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const { handlePageChange, resetFilters, searchParams, updateFilters } =
+    useFilters(setCurrentPage)
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
   const authorFilter = searchParams.get("author") || ""
   const tagFilter = searchParams.get("tag") || ""
 
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
   const { years, authors, tags } = options
 
   // Check if any filter is active
   const filtered = yearFilter !== "" || authorFilter !== "" || tagFilter !== ""
-
-  // Update URL with filters
-  const updateFilters = (param: string, value: string) => {
-    const params = new URLSearchParams(searchParams.toString())
-
-    if (value === "") {
-      params.delete(param)
-    } else {
-      params.set(param, value)
-    }
-
-    router.push(`?${params.toString()}`)
-
-    // Reset to page 1 when filters change
-    setCurrentPage(1)
-  }
-
-  const resetFilters = () => {
-    updateFilters("year", "")
-    updateFilters("author", "")
-    updateFilters("tag", "")
-  }
 
   // Filter papers based on selected filters
   const filteredPapers = allPapers.filter(({ frontmatter }) => {
@@ -99,17 +77,12 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
   const endIndex = startIndex + MAX_PER_PAGE
   const paginatedPapers = filteredPapers.slice(startIndex, endIndex)
 
-  // Handle page change
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-  }
-
   return (
     <>
       <div
         className={cn(
           "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
-          "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
+          "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
         <span className="text-foreground-light col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
@@ -117,7 +90,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
         </span>
         <select
           id="filter-date"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", yearFilter && "bg-border")}
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -132,7 +105,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
         </select>
         <select
           id="filter-author"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", authorFilter && "bg-border")}
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
@@ -145,7 +118,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
         </select>
         <select
           id="filter-tag"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", tagFilter && "bg-border")}
           value={tagFilter}
           onChange={(e) => updateFilters("tag", e.target.value)}
         >

@@ -2,13 +2,14 @@
 
 import { useState } from "react"
 import { join } from "path"
-import { useRouter, useSearchParams } from "next/navigation"
 
 import type { TalkSummary } from "@/lib/types"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import TalkPreviewRow from "@/components/TalkPreviewRow"
 import { Button } from "@/components/ui/button"
+
+import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
@@ -26,44 +27,22 @@ type TalksPageProps = {
 }
 
 export function TalksPage({ allTalks, options }: TalksPageProps) {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  // Client-side pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const { handlePageChange, resetFilters, searchParams, updateFilters } =
+    useFilters(setCurrentPage)
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
   const speakerFilter = searchParams.get("speaker") || ""
   const locationFilter = searchParams.get("location") || ""
 
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
   const { years, authors, locations } = options
 
   // Check if any filter is active
   const filtered =
     yearFilter !== "" || speakerFilter !== "" || locationFilter !== ""
-
-  // Update URL with filters
-  const updateFilters = (param: string, value: string) => {
-    const params = new URLSearchParams(searchParams.toString())
-
-    if (value === "") {
-      params.delete(param)
-    } else {
-      params.set(param, value)
-    }
-
-    router.push(`?${params.toString()}`)
-
-    // Reset to page 1 when filters change
-    setCurrentPage(1)
-  }
-
-  const resetFilters = () => {
-    updateFilters("year", "")
-    updateFilters("speaker", "")
-    updateFilters("tag", "")
-  }
 
   // Filter talks based on selected filters
   const filteredTalks = allTalks.filter(({ frontmatter }) => {
@@ -90,17 +69,12 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
   const endIndex = startIndex + MAX_PER_PAGE
   const paginatedTalks = filteredTalks.slice(startIndex, endIndex)
 
-  // Handle page change
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-  }
-
   return (
     <>
       <div
         className={cn(
           "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
-          "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
+          "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
         <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
@@ -108,7 +82,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         </span>
         <select
           id="filter-date"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", yearFilter && "bg-border")}
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -123,7 +97,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         </select>
         <select
           id="filter-author"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", speakerFilter && "bg-border")}
           value={speakerFilter}
           onChange={(e) => updateFilters("speaker", e.target.value)}
         >
@@ -136,7 +110,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
         </select>
         <select
           id="filter-location"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", locationFilter && "bg-border")}
           value={locationFilter}
           onChange={(e) => updateFilters("location", e.target.value)}
         >

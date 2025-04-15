@@ -2,13 +2,14 @@
 
 import { useState } from "react"
 import { join } from "path"
-import { useRouter, useSearchParams } from "next/navigation"
 
 import type { PostSummary } from "@/lib/types"
 
 import { PaginationNav } from "@/components/PaginationNav"
 import PostPreviewRow from "@/components/PostPreviewRow"
 import { Button } from "@/components/ui/button"
+
+import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
@@ -26,43 +27,21 @@ type PostsPageProps = {
 }
 
 export function PostsPage({ allPosts, options }: PostsPageProps) {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  // Client-side pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const { handlePageChange, resetFilters, searchParams, updateFilters } =
+    useFilters(setCurrentPage)
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
   const authorFilter = searchParams.get("author") || ""
   const tagFilter = searchParams.get("tag") || ""
 
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
   const { years, authors, tags } = options
 
   // Check if any filter is active
   const filtered = yearFilter !== "" || authorFilter !== "" || tagFilter !== ""
-
-  // Update URL with filters
-  const updateFilters = (param: string, value: string) => {
-    const params = new URLSearchParams(searchParams.toString())
-
-    if (value === "") {
-      params.delete(param)
-    } else {
-      params.set(param, value)
-    }
-
-    router.push(`?${params.toString()}`)
-
-    // Reset to page 1 when filters change
-    setCurrentPage(1)
-  }
-
-  const resetFilters = () => {
-    updateFilters("year", "")
-    updateFilters("author", "")
-    updateFilters("tag", "")
-  }
 
   // Filter posts based on selected filters
   const filteredPosts = allPosts.filter(({ frontmatter }) => {
@@ -98,17 +77,12 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
   const endIndex = startIndex + MAX_PER_PAGE
   const paginatedPosts = filteredPosts.slice(startIndex, endIndex)
 
-  // Handle page change
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-  }
-
   return (
     <>
       <div
         className={cn(
           "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
-          "grid-cols-3 lg:grid-cols-[auto_auto_1fr_1fr_auto]"
+          "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
         <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
@@ -116,7 +90,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </span>
         <select
           id="filter-date"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", yearFilter && "bg-border")}
           value={yearFilter}
           onChange={(e) => updateFilters("year", e.target.value)}
         >
@@ -129,7 +103,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </select>
         <select
           id="filter-author"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", authorFilter && "bg-border")}
           value={authorFilter}
           onChange={(e) => updateFilters("author", e.target.value)}
         >
@@ -142,7 +116,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         </select>
         <select
           id="filter-tag"
-          className="border-b px-2 py-1"
+          className={cn("border-b px-2 py-1", tagFilter && "bg-border")}
           value={tagFilter}
           onChange={(e) => updateFilters("tag", e.target.value)}
         >
