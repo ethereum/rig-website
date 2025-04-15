@@ -1,23 +1,22 @@
-import type { DropdownMenuProps } from "@radix-ui/react-dropdown-menu"
-
 import { Button } from "./ui/button"
 import { BracketLink } from "./ui/bracket-link"
 
 import { Menu } from "lucide-react"
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  type DrawerProps,
+  DrawerTrigger,
+} from "./ui/drawer"
 import { NAV_ITEMS } from "@/lib/constants"
 
 export const MobileMenu = ({
   className,
   ...props
-}: DropdownMenuProps & { className?: string }) => (
-  <DropdownMenu {...props}>
-    <DropdownMenuTrigger asChild className={className}>
+}: DrawerProps & { className?: string }) => (
+  <Drawer direction="right" {...props}>
+    <DrawerTrigger asChild className={className}>
       <Button
         variant="empty"
         size="icon"
@@ -33,13 +32,13 @@ export const MobileMenu = ({
         <Menu strokeLinecap="square" className="focus-within:text-primary" />
         <span className="sr-only">Mobile navigation menu</span>
       </Button>
-    </DropdownMenuTrigger>
-    <DropdownMenuContent align="end" className="rounded-none border-2">
+    </DrawerTrigger>
+    <DrawerContent className="flex flex-col items-center gap-12 p-32">
       {NAV_ITEMS.map(({ href, title }) => (
-        <DropdownMenuItem key={href} className="justify-end lowercase">
+        <DrawerClose key={href} asChild>
           <BracketLink href={href}>{title}</BracketLink>
-        </DropdownMenuItem>
+        </DrawerClose>
       ))}
-    </DropdownMenuContent>
-  </DropdownMenu>
+    </DrawerContent>
+  </Drawer>
 )
