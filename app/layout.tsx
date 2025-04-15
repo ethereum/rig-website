@@ -112,7 +112,7 @@ export default function RootLayout({
                 </span>
               </div>
               <div className="text-secondary-foreground text-center font-sans">
-                © {new Date().getFullYear()} {SITE_NAME}
+                &copy; {new Date().getFullYear()} {SITE_NAME}
                 <br />
                 All rights reserved
               </div>
