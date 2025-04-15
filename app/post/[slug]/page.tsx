@@ -19,7 +19,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="row-start-2 mt-8 w-full max-w-7xl">
-      <div className="mb-8 space-y-3">
+      <div className="mb-8 max-w-3xl space-y-3">
         <time
           dateTime={datePublished}
           className="text-secondary-foreground block font-sans text-sm font-semibold"
@@ -30,6 +30,7 @@ export default async function Page({ params }: Props) {
             day: "numeric",
           })}
         </time>
+
         <h1 className="text-4xl font-bold tracking-[0.01em] md:text-5xl">
           {title}
         </h1>
@@ -44,7 +45,10 @@ export default async function Page({ params }: Props) {
           ))}
         </div>
       </div>
-      <article className="font-sans">
+
+      <hr className="my-12" />
+
+      <article className="max-w-3xl font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>
       </article>
     </main>

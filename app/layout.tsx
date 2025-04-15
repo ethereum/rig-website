@@ -58,7 +58,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="mx-auto grid min-h-screen max-w-[96rem] grid-rows-[auto_1fr_auto] p-8 font-serif antialiased sm:px-18 sm:py-10">
-            <header className="mx-auto flex w-full flex-wrap items-center justify-between gap-y-4">
+            <header className="mx-auto mb-16 flex w-full flex-wrap items-center justify-between gap-y-4 sm:mb-24">
               <Link href="/">
                 <Logo
                   className="text-foreground text-7xl"

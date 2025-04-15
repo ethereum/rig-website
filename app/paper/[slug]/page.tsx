@@ -41,7 +41,7 @@ export default async function Page({ params }: Props) {
 
         <Contributors names={authors} />
 
-        <div className="mt-12 space-x-4">
+        <div className="space-x-4">
           {tags.map((tag, i) => (
             <TagLink key={i} type="paper">
               {tag}
@@ -49,7 +49,9 @@ export default async function Page({ params }: Props) {
           ))}
         </div>
       </div>
+
       <hr className="my-12" />
+
       <div className="mt-12 max-w-3xl space-y-3">
         <img src={join(PATH_ASSETS, image)} alt="" />
 

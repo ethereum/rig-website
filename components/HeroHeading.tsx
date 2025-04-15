@@ -11,7 +11,7 @@ const HeroHeading = ({
   ...props
 }: HeroHeadingProps) => {
   return (
-    <h1 className={cn("-space-y-12 py-20", className)} {...props}>
+    <h1 className={cn("mb-20 -space-y-12", className)} {...props}>
       {prefix && (
         <span className="block text-4xl leading-snug sm:text-5xl">
           {prefix}
