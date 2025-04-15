@@ -40,7 +40,7 @@ export default function Home() {
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
       <div className="max-w-4xl py-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
-        <p className="text-3xl xs:text-4xl sm:text-5xl">
+        <p className="text-3xl sm:text-5xl">
           The{" "}
           <span className="text-primary-foreground">
             Robust Incentives Group
