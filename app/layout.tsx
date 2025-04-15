@@ -75,9 +75,9 @@ export default function RootLayout({
                   </div>
                 ))}
 
-                <MobileMenu className="sm:hidden" />
-
                 <ModeToggle />
+
+                <MobileMenu className="sm:hidden" />
               </nav>
             </header>
             {children}
