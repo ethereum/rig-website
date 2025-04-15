@@ -6,6 +6,8 @@ location: CryptoEconDay Paris
 startDate: July 19, 2023
 ---
 
+<video src="https://www.youtube.com/watch?v=f8YLZqqpFpU"></video>
+
 Video: <https://www.youtube.com/watch?v=f8YLZqqpFpU>
 
 Slides: <https://docs.google.com/presentation/d/1TjzS5oYI_vfcGRSWpHmQ3_P6eq_oQ1WdDve_rNWlFsg/edit?usp=sharing>

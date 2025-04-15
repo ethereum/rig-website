@@ -6,6 +6,8 @@ location: CBER Forum
 startDate: May 23, 2024
 ---
 
+<video src="https://youtu.be/XS72blk5FoE?si=YnPISn6jPdkgRK3b"></video>
+
 Video: <https://youtu.be/XS72blk5FoE?si=YnPISn6jPdkgRK3b>
 
 Slides: <https://docs.google.com/presentation/d/1RKBgtGUMBM3vsILchYvAP2hYeYvGnJq4TVb2vt1jYsY/edit?usp=sharing>

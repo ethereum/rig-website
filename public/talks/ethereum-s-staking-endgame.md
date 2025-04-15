@@ -6,4 +6,6 @@ location: Uncommon Core 2.0
 startDate: March 22, 2024
 ---
 
+<video src="https://youtu.be/ivynR3RI3_Y?si=q3djOO3FO_atDfB7"></video>
+
 Video: <https://youtu.be/ivynR3RI3_Y?si=q3djOO3FO_atDfB7>

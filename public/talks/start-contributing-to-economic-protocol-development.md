@@ -6,6 +6,8 @@ location: Devcon
 startDate: November 13, 2024
 ---
 
+<video src="https://youtu.be/CaauVb5jcH8?si=SlYLrxZ4w7SHY-D6"></video>
+
 Video: <https://youtu.be/CaauVb5jcH8?si=SlYLrxZ4w7SHY-D6>
 
 Slides: <https://docs.google.com/presentation/d/1oT8-qF_kFLzRfy9StlucF5G7CCSCbwTrU3VGnmV4M-M/edit#slide=id.p>

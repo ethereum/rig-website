@@ -2,9 +2,11 @@
 title: "Beyond the Ethereum protocol: Proposer-Builder Separation"
 authors:
   - Barnabé Monnot
-location:
+location: CBER Conference
 startDate: May 23, 2024
 ---
+
+<video src="https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b"></video>
 
 Video: <https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b>
 

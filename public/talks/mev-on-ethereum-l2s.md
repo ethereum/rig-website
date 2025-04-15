@@ -6,6 +6,8 @@ location: MEV SBC, Stanford, Palo Alto, US
 startDate: August 31, 2023
 ---
 
+<video src="https://youtu.be/1mlkSz2IP00?si=gC-CCZsKYvI0pPpz"></video>
+
 Video: <https://youtu.be/1mlkSz2IP00?si=gC-CCZsKYvI0pPpz>
 
 Slides: <https://drive.google.com/file/d/1djUGYvAl79YCKqgqHsoBrpXhJszsIzmM/view?usp=sharing>

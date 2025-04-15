@@ -6,6 +6,8 @@ location: Princeton University, Princeton, USA
 startDate: October 23, 2023
 ---
 
+<video src="https://www.youtube.com/watch?v=2Z3fp1FJnTw"></video>
+
 Video: <https://www.youtube.com/watch?v=2Z3fp1FJnTw>
 
 Slides: <https://docs.google.com/presentation/d/1roho4mqbxpIqWjFnvBgv4jaaJjWz3OWXXBLYw9JZmHs/edit?usp=sharing>

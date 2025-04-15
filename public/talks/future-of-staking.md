@@ -9,7 +9,11 @@ location: Columbia University, New York, US
 startDate: December 6, 2024
 ---
 
+<video src="https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI"></video>
+
 Video: <https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI>
+
+<video src="https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky"></video>
 
 Video: <https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky>
 

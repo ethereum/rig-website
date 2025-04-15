@@ -6,6 +6,8 @@ location: Brussels, Belgium
 startDate: July 10, 2024
 ---
 
+<video src="https://youtu.be/JZRlMmyysRM"></video>
+
 Video: <https://youtu.be/JZRlMmyysRM>
 
 Slides: <https://docs.google.com/presentation/d/1DQ48DpxdtbDctMiBAaJRdQgsHmm8Q-eLuEl_0er0VxM/edit?usp=sharing>
