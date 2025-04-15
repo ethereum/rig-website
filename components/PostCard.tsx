@@ -2,8 +2,9 @@ import type { PostFrontMatter } from "@/lib/types"
 
 import { Contributors } from "./Contributors"
 import TagLink from "./TagLink"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/bracket-link"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import Link from "./ui/link"
 
 import { cn } from "@/lib/utils"
 
@@ -31,7 +32,9 @@ const PostCard = ({
         })}
       </time>
 
-      <CardTitle>{title}</CardTitle>
+      <Link href={href} className="text-foreground hover:text-primary block">
+        <CardTitle>{title}</CardTitle>
+      </Link>
 
       <Contributors names={authors} />
 

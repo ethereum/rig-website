@@ -1,8 +1,9 @@
 import type { TalkFrontMatter } from "@/lib/types"
 
 import { Contributors } from "./Contributors"
-import { Card, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { BracketLink } from "./ui/bracket-link"
+import { Card, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import Link from "./ui/link"
 
 import { cn } from "@/lib/utils"
 
@@ -21,7 +22,12 @@ const TalkCard = ({
     <div className="flex gap-x-8 gap-y-4 max-md:flex-col-reverse">
       <div className="flex w-full flex-col gap-8">
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <Link
+            href={href}
+            className="text-foreground hover:text-primary block"
+          >
+            <CardTitle>{title}</CardTitle>
+          </Link>
 
           <time
             dateTime={startDate}
