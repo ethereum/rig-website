@@ -42,7 +42,7 @@ const SectionCounter = React.forwardRef<
   React.HTMLAttributes<HTMLSpanElement>
 >(({ className, children, ...props }, ref) => (
   <span ref={ref} className={cn("font-sans", className)} {...props}>
-    ({children})
+    &#91;{children}&#93;
   </span>
 ))
 SectionCounter.displayName = "SectionCounter"
