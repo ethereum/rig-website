@@ -14,7 +14,7 @@ const BracketLink = forwardRef<HTMLAnchorElement, LinkProps>(
       <BaseLink
         data-active={isActive}
         className={cn(
-          "hover:text-primary text-foreground block w-fit font-sans tracking-[0.02em]",
+          "hover:text-primary text-foreground block w-fit font-sans tracking-[0.02em] lowercase",
           className
         )}
         ref={ref}
@@ -28,9 +28,7 @@ const BracketLink = forwardRef<HTMLAnchorElement, LinkProps>(
         >
           &#91;&nbsp;
         </span>
-        <span className={cn(isActive && "text-primary")}>
-        {children}
-        </span>
+        <span className={cn(isActive && "text-primary")}>{children}</span>
         <span
           className={cn(
             "text-primary font-medium select-none",
