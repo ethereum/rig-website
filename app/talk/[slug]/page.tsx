@@ -41,6 +41,7 @@ export default async function Page({ params }: Props) {
 
         <Contributors names={authors} />
       </div>
+      <hr className="my-12" />
       <article className="font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>
       </article>

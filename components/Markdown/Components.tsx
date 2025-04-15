@@ -27,4 +27,5 @@ export const MarkdownComponents: Components = {
     <blockquote className="my-6 border-l-4 ps-4">{children}</blockquote>
   ),
   video: ({ src }) => <YouTube url={src || ""} />,
+  hr: () => <hr className="my-12" />,
 }
