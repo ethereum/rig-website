@@ -23,7 +23,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="row-start-2 mt-8 w-full max-w-7xl">
-      <div className="mb-8 space-y-3">
+      <div className="mb-8 max-w-3xl space-y-3">
         <time
           dateTime={datePublished}
           className="text-secondary-foreground block font-sans text-sm font-semibold"
@@ -41,19 +41,22 @@ export default async function Page({ params }: Props) {
 
         <Contributors names={authors} />
 
-        <div className="space-x-4">
+        <div className="mt-12 space-x-4">
           {tags.map((tag, i) => (
             <TagLink key={i} type="paper">
               {tag}
             </TagLink>
           ))}
         </div>
-
-        <div>{publicationVenue}</div>
-
-        <img src={join(PATH_ASSETS, image)} alt="" />
       </div>
-      <article className="font-sans">
+      <hr className="my-12" />
+      <div className="mt-12 max-w-3xl space-y-3">
+        <img src={join(PATH_ASSETS, image)} alt="" />
+
+        <div className="font-sans">{publicationVenue}</div>
+      </div>
+
+      <article className="max-w-3xl font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>
       </article>
     </main>
