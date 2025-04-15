@@ -1,9 +1,11 @@
 import { join } from "path"
 
+import AbsoluteBrackets from "@/components/AbsoluteBrackets"
 import PostCard from "@/components/PostCard"
 import PaperCard from "@/components/PaperCard"
 import TalkCard from "@/components/TalkCard"
 
+import Link from "@/components/ui/link"
 import { BracketLink } from "@/components/ui/bracket-link"
 import { Card } from "@/components/ui/card"
 import {
@@ -29,7 +31,6 @@ import {
 
 import { members } from "@/data/profiles"
 import { sortContributors } from "@/lib/contributors"
-import Link from "@/components/ui/link"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -60,13 +61,7 @@ export default function Home() {
             <SectionHeading className="group-hover:text-foreground">
               posts
             </SectionHeading>
-            <div
-              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
-              }}
-            />
+            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
@@ -93,13 +88,7 @@ export default function Home() {
             <SectionHeading className="group-hover:text-foreground">
               papers
             </SectionHeading>
-            <div
-              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
-              }}
-            />
+            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
@@ -126,13 +115,7 @@ export default function Home() {
             <SectionHeading className="group-hover:text-foreground">
               talks
             </SectionHeading>
-            <div
-              className="border-primary absolute inset-x-0 top-1 -bottom-0.5 border-2 opacity-0 transition-opacity group-hover:opacity-100"
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% 4px, 0 4px, 0 calc(100% - 4px), 100% calc(100% - 4px), 100% 100%, 0 100%)",
-              }}
-            />
+            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
