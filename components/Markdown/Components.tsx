@@ -2,6 +2,7 @@ import Image from "next/image"
 import { type Components } from "react-markdown"
 
 import Link from "@/components/ui/link"
+import YouTube from "../YouTube"
 
 export const MarkdownComponents: Components = {
   a: ({ children, href }) => (
@@ -25,4 +26,5 @@ export const MarkdownComponents: Components = {
   blockquote: ({ children }) => (
     <blockquote className="my-6 border-l-4 ps-4">{children}</blockquote>
   ),
+  video: ({ src }) => <YouTube url={src || ""} />,
 }
