@@ -8,8 +8,15 @@ import {
 } from "@/lib/contributors"
 
 import { members } from "@/data/profiles"
+import { cn } from "@/lib/utils"
 
-export const Contributors = ({ names }: { names: string[] }) => {
+export const Contributors = ({
+  names,
+  avatarClass,
+}: {
+  names: string[]
+  avatarClass?: string
+}) => {
   const contributors = getContributorsFromIDs(names)
   const teamMembers = contributors.filter((contributor) =>
     members.some((member) => member.id === contributor.id)
@@ -31,7 +38,10 @@ export const Contributors = ({ names }: { names: string[] }) => {
       {teamMembers.length > 0 && (
         <div className="flex flex-nowrap -space-x-1">
           {teamMembers.map(({ id, name, avatar }) => (
-            <Avatar key={id} className="border-background size-4 border-1">
+            <Avatar
+              key={id}
+              className={cn("border-background size-6 border-1", avatarClass)}
+            >
               <AvatarImage
                 src={avatar?.replace(/^public/, "")}
                 alt={`${name} avatar`}

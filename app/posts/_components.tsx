@@ -85,8 +85,8 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
           "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
-        <span className="col-start-1 row-start-1 text-nowrap max-lg:col-span-2">
-          Filter by:
+        <span className="col-start-1 row-start-1 self-center text-nowrap max-lg:col-span-2">
+        Filter by:
         </span>
         <select
           id="filter-date"

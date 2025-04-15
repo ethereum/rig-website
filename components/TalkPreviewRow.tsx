@@ -50,7 +50,7 @@ const TalkPreviewRow = ({
         <Contributors names={authors} />
       </CardHeader>
 
-      <CardContent className="flex flex-col md:text-end">
+      <CardContent className="flex flex-col">
         {location}
       </CardContent>
     </div>
