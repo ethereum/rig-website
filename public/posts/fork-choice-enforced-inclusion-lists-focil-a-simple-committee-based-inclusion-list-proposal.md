@@ -12,4 +12,4 @@ tags:
 datePublished: 2024-06-19T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/fork-choice-enforced-inclusion-lists-focil-a-simple-committee-based-inclusion-list-proposal/19870>
+[Read full article on ethresear.ch](https://ethresear.ch/t/fork-choice-enforced-inclusion-lists-focil-a-simple-committee-based-inclusion-list-proposal/19870)

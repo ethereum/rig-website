@@ -10,4 +10,4 @@ tags:
 datePublished: 2025-02-24T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/rainbow-roles-incentives-abps-focilr-as/21826>
+[Read full article on ethresear.ch](https://ethresear.ch/t/rainbow-roles-incentives-abps-focilr-as/21826)

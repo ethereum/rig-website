@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-07-09T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/mev-resistant-dynamic-pricing-auction-of-execution-proposal-rights/20024>
+[Read full article on ethresear.ch](https://ethresear.ch/t/mev-resistant-dynamic-pricing-auction-of-execution-proposal-rights/20024)

@@ -10,4 +10,4 @@ tags:
 datePublished: 2024-02-29T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/the-more-the-less-censored-introducing-committee-enforced-inclusion-sets-comis-on-ethereum/18835>
+[Read full article on ethresear.ch](https://ethresear.ch/t/the-more-the-less-censored-introducing-committee-enforced-inclusion-sets-comis-on-ethereum/18835)

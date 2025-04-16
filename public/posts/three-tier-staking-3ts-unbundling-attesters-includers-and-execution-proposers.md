@@ -8,4 +8,4 @@ tags:
 datePublished: 2025-01-31T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/three-tier-staking-3ts-unbundling-attesters-includers-and-execution-proposers/21648>
+[Read full article on ethresear.ch](https://ethresear.ch/t/three-tier-staking-3ts-unbundling-attesters-includers-and-execution-proposers/21648)

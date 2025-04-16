@@ -12,4 +12,4 @@ tags:
 datePublished: 2024-05-23T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/anonymous-inclusion-lists-anon-ils/19627>
+[Read full article on ethresear.ch](https://ethresear.ch/t/anonymous-inclusion-lists-anon-ils/19627)

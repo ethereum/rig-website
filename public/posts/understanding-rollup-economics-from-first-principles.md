@@ -8,4 +8,4 @@ tags:
 datePublished: 2022-02-24T12:00:00.000Z
 ---
 
-<https://barnabe.substack.com/p/understanding-rollup-economics-from>
+[Read full article on barnabe.substack.com](https://barnabe.substack.com/p/understanding-rollup-economics-from)

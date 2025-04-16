@@ -9,4 +9,4 @@ tags:
 datePublished: 2023-08-10T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327>
+[Read full article on ethresear.ch](https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327)

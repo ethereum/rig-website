@@ -9,4 +9,4 @@ tags:
 datePublished: 2023-12-05T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/timing-games-implications-and-possible-mitigations/17612>
+[Read full article on ethresear.ch](https://ethresear.ch/t/timing-games-implications-and-possible-mitigations/17612)

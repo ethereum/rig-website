@@ -9,4 +9,4 @@ tags:
 datePublished: 2023-05-05T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/bid-cancellations-considered-harmful/15500>
+[Read full article on ethresear.ch](https://ethresear.ch/t/bid-cancellations-considered-harmful/15500)

@@ -7,4 +7,4 @@ tags:
 datePublished: 2023-03-03T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957>
+[Read full article on ethresear.ch](https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957)

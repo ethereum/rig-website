@@ -8,4 +8,4 @@ tags:
 datePublished: 2024-02-22T12:00:00.000Z
 ---
 
-<https://mirror.xyz/barnabe.eth/62E79gUSqiwS9NEbbfdwTdy7G9Hh098fcV38vWv8VQo>
+[Read full article on mirror.xyz](https://mirror.xyz/barnabe.eth/62E79gUSqiwS9NEbbfdwTdy7G9Hh098fcV38vWv8VQo)

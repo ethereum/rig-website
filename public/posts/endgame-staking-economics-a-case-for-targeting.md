@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-02-22T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751>
+[Read full article on ethresear.ch](https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751)

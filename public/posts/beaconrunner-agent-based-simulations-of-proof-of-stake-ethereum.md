@@ -8,4 +8,4 @@ tags:
 datePublished: 2021-06-01T12:00:00.000Z
 ---
 
-<https://ethereum.github.io/beaconrunner/>
+[Read full article on ethereum.github.io](https://ethereum.github.io/beaconrunner/)

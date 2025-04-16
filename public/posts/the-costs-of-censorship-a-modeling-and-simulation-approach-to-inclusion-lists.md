@@ -9,4 +9,4 @@ tags:
 datePublished: 2023-11-10T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/the-costs-of-censorship-a-modeling-and-simulation-approach-to-inclusion-lists/17382>
+[Read full article on ethresear.ch](https://ethresear.ch/t/the-costs-of-censorship-a-modeling-and-simulation-approach-to-inclusion-lists/17382)

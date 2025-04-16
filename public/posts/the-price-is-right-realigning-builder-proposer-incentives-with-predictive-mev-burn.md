@@ -8,4 +8,4 @@ tags:
 datePublished: 2024-02-12T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656>
+[Read full article on ethresear.ch](https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656)

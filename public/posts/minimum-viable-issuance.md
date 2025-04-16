@@ -8,4 +8,4 @@ tags:
 datePublished: 2023-10-07T12:00:00.000Z
 ---
 
-<https://notes.ethereum.org/@anderselowsson/MinimumViableIssuance>
+[Read full article on notes.ethereum.org](https://notes.ethereum.org/@anderselowsson/MinimumViableIssuance)

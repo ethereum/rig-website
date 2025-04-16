@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-04-25T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/uncrowdable-inclusion-lists-the-tension-between-chain-neutrality-preconfirmations-and-proposer-commitments/19372>
+[Read full article on ethresear.ch](https://ethresear.ch/t/uncrowdable-inclusion-lists-the-tension-between-chain-neutrality-preconfirmations-and-proposer-commitments/19372)

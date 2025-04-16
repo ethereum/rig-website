@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-04-18T12:00:00.000Z
 ---
 
-<https://notes.ethereum.org/@anderselowsson/Reward-curve-with-capped-issuance>
+[Read full article on notes.ethereum.org](https://notes.ethereum.org/@anderselowsson/Reward-curve-with-capped-issuance)

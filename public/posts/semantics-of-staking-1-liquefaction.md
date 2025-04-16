@@ -8,4 +8,4 @@ tags:
 datePublished: 2023-11-28T12:00:00.000Z
 ---
 
-<https://mirror.xyz/barnabe.eth/v7W2CsSVYW6I_9bbHFDqvqShQ6gTX3weAtwkaVAzAL4>
+[Read full article on mirror.xyz](https://mirror.xyz/barnabe.eth/v7W2CsSVYW6I_9bbHFDqvqShQ6gTX3weAtwkaVAzAL4)

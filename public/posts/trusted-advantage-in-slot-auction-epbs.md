@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-09-19T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/trusted-advantage-in-slot-auction-epbs/20456>
+[Read full article on ethresear.ch](https://ethresear.ch/t/trusted-advantage-in-slot-auction-epbs/20456)

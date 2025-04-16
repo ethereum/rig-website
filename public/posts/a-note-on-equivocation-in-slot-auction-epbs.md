@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-08-23T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/a-note-on-equivocation-in-slot-auction-epbs/20331>
+[Read full article on ethresear.ch](https://ethresear.ch/t/a-note-on-equivocation-in-slot-auction-epbs/20331)

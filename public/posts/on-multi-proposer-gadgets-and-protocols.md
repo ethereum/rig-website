@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-08-28T12:00:00.000Z
 ---
 
-<https://hackmd.io/xz1UyksETR-pCsazePMAjw?view>
+[Read full article on hackmd.io](https://hackmd.io/xz1UyksETR-pCsazePMAjw?view)

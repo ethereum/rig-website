@@ -9,4 +9,4 @@ tags:
 datePublished: 2023-07-27T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/game-theoretic-model-for-mev-boost-auctions-mma/16206>
+[Read full article on ethresear.ch](https://ethresear.ch/t/game-theoretic-model-for-mev-boost-auctions-mma/16206)

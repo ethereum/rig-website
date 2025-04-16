@@ -8,4 +8,4 @@ tags:
 datePublished: 2023-06-13T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871>
+[Read full article on ethresear.ch](https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871)

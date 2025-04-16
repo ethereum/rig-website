@@ -7,4 +7,4 @@ tags:
 datePublished: 2024-10-23T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/practical-endgame-on-issuance-policy/20747>
+[Read full article on ethresear.ch](https://ethresear.ch/t/practical-endgame-on-issuance-policy/20747)

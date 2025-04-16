@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-04-17T12:00:00.000Z
 ---
 
-<https://notes.ethereum.org/@anderselowsson/Foundations-of-MVI>
+[Read full article on notes.ethereum.org](https://notes.ethereum.org/@anderselowsson/Foundations-of-MVI)

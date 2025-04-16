@@ -8,4 +8,4 @@ tags:
 datePublished: 2022-10-08T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879?u=barnabe>
+[Read full article on ethresear.ch](https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879?u=barnabe)

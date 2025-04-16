@@ -7,4 +7,4 @@ tags:
 datePublished: 2024-11-06T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/proposers-do-play-dice-introducing-random-execution-auctions-randeas/20938/1>
+[Read full article on ethresear.ch](https://ethresear.ch/t/proposers-do-play-dice-introducing-random-execution-auctions-randeas/20938/1)

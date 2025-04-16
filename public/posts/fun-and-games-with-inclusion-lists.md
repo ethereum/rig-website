@@ -8,4 +8,4 @@ tags:
 datePublished: 2023-09-06T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/fun-and-games-with-inclusion-lists/16557?u=barnabe>
+[Read full article on ethresear.ch](https://ethresear.ch/t/fun-and-games-with-inclusion-lists/16557?u=barnabe)

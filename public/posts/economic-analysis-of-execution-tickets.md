@@ -9,4 +9,4 @@ tags:
 datePublished: 2024-03-07T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/economic-analysis-of-execution-tickets/18894>
+[Read full article on ethresear.ch](https://ethresear.ch/t/economic-analysis-of-execution-tickets/18894)

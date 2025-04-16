@@ -8,4 +8,4 @@ tags:
 datePublished: 2024-02-15T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/unbundling-staking-towards-rainbow-staking/18683?u=barnabe>
+[Read full article on ethresear.ch](https://ethresear.ch/t/unbundling-staking-towards-rainbow-staking/18683?u=barnabe)

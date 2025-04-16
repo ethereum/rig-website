@@ -10,4 +10,4 @@ tags:
 datePublished: 2025-02-06T12:00:00.000Z
 ---
 
-<https://ethresear.ch/t/zkfocil-inclusion-list-privacy-using-linkable-ring-signatures/21688>
+[Read full article on ethresear.ch](https://ethresear.ch/t/zkfocil-inclusion-list-privacy-using-linkable-ring-signatures/21688)
