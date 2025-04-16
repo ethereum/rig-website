@@ -2,7 +2,7 @@
 title: Start contributing to economic protocol development
 authors:
   - Julian
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 13, 2024
 ---
 

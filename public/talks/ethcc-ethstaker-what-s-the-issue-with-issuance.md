@@ -3,7 +3,7 @@ title: "[ethcc-EthStaker] What’s the issue with issuance?"
 authors:
   - Caspar Schwarz-Schilling
   - Ansgar Dietrichs
-location: Brussels, Belgium
+location: EthCC 2024 - Brussels, Belgium
 startDate: July 8, 2024
 ---
 

@@ -2,7 +2,7 @@
 title: Fork-choice enforced inclusion lists (FOCIL)
 authors:
   - Julian
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 14, 2024
 ---
 

@@ -3,7 +3,7 @@ title: Why Ethereum’s Issuance Policy is Unsustainable
 authors:
   - Ansgar Dietrichs
   - Caspar Schwarz-Schilling
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 14, 2024
 ---
 

@@ -2,7 +2,7 @@
 title: Designing against centralizing forces
 authors:
   - Thomas Thiery
-location: Málaga, Spain
+location: MARBLE 2024 - Málaga, Spain
 startDate: July 9, 2024
 ---
 

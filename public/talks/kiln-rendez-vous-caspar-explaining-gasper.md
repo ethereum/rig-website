@@ -2,7 +2,7 @@
 title: "[Kiln Rendez-Vous] Caspar explaining Gasper"
 authors:
   - Caspar Schwarz-Schilling
-location: Brussels, Belgium
+location: EthCC 2024 - Brussels, Belgium
 startDate: July 9, 2024
 ---
 

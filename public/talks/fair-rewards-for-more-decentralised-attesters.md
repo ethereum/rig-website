@@ -2,7 +2,7 @@
 title: Fair rewards for more decentralised attesters
 authors:
   - Barnabé Monnot
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 15, 2024
 ---
 

@@ -2,7 +2,7 @@
 title: Practical Endgame on Issuance Policy
 authors:
   - Anders
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 14, 2024
 ---
 

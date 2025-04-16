@@ -4,7 +4,7 @@ authors:
   - Anders
   - Ansgar Dietrichs
   - Caspar Schwarz-Schilling
-location: Devcon
+location: Devcon 7 — SEA
 startDate: November 15, 2024
 ---
 

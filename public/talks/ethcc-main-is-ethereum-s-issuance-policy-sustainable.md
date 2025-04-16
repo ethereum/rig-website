@@ -3,7 +3,7 @@ title: "[ethcc-main] Is Ethereum’s Issuance Policy Sustainable?"
 authors:
   - Caspar Schwarz-Schilling
   - Ansgar Dietrichs
-location: Brussels, Belgium
+location: EthCC 2024 - Brussels, Belgium
 startDate: July 11, 2024
 ---
 

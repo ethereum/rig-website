@@ -3,7 +3,7 @@ title: "[Gauntlet restaking day] restaking-burn"
 authors:
   - Caspar Schwarz-Schilling
   - Ansgar Dietrichs
-location: Brussels, Belgium
+location: EthCC 2024 - Brussels, Belgium
 startDate: July 9, 2024
 ---
 

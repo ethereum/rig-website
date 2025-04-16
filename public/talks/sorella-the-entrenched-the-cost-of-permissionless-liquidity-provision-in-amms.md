@@ -2,7 +2,7 @@
 title: "[Sorella The Entrenched] The Cost of Permissionless Liquidity Provision in AMMs"
 authors:
   - Julian
-location: Brussels, Belgium
+location: EthCC 2024 - Brussels, Belgium
 startDate: July 10, 2024
 ---
 
