@@ -1,11 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import { join } from "path"
 
 import type { PaperSummary } from "@/lib/types"
 
-import { PaginationNav } from "@/components/PaginationNav"
 import PaperPreviewRow from "@/components/PaperPreviewRow"
 import { Button } from "@/components/ui/button"
 
@@ -13,7 +11,7 @@ import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
-import { MAX_PER_PAGE, PATH_PAPERS, TAGS } from "@/lib/constants"
+import { PATH_PAPERS, TAGS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -27,11 +25,7 @@ type PapersPageProps = {
 }
 
 export function PapersPage({ allPapers, options }: PapersPageProps) {
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const { handlePageChange, resetFilters, searchParams, updateFilters } =
-    useFilters(setCurrentPage)
+  const { resetFilters, searchParams, updateFilters } = useFilters()
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
@@ -64,18 +58,6 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
 
     return matchesYear && matchesAuthor && matchesTag
   })
-
-  // Calculate pagination values
-  const totalPapers = filteredPapers.length
-  const totalPages = Math.max(1, Math.ceil(totalPapers / MAX_PER_PAGE))
-
-  // Ensure current page is within valid range
-  const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages)
-
-  // Get the papers for the current page
-  const startIndex = (validCurrentPage - 1) * MAX_PER_PAGE
-  const endIndex = startIndex + MAX_PER_PAGE
-  const paginatedPapers = filteredPapers.slice(startIndex, endIndex)
 
   return (
     <>
@@ -153,7 +135,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
       <div>
         {filteredPapers.length > 0 ? (
           <>
-            {paginatedPapers.map(({ frontmatter, slug }) => (
+            {filteredPapers.map(({ frontmatter, slug }) => (
               <PaperPreviewRow
                 key={slug}
                 frontmatter={frontmatter}
@@ -161,14 +143,6 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
                 className="border-b px-5 max-sm:-mx-5"
               />
             ))}
-
-            {totalPages > 1 && (
-              <PaginationNav
-                currentPage={validCurrentPage}
-                totalPages={totalPages}
-                onPageChange={handlePageChange}
-              />
-            )}
           </>
         ) : (
           <div className="text-secondary-foreground mt-4 text-center">

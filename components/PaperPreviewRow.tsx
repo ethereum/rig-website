@@ -3,7 +3,7 @@ import { join } from "path"
 import type { PaperFrontMatter } from "@/lib/types"
 
 import { Contributors } from "./Contributors"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import { CardContent, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
 import { Tag } from "./ui/tag"
 

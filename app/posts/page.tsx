@@ -15,7 +15,7 @@ export default function Page() {
           new Date(frontmatter.datePublished).getFullYear()
         )
       ),
-    ].sort(),
+    ].sort((a, b) => b - a),
     authors: [
       ...new Set(posts.flatMap(({ frontmatter }) => frontmatter.authors)),
     ].sort(),

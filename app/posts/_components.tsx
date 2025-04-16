@@ -1,11 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import { join } from "path"
 
 import type { PostSummary } from "@/lib/types"
 
-import { PaginationNav } from "@/components/PaginationNav"
 import PostPreviewRow from "@/components/PostPreviewRow"
 import { Button } from "@/components/ui/button"
 
@@ -13,7 +11,7 @@ import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
-import { MAX_PER_PAGE, PATH_POSTS, TAGS } from "@/lib/constants"
+import { PATH_POSTS, TAGS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -27,11 +25,7 @@ type PostsPageProps = {
 }
 
 export function PostsPage({ allPosts, options }: PostsPageProps) {
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const { handlePageChange, resetFilters, searchParams, updateFilters } =
-    useFilters(setCurrentPage)
+  const { resetFilters, searchParams, updateFilters } = useFilters()
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
@@ -64,18 +58,6 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
 
     return matchesYear && matchesAuthor && matchesTag
   })
-
-  // Calculate pagination values
-  const totalPosts = filteredPosts.length
-  const totalPages = Math.max(1, Math.ceil(totalPosts / MAX_PER_PAGE))
-
-  // Ensure current page is within valid range
-  const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages)
-
-  // Get the posts for the current page
-  const startIndex = (validCurrentPage - 1) * MAX_PER_PAGE
-  const endIndex = startIndex + MAX_PER_PAGE
-  const paginatedPosts = filteredPosts.slice(startIndex, endIndex)
 
   return (
     <>
@@ -150,26 +132,16 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
       </div>
       <div>
         {filteredPosts.length > 0 ? (
-          <>
-            <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
-              {paginatedPosts.map(({ frontmatter, slug }) => (
-                <PostPreviewRow
-                  key={slug}
-                  frontmatter={frontmatter}
-                  href={join(PATH_POSTS, slug)}
-                  className="border-b px-5 max-sm:-mx-5"
-                />
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <PaginationNav
-                currentPage={validCurrentPage}
-                totalPages={totalPages}
-                onPageChange={handlePageChange}
+          <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
+            {filteredPosts.map(({ frontmatter, slug }) => (
+              <PostPreviewRow
+                key={slug}
+                frontmatter={frontmatter}
+                href={join(PATH_POSTS, slug)}
+                className="border-b px-5 max-sm:-mx-5"
               />
-            )}
-          </>
+            ))}
+          </div>
         ) : (
           <div className="text-secondary-foreground mt-4 text-center">
             No posts found for the selected filters.

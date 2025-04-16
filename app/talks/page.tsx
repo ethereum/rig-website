@@ -17,7 +17,7 @@ export default function Page() {
           new Date(frontmatter.startDate).getFullYear()
         )
       ),
-    ].sort(),
+    ].sort((a, b) => b - a),
     authors: [
       ...new Set(talks.flatMap(({ frontmatter }) => frontmatter.authors)),
     ].sort(),

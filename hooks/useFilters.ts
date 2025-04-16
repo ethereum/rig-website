@@ -1,8 +1,6 @@
 import { useRouter, useSearchParams } from "next/navigation"
 
-export const useFilters = (
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-) => {
+export const useFilters = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -17,9 +15,6 @@ export const useFilters = (
     }
 
     router.push(`?${params.toString()}`)
-
-    // Reset to page 1 when filters change
-    setCurrentPage(1)
   }
 
   // Reset all filters
@@ -27,13 +22,7 @@ export const useFilters = (
     router.push("?")
   }
 
-  // Handle page change
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-  }
-
   return {
-    handlePageChange,
     resetFilters,
     searchParams,
     updateFilters,

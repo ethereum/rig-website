@@ -1,11 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import { join } from "path"
 
 import type { TalkSummary } from "@/lib/types"
 
-import { PaginationNav } from "@/components/PaginationNav"
 import TalkPreviewRow from "@/components/TalkPreviewRow"
 import { Button } from "@/components/ui/button"
 
@@ -13,7 +11,7 @@ import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 
-import { MAX_PER_PAGE, PATH_TALKS } from "@/lib/constants"
+import { PATH_TALKS } from "@/lib/constants"
 
 type FilterOptions = {
   years: number[]
@@ -27,11 +25,7 @@ type TalksPageProps = {
 }
 
 export function TalksPage({ allTalks, options }: TalksPageProps) {
-  // Client-side pagination state
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const { handlePageChange, resetFilters, searchParams, updateFilters } =
-    useFilters(setCurrentPage)
+  const { resetFilters, searchParams, updateFilters } = useFilters()
 
   // Get filter values from URL query parameters
   const yearFilter = searchParams.get("year") || ""
@@ -56,18 +50,6 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
 
     return matchesYear && matchesAuthor && matchesLocation
   })
-
-  // Calculate pagination values
-  const totalTalks = filteredTalks.length
-  const totalPages = Math.max(1, Math.ceil(totalTalks / MAX_PER_PAGE))
-
-  // Ensure current page is within valid range
-  const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages)
-
-  // Get the talks for the current page
-  const startIndex = (validCurrentPage - 1) * MAX_PER_PAGE
-  const endIndex = startIndex + MAX_PER_PAGE
-  const paginatedTalks = filteredTalks.slice(startIndex, endIndex)
 
   return (
     <>
@@ -139,26 +121,16 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
       </div>
       <div>
         {filteredTalks.length > 0 ? (
-          <>
-            <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
-              {paginatedTalks.map(({ frontmatter, slug }) => (
-                <TalkPreviewRow
-                  key={slug}
-                  frontmatter={frontmatter}
-                  href={join(PATH_TALKS, slug)}
-                  className="border-b px-5 max-sm:-mx-5"
-                />
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <PaginationNav
-                currentPage={validCurrentPage}
-                totalPages={totalPages}
-                onPageChange={handlePageChange}
+          <div className="grid w-full grid-cols-1 gap-x-8 md:grid-cols-[1fr_auto]">
+            {filteredTalks.map(({ frontmatter, slug }) => (
+              <TalkPreviewRow
+                key={slug}
+                frontmatter={frontmatter}
+                href={join(PATH_TALKS, slug)}
+                className="border-b px-5 max-sm:-mx-5"
               />
-            )}
-          </>
+            ))}
+          </div>
         ) : (
           <div className="text-secondary-foreground mt-4 text-center">
             No talks found for the selected filters.

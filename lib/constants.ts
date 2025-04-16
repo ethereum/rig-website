@@ -46,8 +46,6 @@ export const NAV_ITEMS: NavItem[] = [
   // },
 ]
 
-export const MAX_PER_PAGE = 10
-
 export const URL_GITHUB_REPO = "https://github.com/ethereum/rig"
 export const URL_TWITTER = "https://x.com/ethereum"
 export const URL_EMAIL = "mailto:rig@ethereum.org"
