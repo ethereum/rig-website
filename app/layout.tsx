@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils"
 
 import {
   NAV_ITEMS,
+  SITE_DESCRIPTION,
   SITE_NAME,
   URL_EMAIL,
   URL_GITHUB_REPO,
@@ -37,10 +38,10 @@ const montserratSans = Montserrat({
   subsets: ["latin"],
 })
 
-// TODO: Add description and confirm og-image
+// TODO: Confirm og-image
 export const metadata: Metadata = {
-  title: "Robust Incentives Group",
-  description: "Robust Incentives Group",
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
   openGraph: {
     images: "/og-image.png",
   },
