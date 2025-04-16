@@ -93,7 +93,7 @@
 .dark {
   --background: #171717;
   --foreground: #c4c4c4;
-  --foreground-light: #9F9F9F;
+  --foreground-light: #9f9f9f;
   --card: #000000;
   --card-foreground: #c4c4c4;
   --popover: oklch(0.196 0.001 0);

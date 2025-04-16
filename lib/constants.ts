@@ -39,11 +39,6 @@ export const NAV_ITEMS: NavItem[] = [
     title: "Talks",
     href: "/talks",
   },
-  // TODO: Implement or remove
-  // {
-  //   title: "Open Problems",
-  //   href: "/#research",
-  // },
 ]
 
 export const URL_GITHUB_REPO = "https://github.com/ethereum/rig"
