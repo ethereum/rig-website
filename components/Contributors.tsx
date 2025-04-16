@@ -53,26 +53,35 @@ export const Contributors = ({
   // Check if we have external contributors
   const hasOtherContributors = otherContributors.length > 0
 
+  // Maintain a set of already added contributor IDs to avoid duplicates
+  const addedContributorIds = new Set<string>()
+
   // Create ordered contributors list maintaining the original order from names
-  // but prioritizing team members, then VIPs, then others
-  const orderedContributors: Contributor[] = [
-    // First add team members in the order they appear in original names array
-    ...names
-      .map((id) =>
-        teamMembers.find((member) => member.id === id || member.name === id)
-      )
-      .filter((contributor): contributor is Contributor =>
-        Boolean(contributor)
-      ),
-    // Then add VIPs in the order they appear in original names array
-    ...names
-      .map((id) =>
-        vipContributors.find((vip) => vip.id === id || vip.name === id)
-      )
-      .filter((contributor): contributor is Contributor =>
-        Boolean(contributor)
-      ),
-  ]
+  // but prioritizing team members, then VIPs, then others, and avoiding duplicates
+  const orderedContributors: Contributor[] = []
+
+  // Process names in order to maintain original ordering priority
+  names.forEach((id) => {
+    // Try to find a team member first
+    const teamMember = teamMembers.find(
+      (member) => member.id === id || member.name === id
+    )
+    if (teamMember && !addedContributorIds.has(teamMember.id)) {
+      orderedContributors.push(teamMember)
+      addedContributorIds.add(teamMember.id)
+      return
+    }
+
+    // Then try to find a VIP
+    const vipContributor = vipContributors.find(
+      (vip) => vip.id === id || vip.name === id
+    )
+    if (vipContributor && !addedContributorIds.has(vipContributor.id)) {
+      orderedContributors.push(vipContributor)
+      addedContributorIds.add(vipContributor.id)
+      return
+    }
+  })
 
   const getContributorList = () => {
     const allNames = [...teamMemberNames, ...vipNames, ...otherNames]
