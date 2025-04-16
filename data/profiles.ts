@@ -43,12 +43,19 @@ export const vips: Contributor[] = [
     id: "ansgar",
     name: "Ansgar Dietrichs",
     avatar: "public/avatars/ansgar-dietrichs.jpg",
+    twitter: "adietrichs",
   },
   {
     id: "barnabe",
     name: "Barnabé Monnot",
     avatar: "public/avatars/barnabe-monnot.jpg",
     twitter: "barnabemonnot",
+  },
+  {
+    id: "francesco",
+    name: "Francesco d'Amato",
+    twitter: "fradamt",
+    avatar: "public/avatars/francesco-damato.jpg",
   },
 ]
 
