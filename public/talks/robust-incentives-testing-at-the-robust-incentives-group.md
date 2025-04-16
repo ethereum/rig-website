@@ -8,7 +8,7 @@ startDate: April 18, 2022
 
 <video src="https://youtu.be/bX2NAvQjaag"></video>
 
-Video: <https://youtu.be/bX2NAvQjaag>
+[Watch on YouTube](https://youtu.be/bX2NAvQjaag)
 
 Slides: <https://docs.google.com/presentation/d/1mWCuVQGrG5KS6GwG09D4q7MzHfeCIi54xdygJp8F3IM/edit?usp=sharing>
 

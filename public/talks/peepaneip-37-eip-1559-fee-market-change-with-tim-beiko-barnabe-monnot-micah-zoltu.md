@@ -8,6 +8,6 @@ startDate: June 21, 2021
 
 <video src="https://www.youtube.com/watch?v=AC1FS3LmoT4"></video>
 
-Video: <https://www.youtube.com/watch?v=AC1FS3LmoT4>
+[Watch on YouTube](https://www.youtube.com/watch?v=AC1FS3LmoT4)
 
 Slides: <https://docs.google.com/presentation/d/1vVGaezpoj-sYPPBNSY0LdPyJGIex2zl1cdgipVoMkL0/edit?usp=sharing>

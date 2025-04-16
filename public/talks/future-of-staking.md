@@ -11,11 +11,11 @@ startDate: December 6, 2024
 
 <video src="https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI"></video>
 
-Video: <https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI>
+[Watch on YouTube](https://youtu.be/zqoUkZmMk1A?si=-DNi5dMnlH-kScMI)
 
 <video src="https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky"></video>
 
-Video: <https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky>
+[Watch on YouTube](https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky)
 
 Slides: <https://docs.google.com/presentation/d/1OY_a4gJO9UeYhY4GJ0cjdTKb6q2EFCM8l47vvtaNdyc/edit?usp=sharing>
 

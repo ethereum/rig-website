@@ -8,4 +8,4 @@ startDate: December 7, 2023
 
 <video src="https://youtu.be/2l7B-O721uY?si=qtEQr6KTWQ4ykvwG"></video>
 
-Video: <https://youtu.be/2l7B-O721uY?si=qtEQr6KTWQ4ykvwG>
+[Watch on YouTube](https://youtu.be/2l7B-O721uY?si=qtEQr6KTWQ4ykvwG)

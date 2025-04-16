@@ -8,4 +8,4 @@ startDate: April 21, 2022
 
 <video src="https://youtu.be/LtEMabS0Oas"></video>
 
-Video: <https://youtu.be/LtEMabS0Oas>
+[Watch on YouTube](https://youtu.be/LtEMabS0Oas)

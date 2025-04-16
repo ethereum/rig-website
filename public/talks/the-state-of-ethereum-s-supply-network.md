@@ -8,4 +8,4 @@ startDate: July 17, 2023
 
 <video src="https://www.youtube.com/live/lI6NwtMRLXw?si=zIcvMPZ7_LTsAaxS"></video>
 
-Video: <https://www.youtube.com/live/lI6NwtMRLXw?si=zIcvMPZ7_LTsAaxS>
+[Watch on YouTube](https://www.youtube.com/live/lI6NwtMRLXw?si=zIcvMPZ7_LTsAaxS)

@@ -9,7 +9,7 @@ startDate: November 14, 2024
 
 <video src="https://www.youtube.com/watch?v=cUgKXBq017g"></video>
 
-Video: <https://www.youtube.com/watch?v=cUgKXBq017g>
+[Watch on YouTube](https://www.youtube.com/watch?v=cUgKXBq017g)
 
 Slides: <https://docs.google.com/presentation/d/19F0s5TZImp925tSJVsdbO4HkjReucKFDREOyV7Jd7Y8/edit?usp=sharing>
 

@@ -8,6 +8,6 @@ startDate: August 28, 2023
 
 <video src="https://youtu.be/jTZq58SB1l8?si=Nzfu2zNWAFw-AdSh&t=48"></video>
 
-Video: <https://youtu.be/jTZq58SB1l8?si=Nzfu2zNWAFw-AdSh&t=48>
+[Watch on YouTube](https://youtu.be/jTZq58SB1l8?si=Nzfu2zNWAFw-AdSh&t=48)
 
 Slides: <https://docs.google.com/presentation/d/18vlAs5uRspZNEORXNjwqKOCR6rtMuonD_WeC2A5fB8g/edit?usp=sharing>

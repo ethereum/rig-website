@@ -8,6 +8,6 @@ startDate: October 11, 2022
 
 <video src="https://youtu.be/gMiykGwPDSI"></video>
 
-Video: <https://youtu.be/gMiykGwPDSI>
+[Watch on YouTube](https://youtu.be/gMiykGwPDSI)
 
 Slides: <https://docs.google.com/presentation/d/1ADPiTVWEVQ8nBGLMRdx5GmSFdrrKi3OzsbyedOcVLWk/edit>

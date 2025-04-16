@@ -8,4 +8,4 @@ startDate: July 20, 2021
 
 <video src="https://www.youtube.com/live/KZiG2vWGhrg?feature=share"></video>
 
-Video: <https://www.youtube.com/live/KZiG2vWGhrg?feature=share>
+[Watch on YouTube](https://www.youtube.com/live/KZiG2vWGhrg?feature=share)

@@ -8,6 +8,6 @@ startDate: February 23, 2023
 
 <video src="https://youtu.be/Zfqvke8BNhM"></video>
 
-Video: <https://youtu.be/Zfqvke8BNhM>
+[Watch on YouTube](https://youtu.be/Zfqvke8BNhM)
 
 Slides: <https://docs.google.com/presentation/d/1hQ1sWfAvsmJpbnNe6tfyvKfd13YyTW1GPGDk6z0KoQw/edit?usp=sharing>

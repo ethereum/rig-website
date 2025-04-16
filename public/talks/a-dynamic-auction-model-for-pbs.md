@@ -8,4 +8,4 @@ startDate: August 31, 2023
 
 <video src="https://youtu.be/-PXGPFFneMI?si=w-p3kvN0uV1z8pb8"></video>
 
-Video: <https://youtu.be/-PXGPFFneMI?si=w-p3kvN0uV1z8pb8>
+[Watch on YouTube](https://youtu.be/-PXGPFFneMI?si=w-p3kvN0uV1z8pb8)

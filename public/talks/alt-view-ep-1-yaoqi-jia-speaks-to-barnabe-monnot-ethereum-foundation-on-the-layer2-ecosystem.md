@@ -8,4 +8,4 @@ startDate: October 31, 2022
 
 <video src="https://www.youtube.com/watch?v=viJqYMi6DMo"></video>
 
-Video: <https://www.youtube.com/watch?v=viJqYMi6DMo>
+[Watch on YouTube](https://www.youtube.com/watch?v=viJqYMi6DMo)

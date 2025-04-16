@@ -8,7 +8,7 @@ startDate: May 23, 2024
 
 <video src="https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b"></video>
 
-Video: <https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b>
+[Watch on YouTube](https://youtu.be/u8XvkTrjITs?si=sd4iMdgP3tAToY4b)
 
 Slides: <https://docs.google.com/presentation/d/1ibPATRkUA48Cl47Ttpf_zDud7IjorVXsKDOMTGAYFBs/edit?usp=sharing>
 
