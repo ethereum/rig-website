@@ -38,21 +38,18 @@ export const members: Contributor[] = [
   },
 ]
 
-// export const members: Contributor[] = [
-//   ...members,
-//   {
-//     id: "ansgar",
-//     name: "Ansgar Dietrichs",
-//     avatar: "public/avatars/ansgar-dietrichs.jpg",
-//   },
-//   {
-//     id: "barnabe",
-//     name: "Barnabé Monnot",
-//     avatar: "public/avatars/barnabe-monnot.jpg",
-//   },
-//   {
-//     id: "michael",
-//     name: "Michael Neuder",
-//     avatar: "public/avatars/michael-neuder.jpg",
-//   },
-// ]
+export const vips: Contributor[] = [
+  {
+    id: "ansgar",
+    name: "Ansgar Dietrichs",
+    avatar: "public/avatars/ansgar-dietrichs.jpg",
+  },
+  {
+    id: "barnabe",
+    name: "Barnabé Monnot",
+    avatar: "public/avatars/barnabe-monnot.jpg",
+    twitter: "barnabemonnot",
+  },
+]
+
+export const profiles: Contributor[] = [...members, ...vips]

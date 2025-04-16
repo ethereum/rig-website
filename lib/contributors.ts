@@ -1,22 +1,32 @@
 import type { Contributor } from "@/lib/types"
-import { members } from "@/data/profiles"
+import { profiles } from "@/data/profiles"
 
 export const getContributorsFromIDs = (ids: string[]): Contributor[] => {
   const contributors = ids.map((id) => {
-    const contributor = members.find((contributor) => contributor.id === id)
+    const contributor = profiles.find((contributor) => contributor.id === id)
     if (contributor) return contributor
-    const nameMatch = members.find((contributor) => contributor.name === id)
+    const nameMatch = profiles.find((contributor) => contributor.name === id)
     if (nameMatch) return nameMatch
     return { id, name: id } as Contributor
   })
   return contributors
 }
 
-export const listNames = (list: string[]): string =>
-  new Intl.ListFormat("en", {
-    style: "long",
-    type: "conjunction",
-  }).format(list)
+/**
+ * Formats list of names as a conjunctive list (with Oxford comma if more than two names)
+ * @param names List of contributor names
+ * @returns Formatted string of names joined by commas and "and"
+ */
+export const listNames = (names: string[]): string => {
+  if (names.length === 0) return ""
+  if (names.length === 1) return names[0]
+  if (names.length === 2) return `${names[0]} and ${names[1]}`
+
+  // When more than 2 names, use Oxford comma
+  const lastNameIndex = names.length - 1
+  const namesExceptLast = names.slice(0, lastNameIndex).join(", ")
+  return `${namesExceptLast}, and ${names[lastNameIndex]}`
+}
 
 export const getFallbackInitials = (fullName: string): string => {
   const names = fullName.split(" ")
