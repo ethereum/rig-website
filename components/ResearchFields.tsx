@@ -41,7 +41,8 @@ const ResearchFields = ({
                 )}
                 onClick={() => handleSelect(idx)}
               >
-                {research[tag].title} ({research[tag].postsCount})
+                {research[tag].title} (
+                {research[tag].postsCount + research[tag].papersCount})
               </button>
               <ChevronRight className={cn(tag !== selected && "hidden")} />
             </div>
@@ -53,12 +54,16 @@ const ResearchFields = ({
           <h3 className="text-4xl">{research[selected].title}</h3>
           <p className="font-sans">{research[selected].description}</p>
           <div className="flex flex-wrap gap-6">
-            <BracketLink href={`/posts?tag=${selected}`}>
-              View all posts
-            </BracketLink>
-            <BracketLink href={`/papers?tag=${selected}`}>
-              View all papers
-            </BracketLink>
+            {research[selected].postsCount > 0 && (
+              <BracketLink href={`/posts?tag=${selected}`}>
+                View all posts
+              </BracketLink>
+            )}
+            {research[selected].papersCount > 0 && (
+              <BracketLink href={`/papers?tag=${selected}`}>
+                View all papers
+              </BracketLink>
+            )}
           </div>
         </div>
       </div>

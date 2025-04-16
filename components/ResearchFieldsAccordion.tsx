@@ -37,12 +37,16 @@ const ResearchFieldsAccordion = ({
           <AccordionContent className="my-8 space-y-8">
             <p className="font-sans">{research[tag].description}</p>
             <div className="mt-4 flex flex-wrap gap-6">
-              <BracketLink href={`/posts?tag=${tag}`}>
-                View all posts
-              </BracketLink>
-              <BracketLink href={`/papers?tag=${tag}`}>
-                View all papers
-              </BracketLink>
+              {research[tag].postsCount > 0 && (
+                <BracketLink href={`/posts?tag=${tag}`}>
+                  View all posts
+                </BracketLink>
+              )}
+              {research[tag].papersCount > 0 && (
+                <BracketLink href={`/papers?tag=${tag}`}>
+                  View all papers
+                </BracketLink>
+              )}
             </div>
           </AccordionContent>
         </AccordionItem>
