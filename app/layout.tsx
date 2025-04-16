@@ -82,7 +82,7 @@ export default function RootLayout({
               </nav>
             </header>
             {children}
-            <footer className="row-start-3 flex flex-col items-center gap-8 py-20">
+            <footer className="row-start-3 flex flex-col items-center gap-8 pt-20 pb-8">
               <div className="flex items-center gap-x-4 font-sans text-3xl font-bold">
                 <span className="text-accent-foreground mb-[0.125em] text-5xl select-none">
                   &#91;
