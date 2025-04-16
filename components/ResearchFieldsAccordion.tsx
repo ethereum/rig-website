@@ -31,7 +31,7 @@ const ResearchFieldsAccordion = ({
     >
       {fields.map((tag, idx) => (
         <AccordionItem key={tag} value={`item-${idx}`}>
-          <AccordionTrigger className="text-3xl [&[data-state=open]>svg]:hidden">
+          <AccordionTrigger className="text-3xl [&[data-state=open]>svg]:invisible">
             {research[tag].title}
           </AccordionTrigger>
           <AccordionContent className="my-8 space-y-8">
