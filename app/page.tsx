@@ -30,6 +30,7 @@ import { fetchTalks } from "@/lib/talks"
 import { members } from "@/data/profiles"
 
 import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
+import ResearchFieldsAccordion from "@/components/ResearchFieldsAccordion"
 
 export default function Home() {
   const posts = fetchPosts()
@@ -144,16 +145,27 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <Suspense
             fallback={
-              <div className="grid grid-cols-2 gap-16">
-                <div className="flex flex-col gap-4">
+              <>
+                {/* Desktop */}
+                <div className="grid grid-cols-2 gap-16 max-md:hidden">
+                  <div className="flex flex-col gap-4">
+                    {Array(fields.length)
+                      .fill(0)
+                      .map((_, idx) => (
+                        <Skeleton key={idx} className="h-8 w-full" />
+                      ))}
+                  </div>
+                  <Skeleton className="h-full w-full" />
+                </div>
+                {/* Mobile */}
+                <div className="flex flex-col gap-4 md:hidden">
                   {Array(fields.length)
                     .fill(0)
                     .map((_, idx) => (
                       <Skeleton key={idx} className="h-8 w-full" />
                     ))}
                 </div>
-                <Skeleton className="h-full w-full" />
-              </div>
+              </>
             }
           >
             <ResearchFields
@@ -161,7 +173,12 @@ export default function Home() {
               fields={fields}
               className="max-md:hidden"
             />
-            {/* TODO: Mobile accordion */}
+
+            <ResearchFieldsAccordion
+              research={research}
+              fields={fields}
+              className="md:hidden"
+            />
           </Suspense>
         </div>
       </Section>
