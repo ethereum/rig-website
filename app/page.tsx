@@ -191,15 +191,22 @@ export default function Home() {
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
           <p className="text-3xl leading-snug sm:text-4xl">
-            Some text about the team that can help engage and create some
-            connection with the team
+            Are you interested in joining RIG? We are always open for
+            exceptional talent
           </p>
           <Card className="bg-card flex flex-col gap-4 border p-8">
             <p className="m-0 font-sans">
-              looking for some super exciting research job? look no further
+              While we may not always be actively hiring, we continuously seek
+              top talent. If we are not actively searching, the selection
+              process is more competitive, but we encourage applications from
+              outstanding candidates at any time.
             </p>
-            {/* TODO: Get link */}
-            <BracketLink href="#">we are hiring</BracketLink>
+            <BracketLink
+              hideArrow
+              href="https://jobs.lever.co/ethereumfoundation/dc609d02-780b-46e8-9d70-42b2e4d0a671"
+            >
+              apply today
+            </BracketLink>
           </Card>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-8">
