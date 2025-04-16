@@ -17,12 +17,14 @@ type ContributorsProps = {
   names: string[]
   avatarClass?: string
   etAl?: boolean
+  skipLinks?: boolean
 }
 
 export const Contributors = ({
   names,
   avatarClass,
   etAl,
+  skipLinks,
 }: ContributorsProps) => {
   // Get all contributors based on the provided names
   const contributors = getContributorsFromIDs(names)
@@ -101,7 +103,7 @@ export const Contributors = ({
               </Avatar>
             )
 
-            return twitter ? (
+            return twitter && !skipLinks ? (
               <Link
                 key={id}
                 href={new URL(twitter, "https://x.com").toString()}

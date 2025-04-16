@@ -21,9 +21,10 @@ const PaperPreviewRow = ({
   href,
   className,
 }: PaperPreviewRowProps) => (
-  <Card
+  <Link
+    href={href}
     className={cn(
-      "hover:bg-card flex w-full items-center gap-8 py-12 max-lg:flex-col",
+      "group hover:bg-card flex w-full items-center gap-8 py-8 max-lg:flex-col",
       className
     )}
   >
@@ -40,13 +41,11 @@ const PaperPreviewRow = ({
           })}
         </time>
 
-        <CardTitle>
-          <Link href={href} className="hover:text-primary text-foreground">
-            {title}
-          </Link>
+        <CardTitle className="group-hover:text-primary text-foreground">
+          {title}
         </CardTitle>
 
-        <Contributors names={authors} />
+        <Contributors names={authors} skipLinks />
       </CardHeader>
 
       <CardContent className="flex flex-col sm:items-end">
@@ -63,7 +62,7 @@ const PaperPreviewRow = ({
       alt=""
       className="max-h-60 lg:max-w-1/4"
     />
-  </Card>
+  </Link>
 )
 
 export default PaperPreviewRow

@@ -17,13 +17,14 @@ const TalkPreviewRow = ({
   href,
   className,
 }: TalkPreviewRowProps) => (
-  <Card
+  <Link
+    href={href}
     className={cn(
-      "hover:bg-card grid grid-cols-subgrid items-center gap-8 py-12 md:col-span-2",
+      "group hover:bg-card grid grid-cols-subgrid items-center py-8 md:col-span-2",
       className
     )}
   >
-    <div className="grid grid-cols-subgrid gap-8 sm:items-center md:col-span-2">
+    <Card className="grid grid-cols-subgrid gap-8 sm:items-center md:col-span-2">
       <CardHeader className="w-full">
         <time
           dateTime={startDate}
@@ -41,20 +42,18 @@ const TalkPreviewRow = ({
                 day: "numeric",
               })}
         </time>
-        <CardTitle>
-          <Link href={href} className="hover:text-primary text-foreground">
-            {title}
-          </Link>
+        <CardTitle className="group-hover:text-primary text-foreground">
+          {title}
         </CardTitle>
 
-        <Contributors names={authors} />
+        <Contributors names={authors} skipLinks />
       </CardHeader>
 
-      <CardContent className="flex flex-col">
+      <CardContent className="text-foreground flex flex-col">
         {location}
       </CardContent>
-    </div>
-  </Card>
+    </Card>
+  </Link>
 )
 
 export default TalkPreviewRow
