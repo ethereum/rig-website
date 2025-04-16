@@ -37,9 +37,17 @@ const montserratSans = Montserrat({
   subsets: ["latin"],
 })
 
+// TODO: Add description and confirm og-image
 export const metadata: Metadata = {
   title: "Robust Incentives Group",
-  description: "Robust Incentives Group", // TODO: Add description
+  description: "Robust Incentives Group",
+  openGraph: {
+    images: "/og-image.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: "/og-image.png",
+  },
 }
 
 export default function RootLayout({
