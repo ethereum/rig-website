@@ -10,7 +10,7 @@ tags:
   - game theory
   - mev
   - simulations
-datePublished: 2023-01-01T00:00:00.000Z
+datePublished: 2023-12-22T08:18:25.000Z
 publicationVenue: IEEE ICBC 2024
 image: Screenshot_2023-12-31_at_11.09.57.png
 ---

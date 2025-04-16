@@ -5,7 +5,7 @@ authors:
 tags:
   - game theory
   - mev
-datePublished: 2024-01-01T00:00:00.000Z
+datePublished: 2024-02-28T11:37:09.000Z
 publicationVenue: MARBLE 2024
 image: Screenshot_2024-03-03_at_16.41.22.png
 ---

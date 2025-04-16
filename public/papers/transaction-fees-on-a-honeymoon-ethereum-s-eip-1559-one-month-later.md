@@ -11,7 +11,7 @@ tags:
   - data
   - resource pricing
   - simulations
-datePublished: 2021-01-01T00:00:00.000Z
+datePublished: 2021-10-10T10:17:07.000Z
 publicationVenue: IEEE Blockchain 2021
 image: Screenshot_2023-05-28_at_23.17.32.png
 ---

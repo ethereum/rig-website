@@ -7,7 +7,7 @@ authors:
 tags:
   - consensus
   - mev
-datePublished: 2024-01-01T00:00:00.000Z
+datePublished: 2024-08-21T00:34:07.000Z
 publicationVenue:
 image: Screenshot_2024-08-25_at_11.31.24.png
 ---

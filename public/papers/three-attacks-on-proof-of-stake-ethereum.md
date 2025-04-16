@@ -10,7 +10,7 @@ authors:
 tags:
   - consensus
   - mev
-datePublished: 2021-01-01T00:00:00.000Z
+datePublished: 2021-10-19T16:27:13.000Z
 publicationVenue: FC 2022
 image: Screenshot_2023-05-28_at_23.16.32.png
 ---

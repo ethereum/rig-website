@@ -7,7 +7,7 @@ authors:
 tags:
   - resource pricing
   - scaling / rollups
-datePublished: 2023-01-01T00:00:00.000Z
+datePublished: 2023-10-02T12:41:36.000Z
 publicationVenue:
 image: eip-4844-economics-and-rollup-strategies.webp
 ---
