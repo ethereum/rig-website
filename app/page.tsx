@@ -1,8 +1,10 @@
+import { Suspense } from "react"
 import { join } from "path"
 
 import AbsoluteBrackets from "@/components/AbsoluteBrackets"
 import PostCard from "@/components/PostCard"
 import PaperCard from "@/components/PaperCard"
+import ResearchFields from "@/components/ResearchFields"
 import TalkCard from "@/components/TalkCard"
 
 import Link from "@/components/ui/link"
@@ -14,29 +16,27 @@ import {
   SectionHeading,
   SectionCounter,
 } from "@/components/ui/section"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import TwitterIcon from "@/components/svg/twitter.svg"
 import EmailIcon from "@/components/svg/email.svg"
 
+import { sortContributors } from "@/lib/contributors"
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
+import { fetchFieldList, fetchResearchFields } from "@/lib/research"
 import { fetchTalks } from "@/lib/talks"
 
-import {
-  PATH_PAPERS,
-  PATH_POSTS,
-  PATH_TALKS,
-  // TAGS, // TODO: Reenable and complete, or remove
-} from "@/lib/constants"
-
 import { members } from "@/data/profiles"
-import { sortContributors } from "@/lib/contributors"
+
+import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
 
 export default function Home() {
   const posts = fetchPosts()
   const papers = fetchPapers()
   const talks = fetchTalks()
-  // const research = Object.entries(TAGS) // TODO: Reenable and complete, or remove
+  const research = fetchResearchFields(posts, papers)
+  const fields = fetchFieldList()
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
@@ -136,32 +136,36 @@ export default function Home() {
 
       <hr />
 
-      {/* TODO: Reenable and complete, or remove */}
-      {/* <Section id="research">
+      <Section id="research">
         <SectionHead>
           <SectionHeading>research fields</SectionHeading>
-          <SectionCounter>{research.length}</SectionCounter>
+          <SectionCounter>{fields.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <div className="align-start flex flex-col gap-4">
-            {research.map(([key, value]) => {
-              return (
-                <div key={key} className="flex">
-                  <button
-                    key={key}
-                    className="w-fit flex-1 cursor-pointer text-start font-sans text-lg uppercase"
-                  >
-                    {value}
-                  </button>
-                  <div id="TODO:client-side-active-indicator" />
+        <div className="flex flex-col gap-4">
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-2 gap-16">
+                <div className="flex flex-col gap-4">
+                  {Array(fields.length)
+                    .fill(0)
+                    .map((_, idx) => (
+                      <Skeleton key={idx} className="h-8 w-full" />
+                    ))}
                 </div>
-              )
-            })}
-          </div>
-          <div className="border-s-2"></div>
+                <Skeleton className="h-full w-full" />
+              </div>
+            }
+          >
+            <ResearchFields
+              research={research}
+              fields={fields}
+              className="max-md:hidden"
+            />
+            {/* TODO: Mobile accordion */}
+          </Suspense>
         </div>
       </Section>
-      <hr /> */}
+      <hr />
 
       <Section
         id="team"

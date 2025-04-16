@@ -47,3 +47,13 @@ export type Contributor = {
 export type Tag = keyof typeof TAGS
 
 export type NavItem = { title: string; href: string }
+
+export type ResearchFieldLookup = Record<
+  Tag,
+  {
+    title: string
+    description: string
+    postsCount: number
+    papersCount: number
+  }
+>
