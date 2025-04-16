@@ -10,4 +10,4 @@ startDate: November 2, 2023
 
 [Watch on YouTube](https://youtu.be/VFa9CuuTWEM?si=4kEQuXN01lSr9vt7)
 
-[View Google slides](https://docs.google.com/presentation/d/1ixyTEcivnvWMShcLHln0g_zfN3_aQYUlbhagC35PQJw/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1ixyTEcivnvWMShcLHln0g_zfN3_aQYUlbhagC35PQJw/view)

@@ -11,4 +11,4 @@ startDate: February 4, 2025
 
 [Watch on YouTube](https://youtu.be/cUGyLx-mf6I?si=h98mKRZYiHP78sGR)
 
-[View Google slides](https://docs.google.com/presentation/d/1BFH_xO5Xnz-exSRH1IqB0j9ax-FTaX7nRrq1tN-iZEc/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1BFH_xO5Xnz-exSRH1IqB0j9ax-FTaX7nRrq1tN-iZEc/view)

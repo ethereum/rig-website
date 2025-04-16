@@ -6,6 +6,6 @@ location: ZuBerlin, Berlin
 startDate: June 13, 2024
 ---
 
-Video: <https://streameth.org/66680822f9b8e98b1ec915cd/watch?session=666af9a007f92b086c2c5117>
+[Watch on streameth.org](https://streameth.org/66680822f9b8e98b1ec915cd/watch?session=666af9a007f92b086c2c5117)
 
-[View Google slides](https://docs.google.com/presentation/d/1eWxKdykWGFx3OPT7t69R1GaoLYuNSNxTzvQx8M0TGsw/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1eWxKdykWGFx3OPT7t69R1GaoLYuNSNxTzvQx8M0TGsw/view)

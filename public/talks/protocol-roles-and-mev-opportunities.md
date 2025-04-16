@@ -10,4 +10,4 @@ startDate: March 20, 2025
 
 [Watch on YouTube](https://youtu.be/595CmPyzFJ0?si=AqlXcLKwQPTqcPgO)
 
-[View Google slides](https://docs.google.com/presentation/d/1NiW5p6zBgfGwqXwg-fTKOvTnPOldBWSQaZHMf4L9aGQ/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1NiW5p6zBgfGwqXwg-fTKOvTnPOldBWSQaZHMf4L9aGQ/view)

@@ -10,5 +10,5 @@ startDate: July 17, 2023
 
 [Watch on YouTube](https://www.youtube.com/live/msTFXLJYj9M?si=uzcLZX-xAOjPXYiM)
 
-[View Google slides](https://docs.google.com/presentation/d/1UORsd_POR8yqOBbz2XW5ubbRo_UxbLlscnUGDh0PmOI/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1UORsd_POR8yqOBbz2XW5ubbRo_UxbLlscnUGDh0PmOI/view)
 

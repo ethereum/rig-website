@@ -10,4 +10,4 @@ startDate: October 12, 2022
 
 [Watch on YouTube](https://youtu.be/gsFU-inKRQ8)
 
-[View Google slides](https://docs.google.com/presentation/d/1GhRjECiF7dEw0N1hAtVa7G5N0JFav2ZtiuTSYzyRouc/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1GhRjECiF7dEw0N1hAtVa7G5N0JFav2ZtiuTSYzyRouc/view)

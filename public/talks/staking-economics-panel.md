@@ -7,4 +7,4 @@ location: Devconnect Istanbul - ETHconomics 2
 startDate: November 15, 2023
 ---
 
-Video: <https://app.streameth.org/devconnect/ethconomics/session/staking_economics_panel>
+[Watch on app.streameth.org](https://app.streameth.org/devconnect/ethconomics/session/staking_economics_panel)

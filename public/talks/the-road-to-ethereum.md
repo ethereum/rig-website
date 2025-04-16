@@ -6,4 +6,4 @@ location: SUTD
 startDate: April 9, 2021
 ---
 
-Slides: <https://barnabe.substack.com/p/eth2>
+[View slides on Substack](https://barnabe.substack.com/p/eth2)

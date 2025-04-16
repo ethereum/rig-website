@@ -10,4 +10,4 @@ startDate: December 5, 2022
 
 [Watch on YouTube](https://youtu.be/T5BWw_IvPZo)
 
-[View Google slides](https://docs.google.com/presentation/d/10T-53fkQmotcMQC_Vb6Fk_3Iddy-95hnYkzGYMok8dM/edit?usp=drive_link)
+[View slides on Google](https://docs.google.com/presentation/d/10T-53fkQmotcMQC_Vb6Fk_3Iddy-95hnYkzGYMok8dM/edit?usp=drive_link)

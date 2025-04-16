@@ -10,4 +10,4 @@ startDate: June 21, 2021
 
 [Watch on YouTube](https://www.youtube.com/watch?v=AC1FS3LmoT4)
 
-[View Google slides](https://docs.google.com/presentation/d/1vVGaezpoj-sYPPBNSY0LdPyJGIex2zl1cdgipVoMkL0/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1vVGaezpoj-sYPPBNSY0LdPyJGIex2zl1cdgipVoMkL0/view)

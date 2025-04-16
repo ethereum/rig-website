@@ -6,4 +6,4 @@ location: Berlin Ethereum Meetup
 startDate: November 4, 2021
 ---
 
-[View Google slides](https://docs.google.com/presentation/d/1DG95jsDsjwoK4mNnSxQHbXaupeIkcSj4bX-55DxPMwE/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1DG95jsDsjwoK4mNnSxQHbXaupeIkcSj4bX-55DxPMwE/view)

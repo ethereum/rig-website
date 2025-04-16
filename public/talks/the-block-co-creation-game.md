@@ -6,4 +6,4 @@ location: MEVTokyo
 startDate: August 25, 2024
 ---
 
-[View Google slides](https://docs.google.com/presentation/d/1J5knsYx0X9PqI8-cgu-Cy1TIHD7tHdpXQKl3db2wVhg/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1J5knsYx0X9PqI8-cgu-Cy1TIHD7tHdpXQKl3db2wVhg/view)

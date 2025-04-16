@@ -10,4 +10,4 @@ startDate: November 10, 2020
 
 [Watch on YouTube](https://www.youtube.com/watch?v=p8M5RpiUG8o)
 
-[View Google slides](https://docs.google.com/presentation/u/1/d/1MuO7egGTleSXrYcQH9B6IZ-NrMNyTPmypLb4MN9d9SE/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/u/1/d/1MuO7egGTleSXrYcQH9B6IZ-NrMNyTPmypLb4MN9d9SE/view)

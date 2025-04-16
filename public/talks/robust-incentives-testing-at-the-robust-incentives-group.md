@@ -10,6 +10,6 @@ startDate: April 18, 2022
 
 [Watch on YouTube](https://youtu.be/bX2NAvQjaag)
 
-[View Google slides](https://docs.google.com/presentation/d/1mWCuVQGrG5KS6GwG09D4q7MzHfeCIi54xdygJp8F3IM/edit?usp=sharing)
+[View slides on Google](https://docs.google.com/presentation/d/1mWCuVQGrG5KS6GwG09D4q7MzHfeCIi54xdygJp8F3IM/view)
 
-Event: <https://sites.google.com/semiotic.ai/wimv2022>
+[View event on sites.google.com](https://sites.google.com/semiotic.ai/wimv2022)
