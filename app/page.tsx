@@ -66,7 +66,7 @@ export default function Home() {
           </Link>
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {posts.slice(0, 3).map(({ frontmatter, slug }) => (
             <PostCard
               key={slug}
@@ -120,7 +120,7 @@ export default function Home() {
           </Link>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {talks.slice(0, 3).map(({ frontmatter, slug }) => (
             <TalkCard
               key={slug}

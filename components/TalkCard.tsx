@@ -18,44 +18,42 @@ const TalkCard = ({
   href,
   className,
 }: TalkCardProps) => (
-  <Card className={cn("row-span-2 grid grid-rows-subgrid gap-8", className)}>
-    <div className="flex gap-x-8 gap-y-4 max-md:flex-col-reverse">
-      <div className="flex w-full flex-col gap-8">
-        <CardHeader>
-          <Link
-            href={href}
-            className="text-foreground hover:text-primary block"
-          >
-            <CardTitle>{title}</CardTitle>
-          </Link>
+  <Card
+    className={cn(
+      "row-span-2 grid grid-rows-subgrid gap-8",
+      className
+    )}
+  >
+    <CardHeader>
+      <Link href={href} className="text-foreground hover:text-primary block">
+        <CardTitle>{title}</CardTitle>
+      </Link>
 
-          <time
-            dateTime={startDate}
-            className="block font-sans text-xs font-semibold"
-          >
-            {endDate
-              ? new Intl.DateTimeFormat("en", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                }).formatRange(new Date(startDate), new Date(endDate))
-              : new Date(startDate).toLocaleDateString("en", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-          </time>
+      <time
+        dateTime={startDate}
+        className="block font-sans text-xs font-semibold"
+      >
+        {endDate
+          ? new Intl.DateTimeFormat("en", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }).formatRange(new Date(startDate), new Date(endDate))
+          : new Date(startDate).toLocaleDateString("en", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+      </time>
 
-          <Contributors names={authors} etAl />
-        </CardHeader>
+      <Contributors names={authors} etAl />
+    </CardHeader>
 
-        <CardFooter>
-          <BracketLink href={href} className="font-medium">
-            View talk
-          </BracketLink>
-        </CardFooter>
-      </div>
-    </div>
+    <CardFooter>
+      <BracketLink href={href} className="font-medium">
+        View talk
+      </BracketLink>
+    </CardFooter>
   </Card>
 )
 
