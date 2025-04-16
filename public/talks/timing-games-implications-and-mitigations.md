@@ -10,4 +10,4 @@ startDate: December 8, 2023
 
 [Watch on YouTube](https://youtu.be/VdLgPr-i3T4?si=S9z_8gwPlsWLc54f)
 
-Slides: <https://docs.google.com/presentation/d/1u2dtKVDMWGd-s6l5P0kuKzKJ1apf3SvY3FY0xEQjNIM/edit?usp=sharing>
+[View Google slides](https://docs.google.com/presentation/d/1u2dtKVDMWGd-s6l5P0kuKzKJ1apf3SvY3FY0xEQjNIM/edit?usp=sharing)

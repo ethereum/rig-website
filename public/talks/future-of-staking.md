@@ -17,6 +17,6 @@ startDate: December 6, 2024
 
 [Watch on YouTube](https://youtu.be/Z3RD2nnE0H0?si=UVLfJrRWmoOVryky)
 
-Slides: <https://docs.google.com/presentation/d/1OY_a4gJO9UeYhY4GJ0cjdTKb6q2EFCM8l47vvtaNdyc/edit?usp=sharing>
+[View Google slides](https://docs.google.com/presentation/d/1OY_a4gJO9UeYhY4GJ0cjdTKb6q2EFCM8l47vvtaNdyc/edit?usp=sharing)
 
 Topic: Columbia CryptoEconomics Workshop 2024 <https://www.notion.so/Columbia-CryptoEconomics-Workshop-2024-CCE-1cfd98955541812f8f1edb0ecec4335b?pvs=21>

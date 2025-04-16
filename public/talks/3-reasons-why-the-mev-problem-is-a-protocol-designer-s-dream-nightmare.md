@@ -6,4 +6,4 @@ location: ETHDam BloXroute event
 startDate: May 20, 2023
 ---
 
-Slides: <https://docs.google.com/presentation/d/15vc86YLpRGchrMispAMd7RBPT1VvPqcH1DieoYCi4hQ/edit?usp=sharing>
+[View Google slides](https://docs.google.com/presentation/d/15vc86YLpRGchrMispAMd7RBPT1VvPqcH1DieoYCi4hQ/edit?usp=sharing)

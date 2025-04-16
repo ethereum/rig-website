@@ -10,4 +10,4 @@ startDate: May 8, 2024
 
 [Watch on YouTube](https://youtu.be/_JsQCCRwFHs?si=J8DG9f9Hov4MYpJe)
 
-Slides: <https://docs.google.com/presentation/d/1jE6wV7BBgBLMLbKgy3NkPTN-v2BccTBi42J7DpmajwE/edit?usp=sharing>
+[View Google slides](https://docs.google.com/presentation/d/1jE6wV7BBgBLMLbKgy3NkPTN-v2BccTBi42J7DpmajwE/edit?usp=sharing)

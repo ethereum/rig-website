@@ -10,4 +10,4 @@ startDate: August 13, 2021
 
 [Watch on YouTube](https://youtu.be/ZmzIHFuwdg0?t=239)
 
-Slides: <https://docs.google.com/presentation/d/1FeyF5M91fZjSuZIgKRmV58mOWo76NtupJJGk6gd5ceA/edit?usp=sharing>
+[View Google slides](https://docs.google.com/presentation/d/1FeyF5M91fZjSuZIgKRmV58mOWo76NtupJJGk6gd5ceA/edit?usp=sharing)

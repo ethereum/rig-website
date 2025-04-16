@@ -10,4 +10,4 @@ startDate: March 22, 2023
 
 [Watch on YouTube](https://youtu.be/mKyyNvQeopM)
 
-Slides: <https://docs.google.com/presentation/d/1HirWRqsNUw7S45YvcmshXYKDygSMd0WTJwFT6XJtbfE/edit?usp=drive_link>
+[View Google slides](https://docs.google.com/presentation/d/1HirWRqsNUw7S45YvcmshXYKDygSMd0WTJwFT6XJtbfE/edit?usp=drive_link)
