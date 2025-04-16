@@ -81,7 +81,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
     <>
       <div
         className={cn(
-          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm max-sm:px-0 lg:gap-x-10 lg:p-8",
           "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
@@ -158,7 +158,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
                 key={slug}
                 frontmatter={frontmatter}
                 href={join(PATH_PAPERS, slug)}
-                className="border-b px-5"
+                className="border-b px-5 max-sm:-mx-5"
               />
             ))}
 

@@ -81,12 +81,12 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
     <>
       <div
         className={cn(
-          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm lg:gap-x-10 lg:p-8",
+          "text-foreground-light border-primary grid gap-4 border-b p-4 font-sans text-sm max-sm:px-0 lg:gap-x-10 lg:p-8",
           "grid-cols-3 lg:grid-cols-[auto_repeat(3,_10rem)_auto_1fr]"
         )}
       >
         <span className="col-start-1 row-start-1 self-center text-nowrap max-lg:col-span-2">
-        Filter by:
+          Filter by:
         </span>
         <select
           id="filter-date"
@@ -157,7 +157,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
                   key={slug}
                   frontmatter={frontmatter}
                   href={join(PATH_POSTS, slug)}
-                  className="border-b px-5"
+                  className="border-b px-5 max-sm:-mx-5"
                 />
               ))}
             </div>
