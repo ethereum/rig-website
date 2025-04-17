@@ -1,10 +1,10 @@
-import { Suspense } from "react"
+// TODO: Re-enable "Research field" items when ready
+// import { Suspense } from "react"
 import { join } from "path"
 
-import AbsoluteBrackets from "@/components/AbsoluteBrackets"
 import PostCard from "@/components/PostCard"
 import PaperCard from "@/components/PaperCard"
-import ResearchFields from "@/components/ResearchFields"
+// import ResearchFields from "@/components/ResearchFields"
 import TalkCard from "@/components/TalkCard"
 
 import Link from "@/components/ui/link"
@@ -16,7 +16,7 @@ import {
   SectionHeading,
   SectionCounter,
 } from "@/components/ui/section"
-import { Skeleton } from "@/components/ui/skeleton"
+// import { Skeleton } from "@/components/ui/skeleton"
 
 import TwitterIcon from "@/components/svg/twitter.svg"
 import EmailIcon from "@/components/svg/email.svg"
@@ -24,20 +24,20 @@ import EmailIcon from "@/components/svg/email.svg"
 import { sortContributors } from "@/lib/contributors"
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
-import { fetchFieldList, fetchResearchFields } from "@/lib/research"
+// import { fetchFieldList, fetchResearchFields } from "@/lib/research"
 import { fetchTalks } from "@/lib/talks"
 
 import { members } from "@/data/profiles"
 
 import { PATH_PAPERS, PATH_POSTS, PATH_TALKS } from "@/lib/constants"
-import ResearchFieldsAccordion from "@/components/ResearchFieldsAccordion"
+// import ResearchFieldsAccordion from "@/components/ResearchFieldsAccordion"
 
 export default function Home() {
   const posts = fetchPosts()
   const papers = fetchPapers()
   const talks = fetchTalks()
-  const research = fetchResearchFields(posts, papers)
-  const fields = fetchFieldList()
+  // const research = fetchResearchFields(posts, papers)
+  // const fields = fetchFieldList()
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
@@ -60,9 +60,8 @@ export default function Home() {
         <SectionHead>
           <Link href="/posts" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
-              posts
+              Posts
             </SectionHeading>
-            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{posts.length}</SectionCounter>
         </SectionHead>
@@ -87,9 +86,8 @@ export default function Home() {
         <SectionHead>
           <Link href="/papers" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
-              papers
+              Papers
             </SectionHeading>
-            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
@@ -114,9 +112,8 @@ export default function Home() {
         <SectionHead>
           <Link href="/talks" className="group relative text-4xl">
             <SectionHeading className="group-hover:text-foreground">
-              talks
+              Talks
             </SectionHeading>
-            <AbsoluteBrackets />
           </Link>
           <SectionCounter>{talks.length}</SectionCounter>
         </SectionHead>
@@ -137,17 +134,18 @@ export default function Home() {
 
       <hr />
 
-      <Section id="research">
+      {/* <Section id="research">
         <SectionHead>
-          <SectionHeading>research fields</SectionHeading>
-          <SectionCounter>{fields.length}</SectionCounter>
+          <SectionHeading>Research fields</SectionHeading>
         </SectionHead>
         <div className="flex flex-col gap-4">
           <Suspense
             fallback={
               <>
-                {/* Desktop */}
-                <div className="grid grid-cols-2 gap-16 max-md:hidden">
+                <div
+                  id="desktop-skeleton"
+                  className="grid grid-cols-2 gap-16 max-md:hidden"
+                >
                   <div className="flex flex-col gap-4">
                     {Array(fields.length)
                       .fill(0)
@@ -157,8 +155,10 @@ export default function Home() {
                   </div>
                   <Skeleton className="h-full w-full" />
                 </div>
-                {/* Mobile */}
-                <div className="flex flex-col gap-4 md:hidden">
+                <div
+                  id="mobile-skeleton"
+                  className="flex flex-col gap-4 md:hidden"
+                >
                   {Array(fields.length)
                     .fill(0)
                     .map((_, idx) => (
@@ -182,7 +182,8 @@ export default function Home() {
           </Suspense>
         </div>
       </Section>
-      <hr />
+
+      <hr /> */}
 
       <Section
         id="team"
@@ -191,8 +192,7 @@ export default function Home() {
         <h2 className="sr-only">The team</h2>
         <div className="flex flex-col gap-11">
           <p className="text-3xl leading-snug sm:text-4xl">
-            Are you interested in joining RIG? We are always open for
-            exceptional talent
+            Are you interested in joining RIG?
           </p>
           <Card className="bg-card flex flex-col gap-4 border p-8">
             <p className="m-0 font-sans">
@@ -205,7 +205,7 @@ export default function Home() {
               hideArrow
               href="https://jobs.lever.co/ethereumfoundation/dc609d02-780b-46e8-9d70-42b2e4d0a671"
             >
-              apply today
+              apply here
             </BracketLink>
           </Card>
         </div>
