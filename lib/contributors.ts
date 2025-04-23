@@ -6,11 +6,6 @@ export const getContributorsFromIDs = (ids: string[]): Contributor[] => {
   const addedProfileIds = new Set<string>() // Track added IDs to prevent duplicates
 
   ids.forEach((identifier) => {
-    if (typeof identifier !== 'string') {
-      console.warn(`[getContributorsFromIDs] Skipping non-string identifier:`, identifier);
-      return; // Skip non-string identifiers
-    }
-
     const lowerIdentifier = identifier.toLowerCase()
 
     const foundProfile = profiles.find(
