@@ -10,7 +10,6 @@ tags:
   - simulations
 datePublished: 2023-05-23T10:29:25.000Z
 publicationVenue: IEEE ICBC 2023
-image: Screenshot_2023-05-28_at_23.11.10.png
 ---
 
 ## Abstract

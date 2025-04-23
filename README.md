@@ -87,7 +87,6 @@ tags:
   - tag2
 datePublished: 2025-04-20
 publicationVenue: "Conference or Journal Name"
-image: "/images/papers/your-image.png"
 ---
 
 Place links to the external resources here.

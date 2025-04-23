@@ -13,7 +13,6 @@ tags:
   - simulations
 datePublished: 2021-10-10T10:17:07.000Z
 publicationVenue: IEEE Blockchain 2021
-image: Screenshot_2023-05-28_at_23.17.32.png
 ---
 
 ## Abstract

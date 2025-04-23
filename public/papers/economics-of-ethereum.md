@@ -12,7 +12,6 @@ tags:
   - scaling / rollups
 datePublished: 2024-04-16T12:00:00.000Z
 publicationVenue:
-image: Screenshot_2024-05-20_at_16.52.17.png
 ---
 
 ## Abstract
