@@ -91,7 +91,7 @@ export default function Home() {
           </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {papers.slice(0, 3).map(({ frontmatter, slug }) => (
             <PaperCard
               key={slug}
