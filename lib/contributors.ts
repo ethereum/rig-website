@@ -2,13 +2,32 @@ import type { Contributor } from "@/lib/types"
 import { profiles } from "@/data/profiles"
 
 export const getContributorsFromIDs = (ids: string[]): Contributor[] => {
-  const contributors = ids.map((id) => {
-    const contributor = profiles.find((contributor) => contributor.id === id)
-    if (contributor) return contributor
-    const nameMatch = profiles.find((contributor) => contributor.name === id)
-    if (nameMatch) return nameMatch
-    return { id, name: id } as Contributor
+  const contributors: Contributor[] = []
+  const addedProfileIds = new Set<string>() // Track added IDs to prevent duplicates
+
+  ids.forEach((identifier) => {
+    const lowerIdentifier = identifier.toLowerCase()
+
+    const foundProfile = profiles.find(
+      (profile) =>
+        profile.id.toLowerCase() === lowerIdentifier ||
+        profile.name.toLowerCase() === lowerIdentifier
+    )
+
+    if (foundProfile) {
+      if (!addedProfileIds.has(foundProfile.id)) {
+        contributors.push(foundProfile)
+        addedProfileIds.add(foundProfile.id)
+      }
+    } else {
+      const fallbackId = identifier;
+      if (!addedProfileIds.has(fallbackId)) {
+        contributors.push({ id: fallbackId, name: fallbackId })
+        addedProfileIds.add(fallbackId)
+      }
+    }
   })
+
   return contributors
 }
 

@@ -1,13 +1,13 @@
 ---
 title: The Cost of Permissionless Liquidity Provision in Automated Market Makers
 authors:
-  - Julian Davide Crapis
+  - Julian 
+  - Davide Crapis
 tags:
   - game theory
   - mev
 datePublished: 2024-02-28T11:37:09.000Z
 publicationVenue: MARBLE 2024
-image: Screenshot_2024-03-03_at_16.41.22.png
 ---
 
 ## Abstract

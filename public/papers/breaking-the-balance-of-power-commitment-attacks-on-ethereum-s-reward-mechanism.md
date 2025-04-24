@@ -11,7 +11,6 @@ tags:
   - game theory
 datePublished: 2024-07-28T12:00:00.000Z
 publicationVenue:
-image: Screenshot_2024-08-05_at_11.38.05.png
 ---
 
 ## Abstract

@@ -14,7 +14,6 @@ tags:
   - mev
 datePublished: 2023-05-15T21:38:04.000Z
 publicationVenue: AFT 2023
-image: Screenshot_2023-05-28_at_23.14.19.png
 ---
 
 ## Abstract

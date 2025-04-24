@@ -9,7 +9,6 @@ tags:
   - resource pricing
 datePublished: 2022-12-14T11:59:51.000Z
 publicationVenue: FC 2023
-image: Screenshot_2023-05-28_at_23.15.24.png
 ---
 
 ## Abstract

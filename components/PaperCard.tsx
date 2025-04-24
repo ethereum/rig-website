@@ -1,5 +1,3 @@
-import { join } from "path"
-
 import type { PaperFrontMatter } from "@/lib/types"
 
 import { Contributors } from "./Contributors"
@@ -9,7 +7,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import Link from "./ui/link"
 
 import { cn } from "@/lib/utils"
-import { PATH_ASSETS } from "@/lib/constants"
 
 type PaperCardProps = {
   frontmatter: PaperFrontMatter
@@ -18,12 +15,11 @@ type PaperCardProps = {
 }
 
 const PaperCard = ({
-  frontmatter: { title, authors, tags, datePublished, image },
+  frontmatter: { title, authors, tags, datePublished },
   href,
   className,
 }: PaperCardProps) => (
   <Card className={cn("row-span-2 grid grid-rows-subgrid", className)}>
-    <div className="flex gap-x-8 gap-y-4 max-md:flex-col-reverse">
       <div className="flex w-full flex-col gap-x-8 gap-y-4">
         <CardHeader>
           <Link
@@ -61,10 +57,6 @@ const PaperCard = ({
           </BracketLink>
         </CardFooter>
       </div>
-      <CardContent className="md:max-w-2/5">
-        <img src={join(PATH_ASSETS, image)} alt="" />
-      </CardContent>
-    </div>
   </Card>
 )
 
