@@ -2,7 +2,7 @@ import type { NavItem } from "./types"
 
 export const SITE_NAME = "Robust Incentives Group"
 export const SITE_DESCRIPTION =
-  "The Robust Incentives Group is an Ethereum Foundation research team dedicated to the study of protocol mechanisms with the lens of game theory, mechanism design, crypto-economics, formal methods, and data science."
+  "The Robust Incentives Group is an Ethereum Foundation research team dedicated to the study of the Ethereum protocol through the lens of mechanism design."
 
 export const MD_DIR_POSTS = "public/posts"
 export const MD_DIR_PAPERS = "public/papers"
