@@ -48,9 +48,7 @@ export default function Home() {
           <span className="text-primary-foreground">
             Robust Incentives Group
           </span>{" "}
-          is an Ethereum Foundation research team dedicated to the study of
-          protocol mechanisms with the lens of game theory, mechanism design,
-          crypto-economics, formal methods and data science.
+          is an Ethereum Foundation research team dedicated to the study of the Ethereum protocol through the lens of mechanism design.
         </p>
       </div>
 
