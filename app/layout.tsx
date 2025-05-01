@@ -11,12 +11,12 @@ import Logo from "@/components/svg/rig-logo.svg"
 import GitHub from "@/components/svg/github.svg"
 import Twitter from "@/components/svg/twitter.svg"
 import Email from "@/components/svg/email.svg"
+import { getMetadata } from "@/lib/metadata"
 
 import { cn } from "@/lib/utils"
 
 import {
   NAV_ITEMS,
-  SITE_DESCRIPTION,
   SITE_NAME,
   URL_EMAIL,
   URL_GITHUB_REPO,
@@ -38,18 +38,7 @@ const montserratSans = Montserrat({
   subsets: ["latin"],
 })
 
-// TODO: Confirm og-image
-export const metadata: Metadata = {
-  title: SITE_NAME,
-  description: SITE_DESCRIPTION,
-  openGraph: {
-    images: "/og-image.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: "/og-image.png",
-  },
-}
+export const metadata: Metadata = getMetadata()
 
 export default function RootLayout({
   children,

@@ -1,8 +1,13 @@
+import { resolve } from "path"
+import type { Metadata } from "next"
+
 import { Contributors } from "@/components/Contributors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
+import { PATH_PAPERS } from "@/lib/constants"
 import { fetchPapers, getPaper } from "@/lib/papers"
+import { getMetadata } from "@/lib/metadata"
 
 export async function generateStaticParams() {
   const allPapers = fetchPapers()
@@ -11,12 +16,20 @@ export async function generateStaticParams() {
 
 type Props = { params: Promise<{ slug: string }> }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const {
+    frontmatter: { title },
+  } = getPaper(slug)
+  const path = resolve("/", PATH_PAPERS, slug)
+  return getMetadata({ title, path })
+}
+
 export default async function Page({ params }: Props) {
   const { slug } = await params
 
   const { frontmatter, content } = getPaper(slug)
-  const { title, authors, tags, datePublished } =
-    frontmatter
+  const { title, authors, tags, datePublished } = frontmatter
 
   return (
     <main className="row-start-2 mt-8 w-full max-w-7xl">

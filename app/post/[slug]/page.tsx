@@ -1,8 +1,13 @@
+import { resolve } from "path"
+import type { Metadata } from "next"
+
 import { Contributors } from "@/components/Contributors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
+import { PATH_POSTS } from "@/lib/constants"
 import { fetchPosts, getPost } from "@/lib/posts"
+import { getMetadata } from "@/lib/metadata"
 
 export async function generateStaticParams() {
   const allPosts = fetchPosts()
@@ -10,6 +15,15 @@ export async function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const {
+    frontmatter: { title },
+  } = getPost(slug)
+  const path = resolve("/", PATH_POSTS, slug)
+  return getMetadata({ title, path })
+}
 
 export default async function Page({ params }: Props) {
   const { slug } = await params
