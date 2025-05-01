@@ -24,7 +24,7 @@ import EmailIcon from "@/components/svg/email.svg"
 import { sortContributors } from "@/lib/contributors"
 import { fetchPapers } from "@/lib/papers"
 import { fetchPosts } from "@/lib/posts"
-import { fetchFieldList, fetchResearchFields } from "@/lib/research"
+// import { fetchFieldList, fetchResearchFields } from "@/lib/research"
 import { fetchTalks } from "@/lib/talks"
 
 import { members } from "@/data/profiles"
@@ -48,9 +48,7 @@ export default function Home() {
           <span className="text-primary-foreground">
             Robust Incentives Group
           </span>{" "}
-          is an Ethereum Foundation research team dedicated to the study of
-          protocol mechanisms with the lens of game theory, mechanism design,
-          crypto-economics, formal methods and data science.
+          is an Ethereum Foundation research team dedicated to the study of the Ethereum protocol through the lens of mechanism design.
         </p>
       </div>
 
@@ -91,7 +89,7 @@ export default function Home() {
           </Link>
           <SectionCounter>{papers.length}</SectionCounter>
         </SectionHead>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {papers.slice(0, 3).map(({ frontmatter, slug }) => (
             <PaperCard
               key={slug}

@@ -1,11 +1,8 @@
-import { join } from "path"
-
 import { Contributors } from "@/components/Contributors"
 import { MarkdownProvider } from "@/components/Markdown/Provider"
 import TagLink from "@/components/TagLink"
 
 import { fetchPapers, getPaper } from "@/lib/papers"
-import { PATH_ASSETS } from "@/lib/constants"
 
 export async function generateStaticParams() {
   const allPapers = fetchPapers()
@@ -18,7 +15,7 @@ export default async function Page({ params }: Props) {
   const { slug } = await params
 
   const { frontmatter, content } = getPaper(slug)
-  const { title, authors, tags, datePublished, publicationVenue, image } =
+  const { title, authors, tags, datePublished } =
     frontmatter
 
   return (
@@ -51,12 +48,6 @@ export default async function Page({ params }: Props) {
       </div>
 
       <hr className="my-12" />
-
-      <div className="mt-12 max-w-3xl space-y-3">
-        <img src={join(PATH_ASSETS, image)} alt="" />
-
-        <div className="font-sans">{publicationVenue}</div>
-      </div>
 
       <article className="max-w-3xl font-sans">
         <MarkdownProvider>{content}</MarkdownProvider>

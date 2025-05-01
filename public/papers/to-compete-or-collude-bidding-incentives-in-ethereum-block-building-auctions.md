@@ -9,8 +9,7 @@ tags:
   - game theory
   - mev
 datePublished: 2024-11-14T12:00:00.000Z
-publicationVenue: ACM 2024
-image: Screenshot_2024-11-15_at_15.18.06.png
+publicationVenue: ACM 2024g
 ---
 
 ## Abstract

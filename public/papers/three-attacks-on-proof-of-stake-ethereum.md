@@ -12,7 +12,6 @@ tags:
   - mev
 datePublished: 2021-10-19T16:27:13.000Z
 publicationVenue: FC 2022
-image: Screenshot_2023-05-28_at_23.16.32.png
 ---
 
 ## Abstract

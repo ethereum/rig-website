@@ -1,5 +1,3 @@
-import { join } from "path"
-
 import type { PaperFrontMatter } from "@/lib/types"
 
 import { Contributors } from "./Contributors"
@@ -8,7 +6,6 @@ import Link from "./ui/link"
 import { Tag } from "./ui/tag"
 
 import { cn } from "@/lib/utils"
-import { PATH_ASSETS } from "@/lib/constants"
 
 type PaperPreviewRowProps = {
   frontmatter: PaperFrontMatter
@@ -17,14 +14,14 @@ type PaperPreviewRowProps = {
 }
 
 const PaperPreviewRow = ({
-  frontmatter: { title, authors, tags, datePublished, image },
+  frontmatter: { title, authors, tags, datePublished },
   href,
   className,
 }: PaperPreviewRowProps) => (
   <Link
     href={href}
     className={cn(
-      "group hover:bg-card flex w-full items-center gap-8 py-8 max-lg:flex-col",
+      "group hover:bg-card flex w-full items-center gap-8 py-8",
       className
     )}
   >
@@ -56,12 +53,6 @@ const PaperPreviewRow = ({
         ))}
       </CardContent>
     </div>
-
-    <img
-      src={join(PATH_ASSETS, image)}
-      alt=""
-      className="max-h-60 lg:max-w-1/4"
-    />
   </Link>
 )
 

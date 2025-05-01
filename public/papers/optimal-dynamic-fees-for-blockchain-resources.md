@@ -10,7 +10,6 @@ tags:
   - simulations
 datePublished: 2023-09-22T09:34:33.000Z
 publicationVenue:
-image: Screenshot_2023-09-29_at_11.50.32.png
 ---
 
 ## Abstract

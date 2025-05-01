@@ -13,7 +13,6 @@ tags:
   - mev
 datePublished: 2023-11-14T00:23:21.000Z
 publicationVenue: https://openreview.net/group?id=NeurIPS.cc/2023/Workshop/MASEC#tab-accept-oral @ NeurIPS 2023
-image: Screenshot_2023-11-16_at_15.28.05.png
 ---
 
 ## Abstract
