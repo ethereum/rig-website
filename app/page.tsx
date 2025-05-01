@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-      <div className="max-w-4xl py-30">
+      <div className="max-w-4xl pt-14 pb-30 sm:pt-30">
         <h1 className="sr-only">Robust Incentives Group</h1>
         <p className="text-3xl sm:text-5xl">
           The{" "}
