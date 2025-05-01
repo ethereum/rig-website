@@ -3,6 +3,7 @@ import type { NavItem } from "./types"
 export const SITE_NAME = "Robust Incentives Group"
 export const SITE_DESCRIPTION =
   "The Robust Incentives Group is an Ethereum Foundation research team dedicated to the study of the Ethereum protocol through the lens of mechanism design."
+export const SITE_URL = process.env.SITE_URL || "https://rig.ethereum.org"
 
 export const MD_DIR_POSTS = "public/posts"
 export const MD_DIR_PAPERS = "public/papers"
@@ -43,6 +44,9 @@ export const NAV_ITEMS: NavItem[] = [
   },
 ]
 
+export const SITE_TWITTER = "ethereum"
 export const URL_GITHUB_REPO = "https://github.com/ethereum/rig"
-export const URL_TWITTER = "https://x.com/ethereum"
+export const URL_TWITTER = "https://x.com/" + SITE_TWITTER
 export const URL_EMAIL = "mailto:rig@ethereum.org"
+
+export const IS_PRODUCTION_CONTEXT = process.env.CONTEXT === "production"
