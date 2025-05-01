@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { Suspense } from "react"
 
 import { SkeletonLines } from "@/components/ui/skeleton"
@@ -5,6 +6,12 @@ import HeroHeading from "@/components/HeroHeading"
 import { PapersPage } from "./_components"
 
 import { fetchPapers } from "@/lib/papers"
+import { getMetadata } from "@/lib/metadata"
+
+export const metadata: Metadata = getMetadata({
+  title: "Papers",
+  path: "/papers",
+})
 
 export default function Page() {
   const papers = fetchPapers()
