@@ -27,6 +27,7 @@ export const TAGS = {
   el: "EL",
   "game-theory": "Game Theory / Economics",
   scaling: "Scaling / Rollups",
+  eip: "EIP",
 } as const
 
 export const NAV_ITEMS: NavItem[] = [
