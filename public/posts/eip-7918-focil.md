@@ -10,7 +10,7 @@ authors:
   - Jacob Kaufman
   - Jihoon Song
 tags:
-  - cl
+  - consensus
   - eip
 datePublished: 2024-11-01
 ---
