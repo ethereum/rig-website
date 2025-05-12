@@ -1,15 +1,16 @@
 ---
 title: "A pragmatic path towards Validity-Only Partial Statelessness (VOPS)"
 authors:
-  - Thomas Thiery
+  - thomas
 tags:
   - execution
-  - protocol-development
-datePublished: 2025-04-29T12:00:00.000Z
+  - protocol development
+datePublished: 2025-04-29
 ---
 
 [Read full article on ethresear.ch](https://ethresear.ch/t/a-pragmatic-path-towards-validity-only-partial-statelessness-vops/22236)
 
+### tldr
 We argue that:
 * Weak statelessness alone cannot guarantee strong censorship resistance.
 * Future designs must revisit **strong statelessness**, and address practical questions, such as who generates these proofs, what types of proofs are most efficient, and how bandwidth and proving costs impact node requirements.
