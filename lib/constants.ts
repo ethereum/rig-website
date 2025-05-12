@@ -15,7 +15,8 @@ export const PATH_TALKS = "talk"
 export const PATH_ASSETS = "/assets"
 
 export const TAGS = {
-  consensus: "Consensus",
+  consensus: "Consensus Layer",
+  execution: "Execution Layer",
   data: "Data",
   mev: "Maximal Extractable Value",
   pbs: "Proposer-Builder Separation",
