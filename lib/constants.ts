@@ -25,7 +25,6 @@ export const TAGS = {
   simulations: "Simulations",
   "crypto-ai": "Crypto x AI",
   cryptography: "Cryptography",
-  el: "EL",
   "game-theory": "Game Theory / Economics",
   scaling: "Scaling / Rollups",
   eip: "EIP",
