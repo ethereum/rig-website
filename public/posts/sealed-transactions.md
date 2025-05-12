@@ -3,7 +3,7 @@ title: Sealed transactions
 authors:
   - Anders
 tags:
-  - el
+  - execution
   - mev
   - protocol-development
 datePublished: 2025-03-01T12:00:00.000Z
