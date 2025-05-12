@@ -17,6 +17,7 @@ export const PATH_ASSETS = "/assets"
 export const TAGS = {
   consensus: "Consensus Layer",
   execution: "Execution Layer",
+  el: "EL",
   data: "Data",
   mev: "Maximal Extractable Value",
   pbs: "Proposer-Builder Separation",
