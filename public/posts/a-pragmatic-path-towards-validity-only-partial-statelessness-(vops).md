@@ -5,7 +5,7 @@ authors:
 tags:
   - execution
   - protocol-development
-datePublished: 2025-04-29T12:00:00.000Z
+datePublished: 2025-04-29
 ---
 
 [Read full article on ethresear.ch](https://ethresear.ch/t/a-pragmatic-path-towards-validity-only-partial-statelessness-vops/22236)
