@@ -1,5 +1,5 @@
 ---
-title: AUCIL: An Inclusion List Design for Rational Parties
+title: AUCIL\: An Inclusion List Design for Rational Parties
 authors:
   - Sarisht Wadhwa
   - Julian Ma
@@ -10,6 +10,7 @@ authors:
   - Kartik Nayak
 tags:
   - game theory
+  - censorship resistance
 datePublished: 2023-02-11
 publicationVenue: 
 ---
