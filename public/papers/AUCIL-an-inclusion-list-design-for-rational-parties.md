@@ -10,7 +10,6 @@ authors:
   - Kartik Nayak
 tags:
   - game theory
-  - censorship resistance
 datePublished: 2023-02-11
 publicationVenue: 
 ---
