@@ -1,5 +1,5 @@
 ---
-title: AUCIL\: An Inclusion List Design for Rational Parties
+title: AUCIL An Inclusion List Design for Rational Parties
 authors:
   - Sarisht Wadhwa
   - Julian Ma
