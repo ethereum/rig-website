@@ -9,4 +9,4 @@ tags:
 datePublished: 2025-05-20T12:00:00.000Z
 ---
 
-[Read full article on ethresear.ch](https://notes.ethereum.org/@anderselowsson/EIP-7918-return)
+[Review of designs for the return statement in EIP-7918.](https://notes.ethereum.org/@anderselowsson/EIP-7918-return)
