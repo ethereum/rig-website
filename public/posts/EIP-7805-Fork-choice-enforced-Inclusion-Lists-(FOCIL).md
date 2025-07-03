@@ -1,9 +1,9 @@
 ---
 title: "EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)"
 authors:
-  - Thomas Thiery
-  - Francesco D'Amato
-  - Julian Ma
+  - thomas
+  - francesco
+  - julian
   - barnabe
   - potuz
   - Terence Tsao
