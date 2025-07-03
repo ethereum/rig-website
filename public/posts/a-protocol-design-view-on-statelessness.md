@@ -1,7 +1,7 @@
 ---
 title: A Protocol Design View on Statelessness
 authors:
-  - Julian
+  - julian
 tags:
   - protocol-development
   - scaling
