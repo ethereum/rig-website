@@ -31,7 +31,9 @@ export const Contributors = ({
 
   // Separate contributors into team members, VIPs, and others
   const teamMembers = contributors.filter((contributor) =>
-    members.some((member) => member.id.toLowerCase() === contributor.id.toLowerCase())
+    members.some(
+      (member) => member.id.toLowerCase() === contributor.id.toLowerCase()
+    )
   )
 
   const vipContributors = contributors.filter((contributor) =>
@@ -64,7 +66,9 @@ export const Contributors = ({
   names.forEach((id) => {
     // Try to find a team member first
     const teamMember = teamMembers.find(
-      (member) => member.id.toLowerCase() === id.toLowerCase() || member.name.toLowerCase() === id.toLowerCase()
+      (member) =>
+        member.id.toLowerCase() === id.toLowerCase() ||
+        member.name.toLowerCase() === id.toLowerCase()
     )
     if (teamMember && !addedContributorIds.has(teamMember.id)) {
       orderedContributors.push(teamMember)
@@ -74,7 +78,9 @@ export const Contributors = ({
 
     // Then try to find a VIP
     const vipContributor = vipContributors.find(
-      (vip) => vip.id === id || vip.name === id
+      (vip) =>
+        vip.id.toLowerCase() === id.toLowerCase() ||
+        vip.name.toLowerCase() === id.toLowerCase()
     )
     if (vipContributor && !addedContributorIds.has(vipContributor.id)) {
       orderedContributors.push(vipContributor)

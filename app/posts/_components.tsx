@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
+import { getContributorsFromIDs } from "@/lib/contributors"
 
 import { PATH_POSTS, TAGS } from "@/lib/constants"
 
@@ -44,7 +45,10 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
       new Date(frontmatter.datePublished).getFullYear().toString() ===
         yearFilter
     const matchesAuthor =
-      authorFilter === "" || frontmatter.authors.includes(authorFilter)
+      authorFilter === "" ||
+      getContributorsFromIDs(frontmatter.authors).some(
+        (contributor) => contributor.name === authorFilter
+      )
 
     const matchesTag =
       tagFilter === "" ||
