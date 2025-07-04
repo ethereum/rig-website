@@ -7,6 +7,7 @@ import { PostsPage } from "./_components"
 
 import { fetchPosts } from "@/lib/posts"
 import { getMetadata } from "@/lib/metadata"
+import { members } from "@/data/profiles"
 
 export const metadata: Metadata = getMetadata({
   title: "Posts",
@@ -25,9 +26,7 @@ export default function Page() {
         )
       ),
     ].sort((a, b) => b - a),
-    authors: [
-      ...new Set(posts.flatMap(({ frontmatter }) => frontmatter.authors)),
-    ].sort(),
+    authors: members.map((member) => member.name).sort(),
     tags: [
       ...new Set(posts.flatMap(({ frontmatter }) => frontmatter.tags)),
     ].sort(),
