@@ -45,7 +45,7 @@ const PostPreviewRow = ({
 
           <Contributors names={authors} skipLinks />
         </CardHeader>
-        <CardContent className="flex flex-wrap gap-x-4 md:flex-col">
+        <CardContent className="flex flex-wrap gap-x-4 md:flex-col md:justify-self-end">
           {tags.map((tag, i) => (
             <Tag key={i} className="text-foreground block leading-[2]">
               {tag}

@@ -46,7 +46,7 @@ const TalkCard = ({
             })}
       </time>
 
-      <Contributors names={authors} etAl />
+      <Contributors names={authors} etAl enableAllWorksLinks />
     </CardHeader>
 
     <CardFooter>

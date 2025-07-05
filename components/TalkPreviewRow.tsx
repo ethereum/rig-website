@@ -49,7 +49,7 @@ const TalkPreviewRow = ({
         <Contributors names={authors} skipLinks />
       </CardHeader>
 
-      <CardContent className="text-foreground flex flex-col">
+      <CardContent className="text-foreground flex flex-col md:justify-self-end">
         {location}
       </CardContent>
     </Card>
