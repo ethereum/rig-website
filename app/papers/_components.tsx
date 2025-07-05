@@ -139,7 +139,7 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
               <PaperPreviewRow
                 key={slug}
                 frontmatter={frontmatter}
-                href={join(PATH_PAPERS, slug)}
+                href={join("/", PATH_PAPERS, slug)}
                 className="border-b px-5 max-sm:-mx-5"
               />
             ))}

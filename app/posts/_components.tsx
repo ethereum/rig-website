@@ -141,7 +141,7 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
               <PostPreviewRow
                 key={slug}
                 frontmatter={frontmatter}
-                href={join(PATH_POSTS, slug)}
+                href={join("/", PATH_POSTS, slug)}
                 className="border-b px-5 max-sm:-mx-5"
               />
             ))}

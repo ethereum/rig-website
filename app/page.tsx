@@ -210,7 +210,7 @@ export default function Home() {
         <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-8">
           {members
             .sort(sortContributors)
-            .map(({ name, avatar, twitter, email }) => (
+            .map(({ id, name, avatar, twitter, email }) => (
               <div
                 key={name}
                 className="flex flex-col items-center gap-2 font-sans"
@@ -220,7 +220,15 @@ export default function Home() {
                   alt={name}
                   className="size-22 rounded-full border"
                 />
-                <h3 className="text-center text-sm">{name}</h3>
+                <h3 className="text-center text-sm">
+                  <Link
+                    href={`/all-works/${id}`}
+                    className="hover:underline text-foreground"
+                    hideArrow
+                  >
+                    {name}
+                  </Link>
+                </h3>
                 <div className="flex justify-center">
                   {twitter && (
                     <BracketLink
