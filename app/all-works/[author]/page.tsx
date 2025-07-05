@@ -17,9 +17,7 @@ import { PATH_POSTS, PATH_PAPERS, PATH_TALKS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { processWorks } from "./utils"
 
-type PageProps = {
-  params: { author: string }
-}
+type PageProps = { params: Promise<{ author: string }> }
 
 export async function generateStaticParams() {
   return members.map((member) => ({
@@ -30,25 +28,29 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const member = members.find((m) => m.id === params.author)
+  const { author } = await params
+
+  const member = members.find((m) => m.id === author)
 
   if (!member) {
     return getMetadata({
       title: "Author Not Found",
-      path: `/all-works/${params.author}`,
+      path: `/all-works/${author}`,
     })
   }
 
   return getMetadata({
     title: `All Works by ${member.name}`,
     description: `Explore all posts, papers, and talks by ${member.name}`,
-    path: `/all-works/${params.author}`,
+    path: `/all-works/${author}`,
   })
 }
 
-export default function Page({ params }: PageProps) {
+export default async function Page({ params }: PageProps) {
+  const { author } = await params
+
   // Validate that the author exists in our members list
-  const member = members.find((m) => m.id === params.author)
+  const member = members.find((m) => m.id === author)
 
   if (!member) notFound()
 
