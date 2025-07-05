@@ -11,6 +11,7 @@ import { members } from "@/data/profiles"
 
 export const metadata: Metadata = getMetadata({
   title: "Papers",
+  description: "Explore our research papers on Ethereum protocol and mechanism design",
   path: "/papers",
 })
 

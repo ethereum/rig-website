@@ -12,6 +12,7 @@ import { getContributorsFromIDs } from "@/lib/contributors"
 
 export const metadata: Metadata = getMetadata({
   title: "Posts",
+  description: "Explore our posts on Ethereum protocol and mechanism design",
   path: "/posts",
 })
 
