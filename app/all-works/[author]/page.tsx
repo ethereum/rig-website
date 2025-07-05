@@ -120,6 +120,11 @@ export default async function Page({ params }: PageProps) {
                   return null
               }
             })}
+            {works.length === 0 && (
+              <div className="text-secondary-foreground mt-4 text-center">
+                No works found for this author.
+              </div>
+            )}
           </div>
         </div>
       </div>
