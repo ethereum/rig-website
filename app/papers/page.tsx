@@ -11,7 +11,8 @@ import { members } from "@/data/profiles"
 
 export const metadata: Metadata = getMetadata({
   title: "Papers",
-  description: "Explore our research papers on Ethereum protocol and mechanism design",
+  description:
+    "Explore our research papers on Ethereum protocol and mechanism design",
   path: "/papers",
 })
 
@@ -28,8 +29,8 @@ export default function Page() {
       ),
     ].sort((a, b) => b - a),
     authors: members
-      .map(member => member.name)
-      .filter(name => 
+      .map((member) => member.name)
+      .filter((name) =>
         papers.some(({ frontmatter }) => frontmatter.authors.includes(name))
       )
       .sort(),
