@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   )
   const fontData = await fontResponse.arrayBuffer()
 
-  return new ImageResponse(
+  const imageResponse = new ImageResponse(
     (
       <div tw="w-full h-full flex flex-col justify-center items-center font-serif">
         <img
@@ -47,4 +47,16 @@ export async function GET(request: Request) {
       ],
     }
   )
+
+  // Set cache headers to prevent stale content
+  const response = new Response(imageResponse.body, {
+    headers: {
+      ...imageResponse.headers,
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      Pragma: "no-cache",
+      Expires: "0",
+    },
+  })
+
+  return response
 }
