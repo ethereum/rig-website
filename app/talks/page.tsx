@@ -7,9 +7,11 @@ import { TalksPage } from "./_components"
 
 import { fetchTalks } from "@/lib/talks"
 import { getMetadata } from "@/lib/metadata"
+import { members } from "@/data/profiles"
 
 export const metadata: Metadata = getMetadata({
   title: "Talks",
+  description: "Explore our talks on Ethereum protocol and mechanism design",
   path: "/talks",
 })
 
@@ -25,9 +27,12 @@ export default function Page() {
         )
       ),
     ].sort((a, b) => b - a),
-    authors: [
-      ...new Set(talks.flatMap(({ frontmatter }) => frontmatter.authors)),
-    ].sort(),
+    authors: members
+      .map(member => member.name)
+      .filter(name => 
+        talks.some(({ frontmatter }) => frontmatter.authors.includes(name))
+      )
+      .sort(),
     locations: [
       ...new Set(talks.map(({ frontmatter }) => frontmatter.location)),
     ].sort(),

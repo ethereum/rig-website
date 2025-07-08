@@ -126,7 +126,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
               <TalkPreviewRow
                 key={slug}
                 frontmatter={frontmatter}
-                href={join(PATH_TALKS, slug)}
+                href={join("/", PATH_TALKS, slug)}
                 className="border-b px-5 max-sm:-mx-5"
               />
             ))}
