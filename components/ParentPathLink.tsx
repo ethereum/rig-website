@@ -7,7 +7,7 @@ import Link from "@/components/ui/link"
 
 const ParentPathLink = () => {
   const pathname = usePathname()
-  const parentPath = pathname.split("/").slice(0, -1).join("/")
+  const parentPath = pathname.split("/").slice(0, -1).join("/") || "/"
 
   return (
     <Link

@@ -212,7 +212,7 @@ export default function Home() {
             .sort(sortContributors)
             .map(({ id, name, avatar, twitter, email }) => (
               <div
-                key={name}
+                key={id}
                 className="flex flex-col items-center gap-2 font-sans"
               >
                 <img
