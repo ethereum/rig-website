@@ -36,6 +36,13 @@ export const members: Contributor[] = [
     twitter: "soispoke",
     email: "thomas.thiery@ethereum.org",
   },
+    {
+    id: "maria",
+    name: "Maria Silva",
+    avatar: "public/avatars/maria-silva.jpg",
+    twitter: "misilva73",
+    email: "maria@ethereum.org",
+  },
 ]
 
 export const vips: Contributor[] = [
