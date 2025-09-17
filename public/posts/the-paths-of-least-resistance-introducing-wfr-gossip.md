@@ -1,5 +1,5 @@
 ---
-title: The paths of least resistance: Introducing WFR-Gossip
+title: "The paths of least resistance: Introducing WFR-Gossip"
 authors:
   - thomas
 tags:
