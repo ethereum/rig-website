@@ -16,13 +16,6 @@ export const members: Contributor[] = [
     email: "caspar.schwarz-schilling@ethereum.org",
   },
   {
-    id: "davide",
-    name: "Davide Crapis",
-    avatar: "public/avatars/davide-crapis.jpg",
-    twitter: "davidecrapis",
-    email: "davide.crapis@ethereum.org",
-  },
-  {
     id: "julian",
     name: "Julian Ma",
     avatar: "public/avatars/julian-ma.jpg",
@@ -63,6 +56,13 @@ export const vips: Contributor[] = [
     name: "Francesco d'Amato",
     twitter: "fradamt",
     avatar: "public/avatars/francesco-damato.jpg",
+  },
+    {
+    id: "davide",
+    name: "Davide Crapis",
+    avatar: "public/avatars/davide-crapis.jpg",
+    twitter: "davidecrapis",
+    email: "davide.crapis@ethereum.org",
   },
 ]
 
