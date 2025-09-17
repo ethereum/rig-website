@@ -1,5 +1,5 @@
 ---
-title: An analysis of attestation timings in a 6-s slot
+title: "An analysis of attestation timings in a 6-s slot"
 authors:
   - Maria Silva
 tags:
