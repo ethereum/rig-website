@@ -7,4 +7,4 @@ tags:
 datePublished: 2025-09-03
 ---
 
-[Read full article on ethresear.ch](https://ethresear.ch/t/an-analysis-of-attestation-timings-in-a-6-s-slot/)
+[Read full article on ethresear.ch](https://ethresear.ch/t/an-analysis-of-attestation-timings-in-a-6-s-slot/). 
