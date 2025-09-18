@@ -1,5 +1,5 @@
 ---
-title: Measuring CEX-DEX Extracted Value and Searcher Profitability: The Darkest of the MEV Dark Forest
+title: "Measuring CEX-DEX Extracted Value and Searcher Profitability: The Darkest of the MEV Dark Forest"
 
 authors:
   - Fei Wu
