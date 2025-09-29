@@ -45,7 +45,7 @@ export default async function Page({ params }: Props) {
           })}
         </time>
 
-        <h1 className="text-4xl font-bold tracking-[0.01em] md:text-5xl">
+        <h1 className="text-4xl font-bold tracking-[0.01em] break-all md:text-5xl">
           {title}
         </h1>
 
