@@ -20,7 +20,7 @@ export const getContributorsFromIDs = (ids: string[]): Contributor[] => {
         addedProfileIds.add(foundProfile.id)
       }
     } else {
-      const fallbackId = identifier;
+      const fallbackId = identifier
       if (!addedProfileIds.has(fallbackId)) {
         contributors.push({ id: fallbackId, name: fallbackId })
         addedProfileIds.add(fallbackId)

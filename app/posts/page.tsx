@@ -8,9 +8,11 @@ import { PostsPage } from "./_components"
 import { fetchPosts } from "@/lib/posts"
 import { getMetadata } from "@/lib/metadata"
 import { members } from "@/data/profiles"
+import { normalizeAuthorFirst } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Posts",
+  description: "Explore our posts on Ethereum protocol and mechanism design",
   path: "/posts",
 })
 
@@ -26,7 +28,14 @@ export default function Page() {
         )
       ),
     ].sort((a, b) => b - a),
-    authors: members.map((member) => member.name).sort(),
+    authors: members
+      .filter((member) =>
+        posts.some(({ frontmatter }) =>
+          frontmatter.authors.some((a) => normalizeAuthorFirst(a) === member.id)
+        )
+      )
+      .map((m) => m.name)
+      .sort(),
     tags: [
       ...new Set(posts.flatMap(({ frontmatter }) => frontmatter.tags)),
     ].sort(),

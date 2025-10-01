@@ -21,7 +21,19 @@ export const getTitle = (title?: string) =>
 export const defaults = (custom?: CustomMetadata): Metadata => {
   const title = getTitle(custom?.title)
   const description = custom?.description || SITE_DESCRIPTION
-  const images = custom?.images || [{ url: "/og-image.png", alt: "RIG logo" }]
+
+  // Check if this is an all-works author page and construct OG image URL
+  let images = custom?.images || [{ url: "/og-image.png", alt: "RIG logo" }]
+
+  if (custom?.path?.startsWith("/all-works/")) {
+    // Extract author name from the title (format: "All Works by Author Name")
+    const authorMatch = custom.title?.match(/^All Works by (.+)$/)
+    if (authorMatch) {
+      const authorName = authorMatch[1]
+      const ogImageUrl = `/og?author=${encodeURIComponent(authorName)}`
+      images = [{ url: ogImageUrl, alt: `${authorName} - All Works` }]
+    }
+  }
 
   return {
     metadataBase: new URL(SITE_URL),

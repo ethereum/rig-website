@@ -28,10 +28,7 @@ const SectionHeading = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h2
     ref={ref}
-    className={cn(
-      "text-primary inline font-sans text-4xl",
-      className
-    )}
+    className={cn("text-primary inline font-sans text-4xl", className)}
     {...props}
   />
 ))

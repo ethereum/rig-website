@@ -112,15 +112,20 @@ export const Contributors = ({
       const isLast = index === array.length - 1
       const isSecondToLast = index === array.length - 2
 
-      const nameElement = (
+      const member = members.find((m) => m.name === name)
+      const nameElement = member ? (
         <Link
           key={name}
-          href={`/all-works?author=${encodeURIComponent(name)}`}
-          className="text-card-foreground hover:underline hover:text-card-foreground"
+          href={`/all-works/${member.id}`}
+          className="text-card-foreground hover:text-card-foreground hover:underline"
           hideArrow
         >
           {name}
         </Link>
+      ) : (
+        <span key={name} className="text-card-foreground">
+          {name}
+        </span>
       )
 
       if (array.length === 1) return nameElement

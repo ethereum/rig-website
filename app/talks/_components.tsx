@@ -12,6 +12,8 @@ import { useFilters } from "@/hooks/useFilters"
 import { cn } from "@/lib/utils"
 
 import { PATH_TALKS } from "@/lib/constants"
+import { members } from "@/data/profiles"
+import { normalizeAuthorFirst } from "@/lib/authors"
 
 type FilterOptions = {
   years: number[]
@@ -43,8 +45,17 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
     const matchesYear =
       yearFilter === "" ||
       new Date(frontmatter.startDate).getFullYear().toString() === yearFilter
-    const matchesAuthor =
-      speakerFilter === "" || frontmatter.authors.includes(speakerFilter)
+
+    const matchesAuthor = (() => {
+      if (speakerFilter === "") return true
+      const member = members.find((m) => m.name === speakerFilter)
+      if (!member) return false
+      const targetId = member.id.toLowerCase()
+      return frontmatter.authors.some(
+        (a) => normalizeAuthorFirst(a) === targetId
+      )
+    })()
+
     const matchesLocation =
       locationFilter === "" || frontmatter.location === locationFilter
 
@@ -126,7 +137,7 @@ export function TalksPage({ allTalks, options }: TalksPageProps) {
               <TalkPreviewRow
                 key={slug}
                 frontmatter={frontmatter}
-                href={join(PATH_TALKS, slug)}
+                href={join("/", PATH_TALKS, slug)}
                 className="border-b px-5 max-sm:-mx-5"
               />
             ))}
