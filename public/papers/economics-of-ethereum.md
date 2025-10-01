@@ -10,7 +10,7 @@ tags:
   - consensus
   - mev
   - scaling / rollups
-datePublished: 2025-04-01
+datePublished: 2025-04-01T12:00:00.000Z
 publicationVenue:
 ---
 
