@@ -7,6 +7,9 @@ import Link from "@/components/ui/link"
 
 const ParentPathLink = () => {
   const pathname = usePathname()
+
+  if (pathname.startsWith("/all-works/")) return null
+
   const parentPath = pathname.split("/").slice(0, -1).join("/") || "/"
 
   return (
