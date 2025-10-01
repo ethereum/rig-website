@@ -14,7 +14,7 @@ datePublished: 2025-04-01
 publicationVenue:
 ---
 
-[Go to article](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4783695)
+[Go to article](https://www.sciencedirect.com/science/article/abs/pii/S0929119924001809)
 
 ## Abstract
 
