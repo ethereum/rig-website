@@ -11,6 +11,8 @@ import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
 import { getContributorsFromIDs } from "@/lib/contributors"
+import { members } from "@/data/profiles"
+import { normalizeAuthorFirst } from "@/lib/authors"
 
 import { PATH_POSTS, TAGS } from "@/lib/constants"
 
@@ -44,11 +46,13 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
       yearFilter === "" ||
       new Date(frontmatter.datePublished).getFullYear().toString() ===
         yearFilter
-    const matchesAuthor =
-      authorFilter === "" ||
-      getContributorsFromIDs(frontmatter.authors).some(
-        (contributor) => contributor.name === authorFilter
-      )
+    const matchesAuthor = (() => {
+      if (authorFilter === "") return true
+      const member = members.find(m => m.name === authorFilter)
+      if (!member) return false
+      const targetId = member.id.toLowerCase()
+      return frontmatter.authors.some(a => normalizeAuthorFirst(a) === targetId)
+    })()
 
     const matchesTag =
       tagFilter === "" ||

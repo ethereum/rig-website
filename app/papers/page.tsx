@@ -8,6 +8,7 @@ import { PapersPage } from "./_components"
 import { fetchPapers } from "@/lib/papers"
 import { getMetadata } from "@/lib/metadata"
 import { members } from "@/data/profiles"
+import { frontmatterContainsMemberId, normalizeAuthorFirst } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Papers",
@@ -29,10 +30,12 @@ export default function Page() {
       ),
     ].sort((a, b) => b - a),
     authors: members
-      .map((member) => member.name)
-      .filter((name) =>
-        papers.some(({ frontmatter }) => frontmatter.authors.includes(name))
+      .filter((member) =>
+        papers.some(({ frontmatter }) =>
+          frontmatterContainsMemberId(frontmatter.authors, member.id)
+        )
       )
+      .map((m) => m.name)
       .sort(),
     tags: [
       ...new Set(papers.flatMap(({ frontmatter }) => frontmatter.tags)),

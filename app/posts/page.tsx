@@ -9,6 +9,7 @@ import { fetchPosts } from "@/lib/posts"
 import { getMetadata } from "@/lib/metadata"
 import { members } from "@/data/profiles"
 import { getContributorsFromIDs } from "@/lib/contributors"
+import { normalizeAuthorFirst } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Posts",
@@ -29,14 +30,12 @@ export default function Page() {
       ),
     ].sort((a, b) => b - a),
     authors: members
-      .map(member => member.name)
-      .filter(name => 
-        posts.some(({ frontmatter }) => 
-          getContributorsFromIDs(frontmatter.authors).some(
-            (contributor) => contributor.name === name
-          )
+      .filter(member =>
+        posts.some(({ frontmatter }) =>
+          frontmatter.authors.some(a => normalizeAuthorFirst(a) === member.id)
         )
       )
+      .map(m => m.name)
       .sort(),
     tags: [
       ...new Set(posts.flatMap(({ frontmatter }) => frontmatter.tags)),

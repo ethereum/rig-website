@@ -12,6 +12,8 @@ import { useFilters } from "@/hooks/useFilters"
 import { cn } from "@/lib/utils"
 
 import { PATH_PAPERS, TAGS } from "@/lib/constants"
+import { members } from "@/data/profiles"
+import { normalizeAuthorFirst } from "@/lib/authors"
 
 type FilterOptions = {
   years: number[]
@@ -43,8 +45,16 @@ export function PapersPage({ allPapers, options }: PapersPageProps) {
       yearFilter === "" ||
       new Date(frontmatter.datePublished).getFullYear().toString() ===
         yearFilter
-    const matchesAuthor =
-      authorFilter === "" || frontmatter.authors.includes(authorFilter)
+
+    const matchesAuthor = (() => {
+      if (authorFilter === "") return true
+      const member = members.find((m) => m.name === authorFilter)
+      if (!member) return false
+      const targetId = member.id.toLowerCase()
+      return frontmatter.authors.some(
+        (a) => normalizeAuthorFirst(a) === targetId
+      )
+    })()
 
     const matchesTag =
       tagFilter === "" ||

@@ -8,6 +8,7 @@ import { TalksPage } from "./_components"
 import { fetchTalks } from "@/lib/talks"
 import { getMetadata } from "@/lib/metadata"
 import { members } from "@/data/profiles"
+import { frontmatterContainsMemberId } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Talks",
@@ -28,10 +29,12 @@ export default function Page() {
       ),
     ].sort((a, b) => b - a),
     authors: members
-      .map(member => member.name)
-      .filter(name => 
-        talks.some(({ frontmatter }) => frontmatter.authors.includes(name))
+      .filter(member =>
+        talks.some(({ frontmatter }) =>
+          frontmatterContainsMemberId(frontmatter.authors, member.id)
+        )
       )
+      .map(m => m.name)
       .sort(),
     locations: [
       ...new Set(talks.map(({ frontmatter }) => frontmatter.location)),
