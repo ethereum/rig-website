@@ -112,12 +112,12 @@ export const Contributors = ({
       const isLast = index === array.length - 1
       const isSecondToLast = index === array.length - 2
 
-      const member = members.find(m => m.name === name)
+      const member = members.find((m) => m.name === name)
       const nameElement = member ? (
         <Link
           key={name}
           href={`/all-works/${member.id}`}
-          className="text-card-foreground hover:underline hover:text-card-foreground"
+          className="text-card-foreground hover:text-card-foreground hover:underline"
           hideArrow
         >
           {name}

@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 import { useFilters } from "@/hooks/useFilters"
 
 import { cn } from "@/lib/utils"
-import { getContributorsFromIDs } from "@/lib/contributors"
 import { members } from "@/data/profiles"
 import { normalizeAuthorFirst } from "@/lib/authors"
 
@@ -48,10 +47,12 @@ export function PostsPage({ allPosts, options }: PostsPageProps) {
         yearFilter
     const matchesAuthor = (() => {
       if (authorFilter === "") return true
-      const member = members.find(m => m.name === authorFilter)
+      const member = members.find((m) => m.name === authorFilter)
       if (!member) return false
       const targetId = member.id.toLowerCase()
-      return frontmatter.authors.some(a => normalizeAuthorFirst(a) === targetId)
+      return frontmatter.authors.some(
+        (a) => normalizeAuthorFirst(a) === targetId
+      )
     })()
 
     const matchesTag =

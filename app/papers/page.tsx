@@ -8,7 +8,7 @@ import { PapersPage } from "./_components"
 import { fetchPapers } from "@/lib/papers"
 import { getMetadata } from "@/lib/metadata"
 import { members } from "@/data/profiles"
-import { frontmatterContainsMemberId, normalizeAuthorFirst } from "@/lib/authors"
+import { frontmatterContainsMemberId } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Papers",

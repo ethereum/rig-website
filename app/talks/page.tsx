@@ -29,12 +29,12 @@ export default function Page() {
       ),
     ].sort((a, b) => b - a),
     authors: members
-      .filter(member =>
+      .filter((member) =>
         talks.some(({ frontmatter }) =>
           frontmatterContainsMemberId(frontmatter.authors, member.id)
         )
       )
-      .map(m => m.name)
+      .map((m) => m.name)
       .sort(),
     locations: [
       ...new Set(talks.map(({ frontmatter }) => frontmatter.location)),

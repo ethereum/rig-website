@@ -18,12 +18,7 @@ const TalkCard = ({
   href,
   className,
 }: TalkCardProps) => (
-  <Card
-    className={cn(
-      "row-span-2 grid grid-rows-subgrid gap-8",
-      className
-    )}
-  >
+  <Card className={cn("row-span-2 grid grid-rows-subgrid gap-8", className)}>
     <CardHeader>
       <Link href={href} className="text-foreground hover:text-primary block">
         <CardTitle>{title}</CardTitle>

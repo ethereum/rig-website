@@ -48,7 +48,8 @@ export default function Home() {
           <span className="text-primary-foreground">
             Robust Incentives Group
           </span>{" "}
-          is an Ethereum Foundation research team dedicated to the study of the Ethereum protocol through the lens of mechanism design.
+          is an Ethereum Foundation research team dedicated to the study of the
+          Ethereum protocol through the lens of mechanism design.
         </p>
       </div>
 
@@ -223,7 +224,7 @@ export default function Home() {
                 <h3 className="text-center text-sm">
                   <Link
                     href={`/all-works/${id}`}
-                    className="hover:underline text-foreground"
+                    className="text-foreground hover:underline"
                     hideArrow
                   >
                     {name}
