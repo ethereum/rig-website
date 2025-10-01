@@ -54,7 +54,11 @@ export default async function Page({ params }: Props) {
           {title}
         </h1>
 
-        <Contributors names={authors} avatarClass="size-8" />
+        <Contributors
+          names={authors}
+          avatarClass="size-8"
+          enableAllWorksLinks
+        />
       </div>
 
       <hr className="my-12" />

@@ -7,9 +7,13 @@ import { PapersPage } from "./_components"
 
 import { fetchPapers } from "@/lib/papers"
 import { getMetadata } from "@/lib/metadata"
+import { members } from "@/data/profiles"
+import { frontmatterContainsMemberId } from "@/lib/authors"
 
 export const metadata: Metadata = getMetadata({
   title: "Papers",
+  description:
+    "Explore our research papers on Ethereum protocol and mechanism design",
   path: "/papers",
 })
 
@@ -25,9 +29,14 @@ export default function Page() {
         )
       ),
     ].sort((a, b) => b - a),
-    authors: [
-      ...new Set(papers.flatMap(({ frontmatter }) => frontmatter.authors)),
-    ].sort(),
+    authors: members
+      .filter((member) =>
+        papers.some(({ frontmatter }) =>
+          frontmatterContainsMemberId(frontmatter.authors, member.id)
+        )
+      )
+      .map((m) => m.name)
+      .sort(),
     tags: [
       ...new Set(papers.flatMap(({ frontmatter }) => frontmatter.tags)),
     ].sort(),

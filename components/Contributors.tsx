@@ -18,6 +18,7 @@ type ContributorsProps = {
   avatarClass?: string
   etAl?: boolean
   skipLinks?: boolean
+  enableAllWorksLinks?: boolean
 }
 
 export const Contributors = ({
@@ -25,13 +26,16 @@ export const Contributors = ({
   avatarClass,
   etAl,
   skipLinks,
+  enableAllWorksLinks,
 }: ContributorsProps) => {
   // Get all contributors based on the provided names
   const contributors = getContributorsFromIDs(names)
 
   // Separate contributors into team members, VIPs, and others
   const teamMembers = contributors.filter((contributor) =>
-    members.some((member) => member.id.toLowerCase() === contributor.id.toLowerCase())
+    members.some(
+      (member) => member.id.toLowerCase() === contributor.id.toLowerCase()
+    )
   )
 
   const vipContributors = contributors.filter((contributor) =>
@@ -64,7 +68,9 @@ export const Contributors = ({
   names.forEach((id) => {
     // Try to find a team member first
     const teamMember = teamMembers.find(
-      (member) => member.id.toLowerCase() === id.toLowerCase() || member.name.toLowerCase() === id.toLowerCase()
+      (member) =>
+        member.id.toLowerCase() === id.toLowerCase() ||
+        member.name.toLowerCase() === id.toLowerCase()
     )
     if (teamMember && !addedContributorIds.has(teamMember.id)) {
       orderedContributors.push(teamMember)
@@ -74,7 +80,9 @@ export const Contributors = ({
 
     // Then try to find a VIP
     const vipContributor = vipContributors.find(
-      (vip) => vip.id === id || vip.name === id
+      (vip) =>
+        vip.id.toLowerCase() === id.toLowerCase() ||
+        vip.name.toLowerCase() === id.toLowerCase()
     )
     if (vipContributor && !addedContributorIds.has(vipContributor.id)) {
       orderedContributors.push(vipContributor)
@@ -85,11 +93,76 @@ export const Contributors = ({
 
   const getContributorList = () => {
     const allNames = [...teamMemberNames, ...vipNames, ...otherNames]
-    if (!orderedContributors.length) return listNames(otherNames)
-    if (!etAl) return listNames(allNames)
-    return `${formatTeamNames([...teamMemberNames, ...vipNames], hasOtherContributors)}${
-      hasOtherContributors ? ", et al." : ""
-    }`
+
+    if (!enableAllWorksLinks) {
+      // Original string-based behavior
+      if (!orderedContributors.length) return listNames(otherNames)
+      if (!etAl) return listNames(allNames)
+      return `${formatTeamNames([...teamMemberNames, ...vipNames], hasOtherContributors)}${
+        hasOtherContributors ? ", et al." : ""
+      }`
+    }
+
+    // JSX-based behavior with links
+    const renderNameWithLink = (
+      name: string,
+      index: number,
+      array: string[]
+    ) => {
+      const isLast = index === array.length - 1
+      const isSecondToLast = index === array.length - 2
+
+      const member = members.find((m) => m.name === name)
+      const nameElement = member ? (
+        <Link
+          key={name}
+          href={`/all-works/${member.id}`}
+          className="text-card-foreground hover:text-card-foreground hover:underline"
+          hideArrow
+        >
+          {name}
+        </Link>
+      ) : (
+        <span key={name} className="text-card-foreground">
+          {name}
+        </span>
+      )
+
+      if (array.length === 1) return nameElement
+      if (array.length === 2) {
+        return (
+          <Fragment key={name}>
+            {nameElement}
+            {isSecondToLast ? " and " : ""}
+          </Fragment>
+        )
+      }
+
+      // More than 2 names - use Oxford comma
+      return (
+        <Fragment key={name}>
+          {nameElement}
+          {isLast ? "" : isSecondToLast ? ", and " : ", "}
+        </Fragment>
+      )
+    }
+
+    if (!orderedContributors.length) {
+      return <>{otherNames.map(renderNameWithLink)}</>
+    }
+
+    if (!etAl) {
+      return <>{allNames.map(renderNameWithLink)}</>
+    }
+
+    // With et al. - link team members and VIPs, add "et al." for others
+    const teamAndVipNames = [...teamMemberNames, ...vipNames]
+    return (
+      <>
+        {teamAndVipNames.map(renderNameWithLink)}
+        {hasOtherContributors && ", et al."}
+      </>
+    )
   }
 
   return (

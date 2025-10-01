@@ -45,7 +45,7 @@ const PaperPreviewRow = ({
         <Contributors names={authors} skipLinks />
       </CardHeader>
 
-      <CardContent className="flex flex-col sm:items-end">
+      <CardContent data-label="tags" className="flex flex-col sm:items-end">
         {tags.map((tag, i) => (
           <Tag key={i} className="text-foreground block leading-[2]">
             {tag}
