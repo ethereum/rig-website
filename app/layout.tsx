@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils"
 
 import {
   NAV_ITEMS,
+  SHOW_TWITTER_LINK,
   SITE_NAME,
   URL_EMAIL,
   URL_GITHUB_REPO,
@@ -92,13 +93,15 @@ export default function RootLayout({
                 >
                   <GitHub />
                 </Link>
-                <Link
-                  href={URL_TWITTER}
-                  hideArrow
-                  className="scale-100 transition-transform hover:scale-110 focus:scale-110"
-                >
-                  <Twitter />
-                </Link>
+                {SHOW_TWITTER_LINK && (
+                  <Link
+                    href={URL_TWITTER}
+                    hideArrow
+                    className="scale-100 transition-transform hover:scale-110 focus:scale-110"
+                  >
+                    <Twitter />
+                  </Link>
+                )}
                 <Link
                   href={URL_EMAIL}
                   hideArrow

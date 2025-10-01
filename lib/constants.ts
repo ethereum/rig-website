@@ -49,6 +49,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SITE_TWITTER = "ethereum"
 export const URL_GITHUB_REPO = "https://github.com/ethereum/rig"
 export const URL_TWITTER = "https://x.com/" + SITE_TWITTER
+export const SHOW_TWITTER_LINK = false // Toggle flag to display link in footer
 export const URL_EMAIL = "mailto:rig@ethereum.org"
 
 export const IS_PRODUCTION_CONTEXT = process.env.CONTEXT === "production"
