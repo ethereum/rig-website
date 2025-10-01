@@ -1,5 +1,5 @@
 ---
-title: "Delayed Execution with zkVMs"
+title: "Prover Killers Killer: You Build it, You Prove it"
 authors:
   - julian
   - Kevaundray Wedderburn
