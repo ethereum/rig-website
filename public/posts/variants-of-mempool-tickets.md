@@ -3,7 +3,7 @@ title: "Variants of Mempool Tickets"
 authors:
   - Julian Ma
 tags:
-  - data
+  - data-layer
   - p2p
 datePublished: 2025-10-23
 ---
