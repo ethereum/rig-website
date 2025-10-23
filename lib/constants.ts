@@ -18,6 +18,8 @@ export const TAGS = {
   consensus: "Consensus Layer",
   execution: "Execution Layer",
   el: "Execution Layer",
+  data: "Data Layer",
+  p2p: "p2p",
   data: "Data",
   mev: "Maximal Extractable Value",
   pbs: "Proposer-Builder Separation",
