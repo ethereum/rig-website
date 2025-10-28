@@ -1,7 +1,7 @@
 ---
 title: ePBS and FOCIL compatibility
 authors:
-  - Thomas Thiery
+  - thomas
 tags:
   - protocol-development
 datePublished: 2025-07-10
