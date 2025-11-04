@@ -1,11 +1,10 @@
 ---
 title: "Hybrid Encrypted Mempools"
 authors:
-  - Benedikt Wagner
-  - Julian Ma
+  - julian
 tags:
-  - Privacy
-  - MEV
+  - mev
+  - cryptography
 datePublished: 2025-10-27
 ---
 
