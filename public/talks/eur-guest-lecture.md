@@ -1,7 +1,7 @@
 ---
 title: "Erasmus University Rotterdam, Protcol Design Guest Lecture"
 authors:
-  - Julian Ma
+  - julian
 location: "Erasmus University Rotterdam, Rotterdam, the Netherlands"
 startDate: 2025-10-01
 ---
