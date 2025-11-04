@@ -1,5 +1,5 @@
 ---
-title: "Erasmus University Rotterdam, Protcol Design Guest Lecture"
+title: "Erasmus University Rotterdam, Protocol Design Guest Lecture"
 authors:
   - julian
 location: "Erasmus University Rotterdam, Rotterdam, the Netherlands"
