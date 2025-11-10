@@ -1,5 +1,5 @@
 ---
-title: "Selecting Optimal Outbound Neighbors (SOON) for fast, bandwidth‑efficient propagation in P2P networks"
+title: "Selecting Optimal Outbound Neighbors (SOON) for fast, bandwidth‑efficient propagation in p2p networks"
 authors:
   - Thomas Thiery
   - Marios Ioannou
