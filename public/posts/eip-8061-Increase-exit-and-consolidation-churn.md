@@ -6,7 +6,7 @@ authors:
 tags:
   - consensus
   - eip
-datePublished: 2025-10-29
+datePublished: 2025-10-28
 ---
 
 [Read full post on ethereum-magicians.org](https://ethereum-magicians.org/t/eip-8061-increase-churn-limits/25991)
