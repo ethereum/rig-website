@@ -52,16 +52,12 @@ export const Contributors = ({
   // Check if we have external contributors
   const hasOtherContributors = otherContributors.length > 0
 
-  // Create ordered contributors list
-  // When etAl is true (landing page): maintain original order for members and vips, exclude externals from avatars
-  // When etAl is false (individual pages): maintain exact original order for all authors
-  const orderedContributors: Contributor[] = etAl
-    ? contributors.filter(
-        (contributor) =>
-          teamMembers.includes(contributor) ||
-          vipContributors.includes(contributor)
-      )
-    : contributors
+  // Avatars: show only members and vips, preserving original .md order
+  const avatarContributors: Contributor[] = contributors.filter(
+    (contributor) =>
+      teamMembers.includes(contributor) ||
+      vipContributors.includes(contributor)
+  )
 
   const getContributorList = () => {
     // Get names in original order from the contributors array (which preserves .md order)
@@ -70,7 +66,7 @@ export const Contributors = ({
     // For landing page with etAl: show members and vips in original order, then "et al." for externals
     // For individual pages: show all authors in original order
     const displayNames = etAl
-      ? orderedContributors.map(({ name }) => name)
+      ? avatarContributors.map(({ name }) => name)
       : orderedNames
 
     if (!enableAllWorksLinks) {
@@ -135,10 +131,10 @@ export const Contributors = ({
 
   return (
     <div className="flex items-center space-x-2">
-      {/* Only display avatars if there are team members or VIPs */}
-      {orderedContributors.length > 0 && (
+      {/* Only display avatars for members and VIPs */}
+      {avatarContributors.length > 0 && (
         <div className="flex flex-nowrap -space-x-1">
-          {orderedContributors.map(({ id, name, avatar, twitter }) => {
+          {avatarContributors.map(({ id, name, avatar, twitter }) => {
             const avatarContent = (
               <Avatar
                 className={cn("border-background size-6 border-2", avatarClass)}
