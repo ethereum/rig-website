@@ -1,5 +1,5 @@
 ---
-title: Repricings: A silent hero for Glamsterdam
+title: "Repricings: A silent hero for Glamsterdam"
 authors:
   - Caspar Schwarz-Schilling
   - Ansgar Dietrichs
