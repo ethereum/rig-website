@@ -57,50 +57,33 @@ export const Contributors = ({
   // Check if we have external contributors
   const hasOtherContributors = otherContributors.length > 0
 
-  // Maintain a set of already added contributor IDs to avoid duplicates
-  const addedContributorIds = new Set<string>()
-
-  // Create ordered contributors list maintaining the original order from names
-  // but prioritizing team members, then VIPs, then others, and avoiding duplicates
-  const orderedContributors: Contributor[] = []
-
-  // Process names in order to maintain original ordering priority
-  names.forEach((id) => {
-    // Try to find a team member first
-    const teamMember = teamMembers.find(
-      (member) =>
-        member.id.toLowerCase() === id.toLowerCase() ||
-        member.name.toLowerCase() === id.toLowerCase()
-    )
-    if (teamMember && !addedContributorIds.has(teamMember.id)) {
-      orderedContributors.push(teamMember)
-      addedContributorIds.add(teamMember.id)
-      return
-    }
-
-    // Then try to find a VIP
-    const vipContributor = vipContributors.find(
-      (vip) =>
-        vip.id.toLowerCase() === id.toLowerCase() ||
-        vip.name.toLowerCase() === id.toLowerCase()
-    )
-    if (vipContributor && !addedContributorIds.has(vipContributor.id)) {
-      orderedContributors.push(vipContributor)
-      addedContributorIds.add(vipContributor.id)
-      return
-    }
-  })
+  // Create ordered contributors list
+  // When etAl is true (landing page): maintain original order for members and vips, exclude externals from avatars
+  // When etAl is false (individual pages): maintain exact original order for all authors
+  const orderedContributors: Contributor[] = etAl
+    ? contributors.filter(
+        (contributor) =>
+          teamMembers.includes(contributor) ||
+          vipContributors.includes(contributor)
+      )
+    : contributors
 
   const getContributorList = () => {
-    const allNames = [...teamMemberNames, ...vipNames, ...otherNames]
+    // Get names in original order from the contributors array (which preserves .md order)
+    const orderedNames = contributors.map(({ name }) => name)
+    
+    // For landing page with etAl: show members and vips in original order, then "et al." for externals
+    // For individual pages: show all authors in original order
+    const displayNames = etAl
+      ? orderedContributors.map(({ name }) => name)
+      : orderedNames
 
     if (!enableAllWorksLinks) {
       // Original string-based behavior
-      if (!orderedContributors.length) return listNames(otherNames)
-      if (!etAl) return listNames(allNames)
-      return `${formatTeamNames([...teamMemberNames, ...vipNames], hasOtherContributors)}${
-        hasOtherContributors ? ", et al." : ""
-      }`
+      if (etAl && hasOtherContributors) {
+        return `${formatTeamNames(displayNames, true)}, et al.`
+      }
+      return listNames(displayNames)
     }
 
     // JSX-based behavior with links
@@ -147,20 +130,10 @@ export const Contributors = ({
       )
     }
 
-    if (!orderedContributors.length) {
-      return <>{otherNames.map(renderNameWithLink)}</>
-    }
-
-    if (!etAl) {
-      return <>{allNames.map(renderNameWithLink)}</>
-    }
-
-    // With et al. - link team members and VIPs, add "et al." for others
-    const teamAndVipNames = [...teamMemberNames, ...vipNames]
     return (
       <>
-        {teamAndVipNames.map(renderNameWithLink)}
-        {hasOtherContributors && ", et al."}
+        {displayNames.map(renderNameWithLink)}
+        {etAl && hasOtherContributors && ", et al."}
       </>
     )
   }
