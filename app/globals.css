@@ -137,3 +137,11 @@
     @apply w-full border-2;
   }
 }
+
+@layer utilities {
+  /* Text wrapping utilities: prefer natural wraps, but handle long tokens */
+  .break-anywhere {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}

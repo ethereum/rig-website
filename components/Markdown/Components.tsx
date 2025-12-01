@@ -6,7 +6,7 @@ import YouTube from "../YouTube"
 
 export const MarkdownComponents: Components = {
   a: ({ children, href }) => (
-    <Link href={href} className="max-w-full break-all">
+    <Link href={href} className="max-w-full break-anywhere">
       {children}
     </Link>
   ),
