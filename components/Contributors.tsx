@@ -49,58 +49,32 @@ export const Contributors = ({
       !vipContributors.includes(contributor)
   )
 
-  // Get names for each category
-  const teamMemberNames = teamMembers.map(({ name }) => name)
-  const vipNames = vipContributors.map(({ name }) => name)
-  const otherNames = otherContributors.map(({ name }) => name)
-
   // Check if we have external contributors
   const hasOtherContributors = otherContributors.length > 0
 
-  // Maintain a set of already added contributor IDs to avoid duplicates
-  const addedContributorIds = new Set<string>()
-
-  // Create ordered contributors list maintaining the original order from names
-  // but prioritizing team members, then VIPs, then others, and avoiding duplicates
-  const orderedContributors: Contributor[] = []
-
-  // Process names in order to maintain original ordering priority
-  names.forEach((id) => {
-    // Try to find a team member first
-    const teamMember = teamMembers.find(
-      (member) =>
-        member.id.toLowerCase() === id.toLowerCase() ||
-        member.name.toLowerCase() === id.toLowerCase()
-    )
-    if (teamMember && !addedContributorIds.has(teamMember.id)) {
-      orderedContributors.push(teamMember)
-      addedContributorIds.add(teamMember.id)
-      return
-    }
-
-    // Then try to find a VIP
-    const vipContributor = vipContributors.find(
-      (vip) =>
-        vip.id.toLowerCase() === id.toLowerCase() ||
-        vip.name.toLowerCase() === id.toLowerCase()
-    )
-    if (vipContributor && !addedContributorIds.has(vipContributor.id)) {
-      orderedContributors.push(vipContributor)
-      addedContributorIds.add(vipContributor.id)
-      return
-    }
-  })
+  // Avatars: show only members and vips, preserving original .md order
+  const avatarContributors: Contributor[] = contributors.filter(
+    (contributor) =>
+      teamMembers.includes(contributor) ||
+      vipContributors.includes(contributor)
+  )
 
   const getContributorList = () => {
-    const allNames = [...teamMemberNames, ...vipNames, ...otherNames]
+    // Get names in original order from the contributors array (which preserves .md order)
+    const orderedNames = contributors.map(({ name }) => name)
+    
+    // For landing page with etAl: show members and vips in original order, then "et al." for externals
+    // For individual pages: show all authors in original order
+    const displayNames = etAl
+      ? avatarContributors.map(({ name }) => name)
+      : orderedNames
 
     if (!enableAllWorksLinks) {
       // Original string-based behavior
-      if (!orderedContributors.length) return listNames(otherNames)
-      if (!etAl) return listNames(allNames)
-      return `${formatTeamNames([...teamMemberNames, ...vipNames], hasOtherContributors)}${
-        hasOtherContributors ? ", et al." : ""
-      }`
+      if (etAl && hasOtherContributors) {
+        return `${formatTeamNames(displayNames, true)}, et al.`
+      }
+      return listNames(displayNames)
     }
 
     // JSX-based behavior with links
@@ -147,30 +121,20 @@ export const Contributors = ({
       )
     }
 
-    if (!orderedContributors.length) {
-      return <>{otherNames.map(renderNameWithLink)}</>
-    }
-
-    if (!etAl) {
-      return <>{allNames.map(renderNameWithLink)}</>
-    }
-
-    // With et al. - link team members and VIPs, add "et al." for others
-    const teamAndVipNames = [...teamMemberNames, ...vipNames]
     return (
       <>
-        {teamAndVipNames.map(renderNameWithLink)}
-        {hasOtherContributors && ", et al."}
+        {displayNames.map(renderNameWithLink)}
+        {etAl && hasOtherContributors && ", et al."}
       </>
     )
   }
 
   return (
     <div className="flex items-center space-x-2">
-      {/* Only display avatars if there are team members or VIPs */}
-      {orderedContributors.length > 0 && (
+      {/* Only display avatars for members and VIPs */}
+      {avatarContributors.length > 0 && (
         <div className="flex flex-nowrap -space-x-1">
-          {orderedContributors.map(({ id, name, avatar, twitter }) => {
+          {avatarContributors.map(({ id, name, avatar, twitter }) => {
             const avatarContent = (
               <Avatar
                 className={cn("border-background size-6 border-2", avatarClass)}
