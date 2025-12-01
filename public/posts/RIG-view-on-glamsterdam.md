@@ -9,7 +9,7 @@ authors:
   - Marios Ioannou
 tags:
   - EL
-datePublished: 2024-10-13T12:00:00.000Z
+datePublished: 2024-11-13T12:00:00.000Z
 ---
 
 [Read full post on notes.ethereum.org](https://notes.ethereum.org/@css/rig-glamsterdam)
