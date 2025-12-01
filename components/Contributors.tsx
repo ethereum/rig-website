@@ -49,11 +49,6 @@ export const Contributors = ({
       !vipContributors.includes(contributor)
   )
 
-  // Get names for each category
-  const teamMemberNames = teamMembers.map(({ name }) => name)
-  const vipNames = vipContributors.map(({ name }) => name)
-  const otherNames = otherContributors.map(({ name }) => name)
-
   // Check if we have external contributors
   const hasOtherContributors = otherContributors.length > 0
 
