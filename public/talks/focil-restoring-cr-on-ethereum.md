@@ -1,5 +1,5 @@
 ---
-title: FOCIL: Restoring Censorship Resistance on Ethereum
+title: "FOCIL: Restoring Censorship Resistance on Ethereum"
 authors:
   - Thomas Thiery
 location: Devconnect, Buenos Aires
