@@ -36,6 +36,13 @@ export const members: Contributor[] = [
     twitter: "misilva73",
     email: "maria@ethereum.org",
   },
+    {
+    id: "marios",
+    name: "Marios Ioannou",
+    avatar: "public/avatars/marios-ioannou.jpg",
+    twitter: "qedem0nstrandum",
+    email: "marios.ioannou@ethereum.org",
+  },
 ]
 
 export const vips: Contributor[] = [
