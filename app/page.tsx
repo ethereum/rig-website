@@ -202,7 +202,7 @@ export default function Home() {
             </p>
             <BracketLink
               hideArrow
-              href="https://jobs.lever.co/ethereumfoundation/dc609d02-780b-46e8-9d70-42b2e4d0a671"
+              href="https://jobs.ashbyhq.com/ethereum-foundation/1288ac61-5f5c-4fe8-b594-30c96cb55b63"
             >
               apply here
             </BracketLink>
