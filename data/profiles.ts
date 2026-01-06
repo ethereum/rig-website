@@ -41,7 +41,7 @@ export const members: Contributor[] = [
     name: "Marios Ioannou",
     avatar: "public/avatars/marios-ioannou.jpg",
     twitter: "qedem0nstrandum",
-    email: "marios.ioannou@ethereum.org",
+    email: "marios@ethereum.org",
   },
 ]
 
