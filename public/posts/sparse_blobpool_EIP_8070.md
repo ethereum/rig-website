@@ -4,7 +4,8 @@ authors:
   - Marios
   - Francesco D'Amato 
 tags:
-  - P2P
+  - p2p
+  - eip
   - Blobs
 datePublished: 2026-01-09T12:00:00.000Z
 ---
