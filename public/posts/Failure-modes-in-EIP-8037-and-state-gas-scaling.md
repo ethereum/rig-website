@@ -1,5 +1,5 @@
 ---
-title: Failure-modes-in-EIP-8037-and-state-gas-scaling 
+title: Failure modes in EIP-8037 and state-gas scaling 
 authors:
   - Anders
 tags:
