@@ -5,6 +5,7 @@ authors:
   - Julian
   - Justin Florentine
 tags:
+  - eip
   - mev
   - protocol-development
 datePublished: 2026-03-04T12:00:00.000Z
