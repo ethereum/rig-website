@@ -1,5 +1,5 @@
 ---
-title: "LUCID encrypted mempool"
+title: "EIP-8184: LUCID encrypted mempool"
 authors:
   - Anders
   - Julian
