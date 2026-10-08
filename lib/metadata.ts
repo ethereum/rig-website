@@ -39,6 +39,9 @@ export const defaults = (custom?: CustomMetadata): Metadata => {
     metadataBase: new URL(SITE_URL),
     title,
     description,
+    // Filtered list views (e.g. /posts?tag=mev) render the same page as the
+    // unfiltered one, so point them all at the clean path.
+    alternates: { canonical: custom?.path || "/" },
     openGraph: {
       type: "website",
       locale: "en_US",
