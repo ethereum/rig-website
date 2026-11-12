@@ -29,7 +29,16 @@ const nextConfig: NextConfig = {
 
     return config
   },
-  /* config other options here */
+  async redirects() {
+    return [
+      // Duplicate of mev-space-10-data-drama-decisions, published the same day
+      {
+        source: "/talk/mev-space-10",
+        destination: "/talk/mev-space-10-data-drama-decisions",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
